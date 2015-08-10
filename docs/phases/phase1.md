@@ -1,28 +1,29 @@
-# Phase 1: User Authentication, Basic Blogs and Posts
+# Phase 1: User Authentication, Viewing Courses
 
 ## Rails
 ### Models
 * User
-* Blog
-* Post
+* Course
 
 ### Controllers
 * UsersController (create, new)
 * SessionsController (create, new, destroy)
-* BlogsController (create, new, show)
-* PostsController (create, new, show)
+* Api::CoursesController (index)
 
 ### Views
 * users/new.html.erb
 * session/new.html.erb
-* blogs/new.html.erb
-* blogs/show.html.erb
+* courses/index.json.jbuilder
 
 ## Backbone
 ### Models
+* Course
 
 ### Collections
+* Courses
 
 ### Views
+* CoursesIndex (composite view; contains CoursesIndexItem subviews)
+* CoursesIndexItem
 
 ## Gems/Libraries

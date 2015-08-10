@@ -1,29 +1,33 @@
-# Phase 2: Viewing Blogs and Posts
+# Phase 2: Viewing Topics and Exercises
 
 ## Rails
 ### Models
+* Topic
+* Exercise
 
 ### Controllers
-Api::BlogsController (create, destroy, index, show)
-Api::PostsController (create, destroy, show, update)
+Api::CoursesController (show)
+Api::TopicsController (show)
+Api::ExercisesController (show)
 
 ### Views
-* blogs/show.json.jbuilder
+* courses/show.json.jbuilder
+* topics/show.json.jbuilder
+* exercises/show.json.jbuilder
 
 ## Backbone
 ### Models
-* Blog (parses nested `posts` association)
-* Post
+* Topic
+* Exercise
 
 ### Collections
-* Blogs
-* Posts
+* Topics
+* Exercises
 
 ### Views
-* BlogForm
-* BlogShow (composite view, contains PostsIndex subview)
-* PostsIndex (composite view, contains PostsIndexItem subviews)
-* PostsIndexItem
-* PostShow
+* CourseShow (composite view; contains TopicsItem subviews)
+* TopicsItem
+* TopicShow (composite view; contains ExerciseShow, Editor and Console subviews)
+* ExerciseShow
 
 ## Gems/Libraries

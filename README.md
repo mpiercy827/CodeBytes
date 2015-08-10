@@ -1,24 +1,23 @@
-# Flux-capacitr
+# CodeBytes
 
 [Heroku link][heroku]
 
-[heroku]: http://flux-capacitr.herokuapp.com
+[heroku]: http://codebytes.herokuapp.com
 
 ## Minimum Viable Product
-Flux-capacitr is a clone of Tumblr built on Rails and Backbone. Users can:
+CodeBytes is an online learning community inspired by CodeAcademy where users can learn the basics of computer programming. Users can:
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
-- [x] Create accounts
-- [x] Create sessions (log in)
-- [x] Create blogs
-- [x] Create blog posts
-- [ ] View blogs and posts
-- [ ] Subscribe to blogs
-- [ ] View a feed of subscribed blogs
-- [ ] Tag blog posts
-- [ ] Search for blogs by title
-- [ ] Search for posts by tag
+- [ ] Create accounts
+- [ ] Create sessions (log in)
+- [ ] View courses and topics (within courses)
+- [ ] View exercises in each topic
+- [ ] Use an interactive terminal to complete exercises
+- [ ] Earn badges for completing courses
+- [ ] View badges on their profile (and other users' profiles)
+- [ ] Search courses for topics
+- [ ] Suggest topics/languages for new courses
 
 ## Design Docs
 * [View Wireframes][views]
@@ -29,63 +28,60 @@ Flux-capacitr is a clone of Tumblr built on Rails and Backbone. Users can:
 
 ## Implementation Timeline
 
-### Phase 1: User Authentication, Blog Creation (~1 day)
-I will implement user authentication in Rails based on the practices learned at
-App Academy. By the end of this phase, users will be able to create blogs using
-a simple text form in a Rails view. The most important part of this phase will
-be pushing the app to Heroku and ensuring that everything works before moving on
-to phase 2.
+### Phase 1: User Authentication, Viewing Courses (~1 day)
+During the first phase of the project, I will be implementing a user
+authentication system in Rails based on the approach learned at App Academy. By
+the end of this phase, I will have also constructed an API that sends JSON data
+to Backbone, which will use models and collections to fetch this data and allow
+users to view the available courses. The app at this stage will then be pushed
+to Heroku before moving on.
 
 [Details][phase-one]
 
-### Phase 2: Viewing Blogs and Posts (~2 days)
-I will add API routes to serve blog and post data as JSON, then add Backbone
-models and collections that fetch data from those routes. By the end of this
-phase, users will be able to create blogs and view both blogs and posts, all
-inside a single Backbone app.
+### Phase 2: Viewing Topics and Exercises (~1-2 days)
+After allowing users to view courses on the landing page, I will then add the
+'CourseShow' pages as well as the 'TopicShow' pages, where users will complete
+exercises. By the end of the phase, users will be able to view exercises for a
+given course.
 
 [Details][phase-two]
 
-### Phase 3: Editing and Displaying Posts (~2 days)
-I plan to use third-party libraries to add functionality to the `PostForm` and
-`PostShow` views in this phase. First I'll need to add a Markdown editor to the
-`PostForm`, and make sure that the Markdown is properly escaped and formatted in
-the `PostShow` view. I also plan to integrate Filepicker for file upload so
-users can add images to blog posts.
+### Phase 3: Creating an Interactive Terminal (~2 days)
+At the core of the app, this phase will be focused on the development of an
+interactive page that users use to complete exercises. Taking place on the
+'TopicShow' page, there will be a text editor subview where users enter their
+code, as well as a console subview that displays the code after it has been run.
+By the end of this phase, users will be able to write and get interactive
+feedback about their own code.
 
 [Details][phase-three]
 
-### Phase 4: User Feeds (~1-2 days)
-I'll start by adding a `feed` route that uses the `current_user`'s
-`subscribed_blogs` association to serve a list of blog posts ordered
-chronologically. On the Backbone side, I'll make a `FeedShow` view whose `posts`
-collection fetches from the new route.  Ultimately, this will be the page users
-see after logging in.
+### Phase 4: User Badges for Course Completion (~2 days)
+Now that users are able to complete exercises and entire courses, I will add the
+functionality that allows them to be rewarded with badges when they do so. These
+badges will be displayed on their profile page, where they can proudly show off
+their newly acquired coding skills!
 
 [Details][phase-four]
 
-### Phase 5: Searching for Blogs and Posts (~2 days)
-I'll need to add `search` routes to both the Blogs and Posts controllers. On the
-Backbone side, there will be a `SearchResults` composite view has `BlogsIndex`
-and `PostsIndex` subviews. These views will use plain old `blogs` and `posts`
-collections, but they will fetch from the new `search` routes.
+### Phase 5: Searching and Suggesting Courses (~2 days)
+Lastly, I will work on a search bar that allows users to search for specific
+topics/courses on the site. I will also implement a mailer on the Rails side that
+allows users to suggest future courses for the site. By the end of the phase,
+the app should be fully functioning and ready for bonus features!
 
 [Details][phase-five]
 
 ### Bonus Features (TBD)
-- [ ] "Like" button and counter for posts
-- [ ] Custom blog urls
-- [ ] Pagination/infinite scroll
-- [ ] Activity history (e.g. likes, reblogs, taggings)
-- [ ] Post types (image posts, quote posts, etc)
-- [ ] Reblogging
+- [ ] Experiment with a language by using a sandbox terminal
 - [ ] Multiple sessions/session management
-- [ ] User avatars
-- [ ] Typeahead search bar
+- [ ] Allow anonymous users to access everything but badges
+- [ ] Password reset with email confirmation
+- [ ] Allow users to create courses
+- [ ] Video Tutorials
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
 [phase-three]: ./docs/phases/phase3.md
 [phase-four]: ./docs/phases/phase4.md
 [phase-five]: ./docs/phases/phase5.md
-

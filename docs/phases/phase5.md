@@ -1,11 +1,11 @@
-# Phase 5: Searching for Blogs and Posts
-
+# Phase 5: Searching and Suggesting Courses
 ## Rails
 ### Models
 
 ### Controllers
-Api::BlogsController (search)
-Api::PostsController (search)
+Api::CoursesController (search)
+Api::TopicsController (search)
+AdminMailer
 
 ### Views
 
@@ -15,8 +15,7 @@ Api::PostsController (search)
 ### Collections
 
 ### Views
-* BlogSearchItem
-* SearchShow (composite view, contains BlogsIndex and PostsIndex subviews)
+* SearchList
+* SuggestionForm
 
 ## Gems/Libraries
-

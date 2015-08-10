@@ -1,7 +1,8 @@
-# Phase 3: Editing and Displaying Posts
+# Phase 3: Creating an Interactive Terminal
 
 ## Rails
 ### Models
+* Interpreter
 
 ### Controllers
 
@@ -13,9 +14,8 @@
 ### Collections
 
 ### Views
-* PostForm
+* Editor
+* Console
 
 ## Gems/Libraries
-* Filepicker
-* Markdown-js
-* Bootstrap Markdown
+therubyracer (runs JS in ruby)

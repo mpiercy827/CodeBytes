@@ -3,24 +3,40 @@
 ## New Session
 ![new-session]
 
-## Feed Show (landing page)
-![feed-show]
+## Courses Index (landing page)
+![courses-index]
 
-## Blog Show
-![blog-show]
+## Course Show
+![course-show]
 
-## Post Show
-![post-show]
+## Topic Show
+![topic-show]
 
-## Post Form
-![post-form]
+## Exercise Show
+![exercise-show]
+
+## Editor
+![editor]
+
+## Console
+![console]
+
+## User Show
+![user-show]
+
+## Suggestion Form
+![suggestion-form]
 
 ## Search Results
 ![search-results]
 
 [new-session]: ./wireframes/new_session.png
-[feed-show]: ./wireframes/feed_show.png
-[blog-show]: ./wireframes/blog_show.png
-[post-show]: ./wireframes/post_show.png
-[post-form]: ./wireframes/post_form.png
+[courses-index]: ./wireframes/courses_index.png
+[course-show]: ./wireframes/course_show.png
+[topic-show]: ./wireframes/topic_show.png
+[exercise-show]: ./wireframes/exercise_show.png
+[editor]: ./wireframes/editor.png
+[console]: ./wireframes/console.png
+[user-show]: ./wireframes/user_show.png
+[suggestion-form]: ./wireframes/suggestion_form.png
 [search-results]: ./wireframes/search_results.png

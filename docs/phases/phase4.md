@@ -1,20 +1,24 @@
-# Phase 4: User Feeds
+# Phase 4: User Badges for Course Completion
 
 ## Rails
 ### Models
+* Badge
 
 ### Controllers
-Api::PostsController (feed)
+Api::UsersController (show)
+Api::BadgesController (new, create, show)
 
 ### Views
-posts/feed.json.jbuilder
+* badges/show.json.jbuilder
 
 ## Backbone
 ### Models
+* User
 
 ### Collections
+* Users
 
 ### Views
-* FeedShow (composite view, contains PostsIndex subview)
+* UserShow
 
 ## Gems/Libraries
