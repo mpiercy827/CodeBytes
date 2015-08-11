@@ -25,6 +25,10 @@ class ApplicationController < ActionController::Base
 
   private
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.require(:user).permit(:email, :password)
+  end
+
+  def redirect_unless_logged_in
+    redirect_to new_session_url unless logged_in?
   end
 end
