@@ -9,8 +9,8 @@ CodeBytes is an online learning community inspired by CodeAcademy where users ca
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
-- [ ] Create accounts
-- [ ] Create sessions (log in)
+- [ x ] Create accounts
+- [ x ] Create sessions (log in)
 - [ ] View courses and topics (within courses)
 - [ ] View exercises in each topic
 - [ ] Use an interactive terminal to complete exercises
