@@ -13,7 +13,7 @@ CodeBytes.Collections.Courses = Backbone.Collection.extend({
       course = new CodeBytes.Models.Course({ id: id });
       courses.add(course);
       course.fetch({
-        error: function () { courses.remove(course) }
+        error: function () { courses.remove(course); }
       });
     }
 

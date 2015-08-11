@@ -3,18 +3,18 @@ CodeBytes.Views.CoursesIndex = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.listenTo(this.collection, "sync", this.render);
+    this.listenTo(this.collection, "add", this.addCourseItem);
     this.collection.each(this.addCourseItem.bind(this));
   },
 
   addCourseItem: function (course) {
-    var courseItemView = new CodeBytes.Views.CoursesIndexItem({ model: board });
+    var courseItemView = new CodeBytes.Views.CoursesIndexItem({ model: course });
     this.addSubview(".courses-list", courseItemView);
   },
 
   render: function () {
     var content = this.template({ courses: this.collection });
     this.$el.html(content);
-    debugger;
     this.attachSubviews();
     return this;
   }

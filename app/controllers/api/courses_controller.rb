@@ -5,5 +5,6 @@ class Api::CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id])
+    render :show
   end
 end
