@@ -526,3 +526,219 @@ Processing by StaticPagesController#root as HTML
   Rendered shared/_header.html.erb (1.4ms)
   Rendered shared/_footer.html.erb (0.0ms)
 Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-08-11 08:03:08 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (4.6ms)
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+  Rendered shared/_header.html.erb (26.6ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 467ms (Views: 463.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 08:03:10 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 08:03:10 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 08:03:10 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 08:03:10 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-11 08:03:10 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 08:03:10 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 08:03:10 -0700
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-08-11 08:03:10 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 08:03:10 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 08:03:10 -0700
+
+
+Started GET "/users/new" for ::1 at 2015-08-11 08:03:12 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-08-11 08:03:23 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"MmFt1Uwe6kbyU+6YBptSpT9kJ8e2EacKTxhkhQMHfAv4WFBxkwp9SovnE8rUdANqpHpKcpMiF9py1VcCBmAuTw==", "user"=>{"email"=>"matt", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'matt' LIMIT 1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."session_token" = '7jhEgReacbE1fxrQ1GcV-g' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "matt"], ["password_digest", "$2a$10$hb4hzKoVf37v1blGmeWK7.XdZJV4.ig2YVxq48PJlNxNC5iQ0pfgC"], ["session_token", "7jhEgReacbE1fxrQ1GcV-g"], ["created_at", "2015-08-11 15:03:24.115100"], ["updated_at", "2015-08-11 15:03:24.115100"]]
+  [1m[35m (2.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 141ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/" for ::1 at 2015-08-11 08:03:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+  Rendered shared/_header.html.erb (2.2ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/session/new" for ::1 at 2015-08-11 08:06:50 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+  Rendered shared/_header.html.erb (7.6ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/session" for ::1 at 2015-08-11 08:06:52 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"GnFdK23UDicsWq5mrWqh7iyyO20/d+0VwcWgoLw+vSHQSGCPssCZK1XuUzR/hfAht6xW2BpEXcX8CJMnuVnvZQ==", "user"=>{"email"=>"f", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 110ms (Views: 107.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/session" for ::1 at 2015-08-11 08:06:56 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"kl4hJ52H7AKIoYe3HHV4Sp4i5v2Xe+vGBEok5pBhcZFYZxyDQpN7DvEVeuXOmimFBTyLSLJIWxY5hxdhlQYj1Q==", "user"=>{"email"=>"ff", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 36ms (Views: 33.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/session" for ::1 at 2015-08-11 08:07:02 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"cu3UMjVJ82h1UxDRUfPUKlXCAMoDhLTQlYNvwYc4M+K41OmW6l1kZAzn7YODHIXlztxtfya3BACoTlxGgl9hpg==", "user"=>{"email"=>"matt", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 0.9ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started POST "/session" for ::1 at 2015-08-11 08:07:28 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"wLzV0XwyEHwXkVgEzKspNZBkPaMG2iMWglR+TF8vMSIKheh1oyaHcG4lpVYeRHj6C3pQFiPpk8a/mU3LWkhjZg==", "user"=>{"email"=>"matt@matt.matt", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/session/new" for ::1 at 2015-08-11 08:07:30 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/session/new" for ::1 at 2015-08-11 08:08:59 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+  Rendered shared/_header.html.erb (4.8ms)
+  Rendered shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 08:08:59 -0700
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 08:08:59 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-11 08:08:59 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 08:08:59 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 08:08:59 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 08:08:59 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 08:08:59 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 08:08:59 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 08:08:59 -0700
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-08-11 08:08:59 -0700
+
+
+Started POST "/session" for ::1 at 2015-08-11 08:09:04 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"8xnahr86ZEOWWuSNXFOkNwzuf8BSuWrDCMHphWjXaZM5IOciYC7zT+/uGd+OvPX4l/ASdXeK2hM1DNoCbbA71w==", "user"=>{"email"=>"matt@matt.matt", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "matt@matt.matt"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."email" = 'matt@matt.matt' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."session_token" = 'EXaZ_skprIU_hZxrBJ6_6Q' AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "EXaZ_skprIU_hZxrBJ6_6Q"], ["updated_at", "2015-08-11 15:09:04.460380"], ["id", 1]]
+  [1m[35m (2.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 112ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/" for ::1 at 2015-08-11 08:09:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "EXaZ_skprIU_hZxrBJ6_6Q"]]
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/session" for ::1 at 2015-08-11 08:09:06 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"y4iGhXSGOo8iUsVinjwO4kmmOC0W9VPid3XlB0+EmBcBsbshq5Ktg1vmODBM018t0rhVmDPG4zJKuNaASuPKUw=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "EXaZ_skprIU_hZxrBJ6_6Q"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'matt@matt.matt' AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."session_token" = 'z9UcwKrTWHyiwWlljqhN7Q' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["session_token", "z9UcwKrTWHyiwWlljqhN7Q"], ["updated_at", "2015-08-11 15:09:06.271762"], ["id", 1]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 9ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-08-11 08:09:06 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.4ms)
