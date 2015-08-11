@@ -17,3 +17,57 @@
 [08/11/15 11:21:08 -0700 Matts-MacBook-Air.local (58539)] INFO : Installing Rails 4 view instrumentation
 [08/11/15 11:21:08 -0700 Matts-MacBook-Air.local (58539)] INFO : Installing Rails 4 Error instrumentation
 [08/11/15 11:21:08 -0700 Matts-MacBook-Air.local (58539)] INFO : Finished instrumentation
+[08/11/15 11:27:26 -0700 Matts-MacBook-Air.local (58658)] INFO : Starting the New Relic agent in "development" environment.
+[08/11/15 11:27:26 -0700 Matts-MacBook-Air.local (58658)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/11/15 11:27:26 -0700 Matts-MacBook-Air.local (58658)] WARN : No configuration file found. Working directory = /Users/mattpiercy/workspace/appacademy/CodeBytes
+[08/11/15 11:27:26 -0700 Matts-MacBook-Air.local (58658)] WARN : Looked in these locations (based on defaults): /Users/mattpiercy/workspace/appacademy/CodeBytes/config/newrelic.yml, /Users/mattpiercy/workspace/appacademy/CodeBytes/newrelic.yml, /Users/mattpiercy/workspace/appacademy/CodeBytes/config/newrelic.yml, /Users/mattpiercy/workspace/appacademy/CodeBytes/newrelic.yml, /Users/mattpiercy/.newrelic/newrelic.yml, /Users/mattpiercy/newrelic.yml
+[08/11/15 11:27:26 -0700 Matts-MacBook-Air.local (58658)] INFO : Environment: development
+[08/11/15 11:27:26 -0700 Matts-MacBook-Air.local (58658)] INFO : No known dispatcher detected.
+[08/11/15 11:27:26 -0700 Matts-MacBook-Air.local (58658)] INFO : Application: development
+[08/11/15 11:27:26 -0700 Matts-MacBook-Air.local (58658)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[08/11/15 11:27:26 -0700 Matts-MacBook-Air.local (58658)] INFO : Installing ActiveJob instrumentation
+[08/11/15 11:27:26 -0700 Matts-MacBook-Air.local (58658)] INFO : Installing ActiveRecord 4 instrumentation
+[08/11/15 11:27:27 -0700 Matts-MacBook-Air.local (58658)] INFO : Installing Net instrumentation
+[08/11/15 11:27:27 -0700 Matts-MacBook-Air.local (58658)] INFO : Installing deferred Rack instrumentation
+[08/11/15 11:27:27 -0700 Matts-MacBook-Air.local (58658)] INFO : Installing Rack::Builder middleware instrumentation
+[08/11/15 11:27:27 -0700 Matts-MacBook-Air.local (58658)] INFO : Installing Rails 3+ middleware instrumentation
+[08/11/15 11:27:27 -0700 Matts-MacBook-Air.local (58658)] INFO : Installing Rails 4 Controller instrumentation
+[08/11/15 11:27:27 -0700 Matts-MacBook-Air.local (58658)] INFO : Installing Rails 4 view instrumentation
+[08/11/15 11:27:27 -0700 Matts-MacBook-Air.local (58658)] INFO : Installing Rails 4 Error instrumentation
+[08/11/15 11:27:27 -0700 Matts-MacBook-Air.local (58658)] INFO : Finished instrumentation
+[08/11/15 11:35:12 -0700 Matts-MacBook-Air.local (58797)] INFO : Starting the New Relic agent in "development" environment.
+[08/11/15 11:35:12 -0700 Matts-MacBook-Air.local (58797)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/11/15 11:35:12 -0700 Matts-MacBook-Air.local (58797)] WARN : No configuration file found. Working directory = /Users/mattpiercy/workspace/appacademy/CodeBytes
+[08/11/15 11:35:12 -0700 Matts-MacBook-Air.local (58797)] WARN : Looked in these locations (based on defaults): /Users/mattpiercy/workspace/appacademy/CodeBytes/config/newrelic.yml, /Users/mattpiercy/workspace/appacademy/CodeBytes/newrelic.yml, /Users/mattpiercy/workspace/appacademy/CodeBytes/config/newrelic.yml, /Users/mattpiercy/workspace/appacademy/CodeBytes/newrelic.yml, /Users/mattpiercy/.newrelic/newrelic.yml, /Users/mattpiercy/newrelic.yml
+[08/11/15 11:35:12 -0700 Matts-MacBook-Air.local (58797)] INFO : Environment: development
+[08/11/15 11:35:12 -0700 Matts-MacBook-Air.local (58797)] INFO : No known dispatcher detected.
+[08/11/15 11:35:12 -0700 Matts-MacBook-Air.local (58797)] INFO : Application: development
+[08/11/15 11:35:12 -0700 Matts-MacBook-Air.local (58797)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[08/11/15 11:35:12 -0700 Matts-MacBook-Air.local (58797)] INFO : Installing ActiveJob instrumentation
+[08/11/15 11:35:12 -0700 Matts-MacBook-Air.local (58797)] INFO : Installing ActiveRecord 4 instrumentation
+[08/11/15 11:35:13 -0700 Matts-MacBook-Air.local (58797)] INFO : Installing Net instrumentation
+[08/11/15 11:35:13 -0700 Matts-MacBook-Air.local (58797)] INFO : Installing deferred Rack instrumentation
+[08/11/15 11:35:13 -0700 Matts-MacBook-Air.local (58797)] INFO : Installing Rack::Builder middleware instrumentation
+[08/11/15 11:35:13 -0700 Matts-MacBook-Air.local (58797)] INFO : Installing Rails 3+ middleware instrumentation
+[08/11/15 11:35:13 -0700 Matts-MacBook-Air.local (58797)] INFO : Installing Rails 4 Controller instrumentation
+[08/11/15 11:35:13 -0700 Matts-MacBook-Air.local (58797)] INFO : Installing Rails 4 view instrumentation
+[08/11/15 11:35:13 -0700 Matts-MacBook-Air.local (58797)] INFO : Installing Rails 4 Error instrumentation
+[08/11/15 11:35:13 -0700 Matts-MacBook-Air.local (58797)] INFO : Finished instrumentation
+[08/11/15 11:37:38 -0700 Matts-MacBook-Air.local (58859)] INFO : Starting the New Relic agent in "development" environment.
+[08/11/15 11:37:38 -0700 Matts-MacBook-Air.local (58859)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/11/15 11:37:38 -0700 Matts-MacBook-Air.local (58859)] WARN : No configuration file found. Working directory = /Users/mattpiercy/workspace/appacademy/CodeBytes
+[08/11/15 11:37:38 -0700 Matts-MacBook-Air.local (58859)] WARN : Looked in these locations (based on defaults): /Users/mattpiercy/workspace/appacademy/CodeBytes/config/newrelic.yml, /Users/mattpiercy/workspace/appacademy/CodeBytes/newrelic.yml, /Users/mattpiercy/workspace/appacademy/CodeBytes/config/newrelic.yml, /Users/mattpiercy/workspace/appacademy/CodeBytes/newrelic.yml, /Users/mattpiercy/.newrelic/newrelic.yml, /Users/mattpiercy/newrelic.yml
+[08/11/15 11:37:38 -0700 Matts-MacBook-Air.local (58859)] INFO : Environment: development
+[08/11/15 11:37:38 -0700 Matts-MacBook-Air.local (58859)] INFO : No known dispatcher detected.
+[08/11/15 11:37:38 -0700 Matts-MacBook-Air.local (58859)] INFO : Application: development
+[08/11/15 11:37:38 -0700 Matts-MacBook-Air.local (58859)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[08/11/15 11:37:38 -0700 Matts-MacBook-Air.local (58859)] INFO : Installing ActiveJob instrumentation
+[08/11/15 11:37:38 -0700 Matts-MacBook-Air.local (58859)] INFO : Installing ActiveRecord 4 instrumentation
+[08/11/15 11:37:39 -0700 Matts-MacBook-Air.local (58859)] INFO : Installing Net instrumentation
+[08/11/15 11:37:39 -0700 Matts-MacBook-Air.local (58859)] INFO : Installing deferred Rack instrumentation
+[08/11/15 11:37:39 -0700 Matts-MacBook-Air.local (58859)] INFO : Installing Rack::Builder middleware instrumentation
+[08/11/15 11:37:39 -0700 Matts-MacBook-Air.local (58859)] INFO : Installing Rails 3+ middleware instrumentation
+[08/11/15 11:37:39 -0700 Matts-MacBook-Air.local (58859)] INFO : Installing Rails 4 Controller instrumentation
+[08/11/15 11:37:39 -0700 Matts-MacBook-Air.local (58859)] INFO : Installing Rails 4 view instrumentation
+[08/11/15 11:37:39 -0700 Matts-MacBook-Air.local (58859)] INFO : Installing Rails 4 Error instrumentation
+[08/11/15 11:37:39 -0700 Matts-MacBook-Air.local (58859)] INFO : Finished instrumentation

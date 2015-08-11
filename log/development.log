@@ -8504,3 +8504,159 @@ Processing by Api::CoursesController#index as JSON
   Rendered api/courses/_course.json.jbuilder (0.1ms)
   Rendered api/courses/index.json.jbuilder (3.6ms)
 Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.5ms)
+  [1m[36m (5043.1ms)[0m  [1mDROP DATABASE IF EXISTS "CodeBytes_development"[0m
+PG::ObjectInUse: ERROR:  database "CodeBytes_development" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+: DROP DATABASE IF EXISTS "CodeBytes_development"
+  [1m[35m (127.8ms)[0m  DROP DATABASE IF EXISTS "CodeBytes_test"
+  [1m[36m (0.7ms)[0m  [1mCREATE DATABASE "CodeBytes_development" ENCODING = 'unicode'[0m
+PG::DuplicateDatabase: ERROR:  database "CodeBytes_development" already exists
+: CREATE DATABASE "CodeBytes_development" ENCODING = 'unicode'
+  [1m[35m (350.2ms)[0m  CREATE DATABASE "CodeBytes_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (15.4ms)[0m  DROP TABLE "courses" CASCADE
+  [1m[36m (14.5ms)[0m  [1mCREATE TABLE "courses" ("id" serial primary key, "language" character varying NOT NULL, "description" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (4.0ms)[0m  CREATE  INDEX  "index_courses_on_language" ON "courses" USING btree ("language")
+  [1m[36m (8.4ms)[0m  [1mDROP TABLE "users" CASCADE[0m
+  [1m[35m (13.8ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (10.7ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (0.6ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (14.1ms)[0m  CREATE TABLE "courses" ("id" serial primary key, "language" character varying NOT NULL, "description" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.4ms)[0m  [1mCREATE  INDEX  "index_courses_on_language" ON "courses" USING btree ("language")[0m
+  [1m[35m (13.6ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (4.1ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (7.1ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (6.4ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (2.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150811164029')[0m
+  [1m[35m (3.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150811044344')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (5047.9ms)[0m  [1mDROP DATABASE IF EXISTS "CodeBytes_development"[0m
+PG::ObjectInUse: ERROR:  database "CodeBytes_development" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+: DROP DATABASE IF EXISTS "CodeBytes_development"
+  [1m[35m (123.5ms)[0m  DROP DATABASE IF EXISTS "CodeBytes_test"
+  [1m[36m (1.1ms)[0m  [1mCREATE DATABASE "CodeBytes_development" ENCODING = 'unicode'[0m
+PG::DuplicateDatabase: ERROR:  database "CodeBytes_development" already exists
+: CREATE DATABASE "CodeBytes_development" ENCODING = 'unicode'
+  [1m[35m (381.7ms)[0m  CREATE DATABASE "CodeBytes_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.4ms)[0m  DROP TABLE "courses" CASCADE
+  [1m[36m (14.4ms)[0m  [1mCREATE TABLE "courses" ("id" serial primary key, "language" character varying NOT NULL, "description" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (6.4ms)[0m  CREATE  INDEX  "index_courses_on_language" ON "courses" USING btree ("language")
+  [1m[36m (5.0ms)[0m  [1mDROP TABLE "users" CASCADE[0m
+  [1m[35m (12.5ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (7.6ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (15.8ms)[0m  CREATE TABLE "courses" ("id" serial primary key, "language" character varying NOT NULL, "description" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (7.0ms)[0m  [1mCREATE  INDEX  "index_courses_on_language" ON "courses" USING btree ("language")[0m
+  [1m[35m (17.9ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (6.9ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (8.8ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (7.2ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (1.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (2.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150811164029')[0m
+  [1m[35m (3.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150811044344')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "courses" ("language", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["language", "Ruby"], ["description", "An easy-to-learn language that can be used to make web apps like\n        this one. Great for beginners!"], ["created_at", "2015-08-11 18:37:46.253030"], ["updated_at", "2015-08-11 18:37:46.253030"]]
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("language", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["language", "HTML/CSS"], ["description", "Learn to make and style your very own webpages in this tutorial!"], ["created_at", "2015-08-11 18:37:46.264193"], ["updated_at", "2015-08-11 18:37:46.264193"]]
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("language", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["language", "Javascript"], ["description", "Create dynamic content in your webpages using Javascript!"], ["created_at", "2015-08-11 18:37:46.268496"], ["updated_at", "2015-08-11 18:37:46.268496"]]
+  [1m[35m (2.1ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2015-08-11 11:37:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "cFyiNKcZy2eLmkMVnV0cmg"]]
+  Rendered shared/_header.html.erb (2.4ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 219ms (Views: 217.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/api/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/application.self-82c3909442a492d18fff93f887a8640e053f1307a28293d8ecb356f45d1eed4a.css?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/underscore.self-b84a7a5ac0e8afc4f176b95606590bfc56044eeae9286097bdee013a6909fde5.js?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/backbone.self-0977290d5e68ce40d516cd4dc3965586680024e51399f0ee54ee8ed3a99b1506.js?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/code_bytes.self-fb697fe45a13adb7c2c35c5151f75424c316e2c41fd506c8633e8e7dcd5a386b.js?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/courses/courses_index.self-5576f6ba6d66f6172760664d2c9ef61317679c8797097134c4d26fcc11b8de1d.js?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/courses/courses_index_item.self-8fedad4483fc5beb3e7f747a8f449a7b25370ac900aa73154677e27e2fabdf05.js?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/utils/composite_view.self-04295107b5cac978dfa00657f2f28ac45314d44b49880f40e8494cf46025b3a0.js?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/models/course.self-90598e12bf8eb153263791a73fce5120e4c31301b4764db51c4afb84f08a61af.js?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/collections/courses.self-520b54471f58092219181efdecd45931c78820c95f6260e6bc486ca0f76b8352.js?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/views/courses_index.self-83a131d4ae6f047961490e9ca4c2956ee758e29faa029adfc1cd6cd480549b57.js?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/views/courses_index_item.self-0276c7d0bc780bf7845639520f65515855cec0b77c24edd55ed4d600873a7572.js?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/routers/router.self-99797ee77b0bf8ee459f4e5bd92f621a78be94ac2d3df42e930a8831bff10ddb.js?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/api/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/assets/application.self-55d2f88127dcaaa99d5c6a5261f9015880991431c520781213525a199c900f0d.js?body=1" for ::1 at 2015-08-11 11:37:47 -0700
+
+
+Started GET "/api/courses" for ::1 at 2015-08-11 11:37:48 -0700
+Processing by Api::CoursesController#index as JSON
+  [1m[35mCourse Load (0.9ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered api/courses/_course.json.jbuilder (0.2ms)
+  Rendered api/courses/_course.json.jbuilder (0.1ms)
+  Rendered api/courses/_course.json.jbuilder (0.1ms)
+  Rendered api/courses/index.json.jbuilder (6.9ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.9ms)
