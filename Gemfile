@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt'
 gem 'backbone-on-rails'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'byebug'
