@@ -38,21 +38,21 @@ to Heroku before moving on.
 
 [Details][phase-one]
 
-### Phase 2: Viewing Topics and Exercises (~1-2 days)
-After allowing users to view courses on the landing page, I will then add the
-'CourseShow' pages as well as the 'TopicShow' pages, where users will complete
-exercises. By the end of the phase, users will be able to view exercises for a
-given course.
-
-[Details][phase-two]
-
-### Phase 3: Creating an Interactive Terminal (~2 days)
+### Phase 2: Creating an Interactive Terminal (~2 days)
 At the core of the app, this phase will be focused on the development of an
 interactive page that users use to complete exercises. Taking place on the
 'TopicShow' page, there will be a text editor subview where users enter their
 code, as well as a console subview that displays the code after it has been run.
 By the end of this phase, users will be able to write and get interactive
 feedback about their own code.
+
+[Details][phase-two]
+
+### Phase 3: Viewing Topics and Exercises (~1-2 days)
+After allowing users to view courses on the landing page and finishing the
+terminal, I will then add the 'CourseShow' pages as well as the 'TopicShow'
+pages, where users will complete exercises. By the end of the phase, users will
+be able to view exercises for a given course.
 
 [Details][phase-three]
 
@@ -64,10 +64,11 @@ their newly acquired coding skills!
 
 [Details][phase-four]
 
-### Phase 5: Searching and Suggesting Courses (~2 days)
+### Phase 5: Searching and Suggesting Courses + Styling (~2 days)
 Lastly, I will work on a search bar that allows users to search for specific
 topics/courses on the site. I will also implement a mailer on the Rails side that
-allows users to suggest future courses for the site. By the end of the phase,
+allows users to suggest future courses for the site. I will also add some much-
+needed styling to the site to make it look great! By the end of the phase,
 the app should be fully functioning and ready for bonus features!
 
 [Details][phase-five]
