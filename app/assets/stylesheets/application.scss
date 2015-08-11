@@ -33,4 +33,22 @@
 
 body {
   padding-top: 70px;
+  font-family: helvetica;
+}
+
+/*courses displays*/
+
+.course-item {
+  width: auto;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 24px;
+}
+
+.course-item p {
+  font-size: 12px;
+}
+
+.course-item:hover {
+  background-color: #eee;
 }

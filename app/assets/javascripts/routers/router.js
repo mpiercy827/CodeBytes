@@ -1,6 +1,7 @@
 CodeBytes.Routers.Router = Backbone.Router.extend({
   routes: {
-    "": "index"
+    "": "index",
+    "courses/:name": "showCourse"
   },
 
   initialize: function (options) {
@@ -15,6 +16,10 @@ CodeBytes.Routers.Router = Backbone.Router.extend({
     });
 
     this._swapView(coursesView);
+  },
+
+  showCourse: function (languageName) {
+
   },
 
   _swapView: function (view) {
