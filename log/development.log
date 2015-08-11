@@ -3249,3 +3249,1383 @@ Processing by Api::CoursesController#index as JSON
   Rendered api/courses/_course.json.jbuilder (0.1ms)
   Rendered api/courses/index.json.jbuilder (1.8ms)
 Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-08-11 10:07:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "cFyiNKcZy2eLmkMVnV0cmg"]]
+  Rendered shared/_header.html.erb (17.2ms)
+  Rendered shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 2502ms (Views: 2498.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/api/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:07:48 -0700
+
+
+Started GET "/assets/views/courses_index.self-5cae3f897a03ae7249269fccacd6590d72e06799eb97960b3813fd49f97f3afd.js?body=1" for ::1 at 2015-08-11 10:07:48 -0700
+
+
+Started GET "/assets/utils/composite_view.self-04295107b5cac978dfa00657f2f28ac45314d44b49880f40e8494cf46025b3a0.js?body=1" for ::1 at 2015-08-11 10:07:48 -0700
+
+
+Started GET "/assets/routers/router.self-08fbc9c66987326f12762b1a79cfe18171278be940c087f21e5701228abc51d4.js?body=1" for ::1 at 2015-08-11 10:07:48 -0700
+
+
+Started GET "/assets/views/courses_index_item.self-cab093925aa899cf08e76cbc96b926a5cdc649d4d8cdc1777e06323fb94a373e.js?body=1" for ::1 at 2015-08-11 10:07:48 -0700
+
+
+Started GET "/assets/api/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:07:48 -0700
+
+
+Started GET "/" for ::1 at 2015-08-11 10:08:35 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (4.4ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "cFyiNKcZy2eLmkMVnV0cmg"]]
+  Rendered shared/_header.html.erb (36.6ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 3151ms (Views: 3144.9ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/courses/courses_index.self-41eb95e74d60f6b8c6749621e215ad84209c08be0589b61d3014e7a5491165a8.js?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/courses/courses_index_item.self-cccdd28ff128776c69dd5e589f2e7fda1d45ccddb7ccaaebc8c2590130ab4f4e.js?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/api/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/application.self-74d75617525e8c5f018bd48928a1b3799ffdd594bee5f7f5be0df07f5693b525.css?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/underscore.self-b84a7a5ac0e8afc4f176b95606590bfc56044eeae9286097bdee013a6909fde5.js?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/backbone.self-0977290d5e68ce40d516cd4dc3965586680024e51399f0ee54ee8ed3a99b1506.js?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/code_bytes.self-fb697fe45a13adb7c2c35c5151f75424c316e2c41fd506c8633e8e7dcd5a386b.js?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/utils/composite_view.self-04295107b5cac978dfa00657f2f28ac45314d44b49880f40e8494cf46025b3a0.js?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/models/course.self-90598e12bf8eb153263791a73fce5120e4c31301b4764db51c4afb84f08a61af.js?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/collections/courses.self-4243d417a5107617ad24bc929e9f9cf3da5094f5ad555b38c7682873bf065efc.js?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/views/courses_index.self-5cae3f897a03ae7249269fccacd6590d72e06799eb97960b3813fd49f97f3afd.js?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/views/courses_index_item.self-cab093925aa899cf08e76cbc96b926a5cdc649d4d8cdc1777e06323fb94a373e.js?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/routers/router.self-08fbc9c66987326f12762b1a79cfe18171278be940c087f21e5701228abc51d4.js?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/api/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/application.self-55d2f88127dcaaa99d5c6a5261f9015880991431c520781213525a199c900f0d.js?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-08-11 10:08:39 -0700
+
+
+Started GET "/" for ::1 at 2015-08-11 10:09:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "cFyiNKcZy2eLmkMVnV0cmg"]]
+  Rendered shared/_header.html.erb (1.9ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 210ms (Views: 209.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/application.self-74d75617525e8c5f018bd48928a1b3799ffdd594bee5f7f5be0df07f5693b525.css?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/api/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/underscore.self-b84a7a5ac0e8afc4f176b95606590bfc56044eeae9286097bdee013a6909fde5.js?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/backbone.self-0977290d5e68ce40d516cd4dc3965586680024e51399f0ee54ee8ed3a99b1506.js?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/code_bytes.self-fb697fe45a13adb7c2c35c5151f75424c316e2c41fd506c8633e8e7dcd5a386b.js?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/courses/courses_index.self-41eb95e74d60f6b8c6749621e215ad84209c08be0589b61d3014e7a5491165a8.js?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/courses/courses_index_item.self-cccdd28ff128776c69dd5e589f2e7fda1d45ccddb7ccaaebc8c2590130ab4f4e.js?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/views/courses_index.self-bdeae80388ac6d1f687992143bbab087aa3eca25611dcc4b2a88c4e71c9b8084.js?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/utils/composite_view.self-04295107b5cac978dfa00657f2f28ac45314d44b49880f40e8494cf46025b3a0.js?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/models/course.self-90598e12bf8eb153263791a73fce5120e4c31301b4764db51c4afb84f08a61af.js?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/collections/courses.self-4243d417a5107617ad24bc929e9f9cf3da5094f5ad555b38c7682873bf065efc.js?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/views/courses_index_item.self-cab093925aa899cf08e76cbc96b926a5cdc649d4d8cdc1777e06323fb94a373e.js?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/routers/router.self-08fbc9c66987326f12762b1a79cfe18171278be940c087f21e5701228abc51d4.js?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/api/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/assets/application.self-55d2f88127dcaaa99d5c6a5261f9015880991431c520781213525a199c900f0d.js?body=1" for ::1 at 2015-08-11 10:09:00 -0700
+
+
+Started GET "/" for ::1 at 2015-08-11 10:11:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "cFyiNKcZy2eLmkMVnV0cmg"]]
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 113ms (Views: 112.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/application.self-74d75617525e8c5f018bd48928a1b3799ffdd594bee5f7f5be0df07f5693b525.css?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/api/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/code_bytes.self-fb697fe45a13adb7c2c35c5151f75424c316e2c41fd506c8633e8e7dcd5a386b.js?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/backbone.self-0977290d5e68ce40d516cd4dc3965586680024e51399f0ee54ee8ed3a99b1506.js?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/underscore.self-b84a7a5ac0e8afc4f176b95606590bfc56044eeae9286097bdee013a6909fde5.js?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/courses/courses_index.self-41eb95e74d60f6b8c6749621e215ad84209c08be0589b61d3014e7a5491165a8.js?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/courses/courses_index_item.self-cccdd28ff128776c69dd5e589f2e7fda1d45ccddb7ccaaebc8c2590130ab4f4e.js?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/utils/composite_view.self-04295107b5cac978dfa00657f2f28ac45314d44b49880f40e8494cf46025b3a0.js?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/models/course.self-90598e12bf8eb153263791a73fce5120e4c31301b4764db51c4afb84f08a61af.js?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/collections/courses.self-4243d417a5107617ad24bc929e9f9cf3da5094f5ad555b38c7682873bf065efc.js?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/views/courses_index.self-bdeae80388ac6d1f687992143bbab087aa3eca25611dcc4b2a88c4e71c9b8084.js?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/views/courses_index_item.self-cab093925aa899cf08e76cbc96b926a5cdc649d4d8cdc1777e06323fb94a373e.js?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/routers/router.self-08fbc9c66987326f12762b1a79cfe18171278be940c087f21e5701228abc51d4.js?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/api/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/assets/application.self-55d2f88127dcaaa99d5c6a5261f9015880991431c520781213525a199c900f0d.js?body=1" for ::1 at 2015-08-11 10:11:06 -0700
+
+
+Started GET "/" for ::1 at 2015-08-11 10:11:58 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "cFyiNKcZy2eLmkMVnV0cmg"]]
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 369ms (Views: 368.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:11:58 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:11:58 -0700
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:11:58 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:11:58 -0700
+
+
+Started GET "/assets/application.self-74d75617525e8c5f018bd48928a1b3799ffdd594bee5f7f5be0df07f5693b525.css?body=1" for ::1 at 2015-08-11 10:11:58 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 10:11:59 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 10:11:59 -0700
+
+
+Started GET "/assets/underscore.self-b84a7a5ac0e8afc4f176b95606590bfc56044eeae9286097bdee013a6909fde5.js?body=1" for ::1 at 2015-08-11 10:11:59 -0700
+
+
+Started GET "/assets/backbone.self-0977290d5e68ce40d516cd4dc3965586680024e51399f0ee54ee8ed3a99b1506.js?body=1" for ::1 at 2015-08-11 10:11:59 -0700
+
+
+Started GET "/assets/code_bytes.self-fb697fe45a13adb7c2c35c5151f75424c316e2c41fd506c8633e8e7dcd5a386b.js?body=1" for ::1 at 2015-08-11 10:11:59 -0700
+
+
+Started GET "/assets/courses/courses_index.self-41eb95e74d60f6b8c6749621e215ad84209c08be0589b61d3014e7a5491165a8.js?body=1" for ::1 at 2015-08-11 10:11:59 -0700
+
+
+Started GET "/assets/courses/courses_index_item.self-cccdd28ff128776c69dd5e589f2e7fda1d45ccddb7ccaaebc8c2590130ab4f4e.js?body=1" for ::1 at 2015-08-11 10:11:59 -0700
+
+
+Started GET "/assets/utils/composite_view.self-04295107b5cac978dfa00657f2f28ac45314d44b49880f40e8494cf46025b3a0.js?body=1" for ::1 at 2015-08-11 10:11:59 -0700
+
+
+Started GET "/assets/models/course.self-90598e12bf8eb153263791a73fce5120e4c31301b4764db51c4afb84f08a61af.js?body=1" for ::1 at 2015-08-11 10:11:59 -0700
+
+
+Started GET "/assets/views/courses_index.self-b26655ccbb91e861a0bcb6f2b07816755fc6a9897a6bcc289b6635ad803199ea.js?body=1" for ::1 at 2015-08-11 10:11:59 -0700
+
+
+Started GET "/assets/collections/courses.self-4243d417a5107617ad24bc929e9f9cf3da5094f5ad555b38c7682873bf065efc.js?body=1" for ::1 at 2015-08-11 10:11:59 -0700
+
+
+Started GET "/assets/views/courses_index_item.self-0beacff74dabe8ebd110c26db031b990e91a5353e90f5276bd6cbde6c2bb1146.js?body=1" for ::1 at 2015-08-11 10:11:59 -0700
+
+
+Started GET "/assets/routers/router.self-08fbc9c66987326f12762b1a79cfe18171278be940c087f21e5701228abc51d4.js?body=1" for ::1 at 2015-08-11 10:11:59 -0700
+
+
+Started GET "/assets/api/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:11:59 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:11:59 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:11:59 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:11:59 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-08-11 10:11:59 -0700
+
+
+Started GET "/assets/application.self-55d2f88127dcaaa99d5c6a5261f9015880991431c520781213525a199c900f0d.js?body=1" for ::1 at 2015-08-11 10:11:59 -0700
+
+
+Started GET "/" for ::1 at 2015-08-11 10:12:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "cFyiNKcZy2eLmkMVnV0cmg"]]
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 216ms (Views: 215.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/api/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/application.self-74d75617525e8c5f018bd48928a1b3799ffdd594bee5f7f5be0df07f5693b525.css?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/underscore.self-b84a7a5ac0e8afc4f176b95606590bfc56044eeae9286097bdee013a6909fde5.js?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/courses/courses_index.self-43020ff255ca41c0342aefb551570098bbfe834ad1a2af337f76e4123bad0f5e.js?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/backbone.self-0977290d5e68ce40d516cd4dc3965586680024e51399f0ee54ee8ed3a99b1506.js?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/code_bytes.self-fb697fe45a13adb7c2c35c5151f75424c316e2c41fd506c8633e8e7dcd5a386b.js?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/courses/courses_index_item.self-cccdd28ff128776c69dd5e589f2e7fda1d45ccddb7ccaaebc8c2590130ab4f4e.js?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/utils/composite_view.self-04295107b5cac978dfa00657f2f28ac45314d44b49880f40e8494cf46025b3a0.js?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/models/course.self-90598e12bf8eb153263791a73fce5120e4c31301b4764db51c4afb84f08a61af.js?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/collections/courses.self-4243d417a5107617ad24bc929e9f9cf3da5094f5ad555b38c7682873bf065efc.js?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/views/courses_index_item.self-0beacff74dabe8ebd110c26db031b990e91a5353e90f5276bd6cbde6c2bb1146.js?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/views/courses_index.self-b26655ccbb91e861a0bcb6f2b07816755fc6a9897a6bcc289b6635ad803199ea.js?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/routers/router.self-08fbc9c66987326f12762b1a79cfe18171278be940c087f21e5701228abc51d4.js?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/api/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/assets/application.self-55d2f88127dcaaa99d5c6a5261f9015880991431c520781213525a199c900f0d.js?body=1" for ::1 at 2015-08-11 10:12:35 -0700
+
+
+Started GET "/" for ::1 at 2015-08-11 10:13:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "cFyiNKcZy2eLmkMVnV0cmg"]]
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 279ms (Views: 278.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/application.self-74d75617525e8c5f018bd48928a1b3799ffdd594bee5f7f5be0df07f5693b525.css?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/underscore.self-b84a7a5ac0e8afc4f176b95606590bfc56044eeae9286097bdee013a6909fde5.js?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/courses/courses_index.self-5b0ea4b87f6cdc972953a0d6d30a6df79f5b4ab4123607e20c43f0e057ed26c4.js?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/backbone.self-0977290d5e68ce40d516cd4dc3965586680024e51399f0ee54ee8ed3a99b1506.js?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/code_bytes.self-fb697fe45a13adb7c2c35c5151f75424c316e2c41fd506c8633e8e7dcd5a386b.js?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/courses/courses_index_item.self-cccdd28ff128776c69dd5e589f2e7fda1d45ccddb7ccaaebc8c2590130ab4f4e.js?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/utils/composite_view.self-04295107b5cac978dfa00657f2f28ac45314d44b49880f40e8494cf46025b3a0.js?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/models/course.self-90598e12bf8eb153263791a73fce5120e4c31301b4764db51c4afb84f08a61af.js?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/collections/courses.self-4243d417a5107617ad24bc929e9f9cf3da5094f5ad555b38c7682873bf065efc.js?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/views/courses_index.self-b26655ccbb91e861a0bcb6f2b07816755fc6a9897a6bcc289b6635ad803199ea.js?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/views/courses_index_item.self-0beacff74dabe8ebd110c26db031b990e91a5353e90f5276bd6cbde6c2bb1146.js?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/routers/router.self-08fbc9c66987326f12762b1a79cfe18171278be940c087f21e5701228abc51d4.js?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/api/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/assets/application.self-55d2f88127dcaaa99d5c6a5261f9015880991431c520781213525a199c900f0d.js?body=1" for ::1 at 2015-08-11 10:13:08 -0700
+
+
+Started GET "/" for ::1 at 2015-08-11 10:14:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "cFyiNKcZy2eLmkMVnV0cmg"]]
+  Rendered shared/_header.html.erb (0.9ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 217ms (Views: 216.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/api/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/application.self-74d75617525e8c5f018bd48928a1b3799ffdd594bee5f7f5be0df07f5693b525.css?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/underscore.self-b84a7a5ac0e8afc4f176b95606590bfc56044eeae9286097bdee013a6909fde5.js?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/backbone.self-0977290d5e68ce40d516cd4dc3965586680024e51399f0ee54ee8ed3a99b1506.js?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/code_bytes.self-fb697fe45a13adb7c2c35c5151f75424c316e2c41fd506c8633e8e7dcd5a386b.js?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/courses/courses_index.self-5576f6ba6d66f6172760664d2c9ef61317679c8797097134c4d26fcc11b8de1d.js?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/courses/courses_index_item.self-cccdd28ff128776c69dd5e589f2e7fda1d45ccddb7ccaaebc8c2590130ab4f4e.js?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/utils/composite_view.self-04295107b5cac978dfa00657f2f28ac45314d44b49880f40e8494cf46025b3a0.js?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/models/course.self-90598e12bf8eb153263791a73fce5120e4c31301b4764db51c4afb84f08a61af.js?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/collections/courses.self-4243d417a5107617ad24bc929e9f9cf3da5094f5ad555b38c7682873bf065efc.js?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/views/courses_index.self-b26655ccbb91e861a0bcb6f2b07816755fc6a9897a6bcc289b6635ad803199ea.js?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/views/courses_index_item.self-0beacff74dabe8ebd110c26db031b990e91a5353e90f5276bd6cbde6c2bb1146.js?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/routers/router.self-08fbc9c66987326f12762b1a79cfe18171278be940c087f21e5701228abc51d4.js?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/api/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/assets/application.self-55d2f88127dcaaa99d5c6a5261f9015880991431c520781213525a199c900f0d.js?body=1" for ::1 at 2015-08-11 10:14:12 -0700
+
+
+Started GET "/" for ::1 at 2015-08-11 10:18:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "cFyiNKcZy2eLmkMVnV0cmg"]]
+  Rendered shared/_header.html.erb (0.9ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 209ms (Views: 208.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/api/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/application.self-74d75617525e8c5f018bd48928a1b3799ffdd594bee5f7f5be0df07f5693b525.css?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/underscore.self-b84a7a5ac0e8afc4f176b95606590bfc56044eeae9286097bdee013a6909fde5.js?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/backbone.self-0977290d5e68ce40d516cd4dc3965586680024e51399f0ee54ee8ed3a99b1506.js?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/views/courses_index.self-1351d60adb633dd4855029422065596c8ee2fa89fed1c800b5dc1905d7dc7fe8.js?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/code_bytes.self-fb697fe45a13adb7c2c35c5151f75424c316e2c41fd506c8633e8e7dcd5a386b.js?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/courses/courses_index.self-5576f6ba6d66f6172760664d2c9ef61317679c8797097134c4d26fcc11b8de1d.js?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/courses/courses_index_item.self-cccdd28ff128776c69dd5e589f2e7fda1d45ccddb7ccaaebc8c2590130ab4f4e.js?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/utils/composite_view.self-04295107b5cac978dfa00657f2f28ac45314d44b49880f40e8494cf46025b3a0.js?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/models/course.self-90598e12bf8eb153263791a73fce5120e4c31301b4764db51c4afb84f08a61af.js?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/views/courses_index_item.self-41f13eb29ef430c759763b7d09f475ecb8c7b8b5ea235e21278d3dacaf594f21.js?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/collections/courses.self-4243d417a5107617ad24bc929e9f9cf3da5094f5ad555b38c7682873bf065efc.js?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/routers/router.self-08fbc9c66987326f12762b1a79cfe18171278be940c087f21e5701228abc51d4.js?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/api/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/assets/application.self-55d2f88127dcaaa99d5c6a5261f9015880991431c520781213525a199c900f0d.js?body=1" for ::1 at 2015-08-11 10:18:42 -0700
+
+
+Started GET "/" for ::1 at 2015-08-11 10:19:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "cFyiNKcZy2eLmkMVnV0cmg"]]
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 333ms (Views: 332.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/application.self-74d75617525e8c5f018bd48928a1b3799ffdd594bee5f7f5be0df07f5693b525.css?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/underscore.self-b84a7a5ac0e8afc4f176b95606590bfc56044eeae9286097bdee013a6909fde5.js?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/backbone.self-0977290d5e68ce40d516cd4dc3965586680024e51399f0ee54ee8ed3a99b1506.js?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/code_bytes.self-fb697fe45a13adb7c2c35c5151f75424c316e2c41fd506c8633e8e7dcd5a386b.js?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/courses/courses_index_item.self-37f00e04ad9ca16b1b9c1151fdbcf416d92c444a1ba1df8eb1cc088e21b592bf.js?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/views/courses_index_item.self-0276c7d0bc780bf7845639520f65515855cec0b77c24edd55ed4d600873a7572.js?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/courses/courses_index.self-5576f6ba6d66f6172760664d2c9ef61317679c8797097134c4d26fcc11b8de1d.js?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/utils/composite_view.self-04295107b5cac978dfa00657f2f28ac45314d44b49880f40e8494cf46025b3a0.js?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/models/course.self-90598e12bf8eb153263791a73fce5120e4c31301b4764db51c4afb84f08a61af.js?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/collections/courses.self-4243d417a5107617ad24bc929e9f9cf3da5094f5ad555b38c7682873bf065efc.js?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/views/courses_index.self-1351d60adb633dd4855029422065596c8ee2fa89fed1c800b5dc1905d7dc7fe8.js?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/routers/router.self-08fbc9c66987326f12762b1a79cfe18171278be940c087f21e5701228abc51d4.js?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/api/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/assets/application.self-55d2f88127dcaaa99d5c6a5261f9015880991431c520781213525a199c900f0d.js?body=1" for ::1 at 2015-08-11 10:19:48 -0700
+
+
+Started GET "/" for ::1 at 2015-08-11 10:20:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "cFyiNKcZy2eLmkMVnV0cmg"]]
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 207ms (Views: 206.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/api/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/application.self-74d75617525e8c5f018bd48928a1b3799ffdd594bee5f7f5be0df07f5693b525.css?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/underscore.self-b84a7a5ac0e8afc4f176b95606590bfc56044eeae9286097bdee013a6909fde5.js?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/backbone.self-0977290d5e68ce40d516cd4dc3965586680024e51399f0ee54ee8ed3a99b1506.js?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/views/courses_index.self-6df77314585b7aec02369b5090f3a868494be815c39854eee55d977607de0503.js?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/code_bytes.self-fb697fe45a13adb7c2c35c5151f75424c316e2c41fd506c8633e8e7dcd5a386b.js?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/courses/courses_index.self-5576f6ba6d66f6172760664d2c9ef61317679c8797097134c4d26fcc11b8de1d.js?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/courses/courses_index_item.self-37f00e04ad9ca16b1b9c1151fdbcf416d92c444a1ba1df8eb1cc088e21b592bf.js?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/utils/composite_view.self-04295107b5cac978dfa00657f2f28ac45314d44b49880f40e8494cf46025b3a0.js?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/models/course.self-90598e12bf8eb153263791a73fce5120e4c31301b4764db51c4afb84f08a61af.js?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/collections/courses.self-4243d417a5107617ad24bc929e9f9cf3da5094f5ad555b38c7682873bf065efc.js?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/views/courses_index_item.self-0276c7d0bc780bf7845639520f65515855cec0b77c24edd55ed4d600873a7572.js?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/routers/router.self-08fbc9c66987326f12762b1a79cfe18171278be940c087f21e5701228abc51d4.js?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/api/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/assets/application.self-55d2f88127dcaaa99d5c6a5261f9015880991431c520781213525a199c900f0d.js?body=1" for ::1 at 2015-08-11 10:20:39 -0700
+
+
+Started GET "/" for ::1 at 2015-08-11 10:20:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "cFyiNKcZy2eLmkMVnV0cmg"]]
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 277ms (Views: 276.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/application.self-74d75617525e8c5f018bd48928a1b3799ffdd594bee5f7f5be0df07f5693b525.css?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/underscore.self-b84a7a5ac0e8afc4f176b95606590bfc56044eeae9286097bdee013a6909fde5.js?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/backbone.self-0977290d5e68ce40d516cd4dc3965586680024e51399f0ee54ee8ed3a99b1506.js?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/code_bytes.self-fb697fe45a13adb7c2c35c5151f75424c316e2c41fd506c8633e8e7dcd5a386b.js?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/courses/courses_index.self-5576f6ba6d66f6172760664d2c9ef61317679c8797097134c4d26fcc11b8de1d.js?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/courses/courses_index_item.self-37f00e04ad9ca16b1b9c1151fdbcf416d92c444a1ba1df8eb1cc088e21b592bf.js?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/utils/composite_view.self-04295107b5cac978dfa00657f2f28ac45314d44b49880f40e8494cf46025b3a0.js?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/routers/router.self-d59574209b8eb1fd9334371c832dd13c0df01efb671fd710e5cc0a307580e2bf.js?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/models/course.self-90598e12bf8eb153263791a73fce5120e4c31301b4764db51c4afb84f08a61af.js?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/collections/courses.self-4243d417a5107617ad24bc929e9f9cf3da5094f5ad555b38c7682873bf065efc.js?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/views/courses_index.self-6df77314585b7aec02369b5090f3a868494be815c39854eee55d977607de0503.js?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/views/courses_index_item.self-0276c7d0bc780bf7845639520f65515855cec0b77c24edd55ed4d600873a7572.js?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/api/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/assets/application.self-55d2f88127dcaaa99d5c6a5261f9015880991431c520781213525a199c900f0d.js?body=1" for ::1 at 2015-08-11 10:20:52 -0700
+
+
+Started GET "/api/courses" for ::1 at 2015-08-11 10:20:52 -0700
+Processing by Api::CoursesController#index as JSON
+  [1m[36mCourse Load (0.8ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered api/courses/_course.json.jbuilder (0.6ms)
+  Rendered api/courses/index.json.jbuilder (22.5ms)
+Completed 200 OK in 36ms (Views: 27.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2015-08-11 10:21:10 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "cFyiNKcZy2eLmkMVnV0cmg"]]
+  Rendered shared/_header.html.erb (1.9ms)
+  Rendered shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 213ms (Views: 212.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/application.self-74d75617525e8c5f018bd48928a1b3799ffdd594bee5f7f5be0df07f5693b525.css?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/api/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/underscore.self-b84a7a5ac0e8afc4f176b95606590bfc56044eeae9286097bdee013a6909fde5.js?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/backbone.self-0977290d5e68ce40d516cd4dc3965586680024e51399f0ee54ee8ed3a99b1506.js?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/views/courses_index.self-1fe9f3b11af19d1b5bbe22fda91faa4669c79da9e38f1987bf4fd168f2d3a925.js?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/code_bytes.self-fb697fe45a13adb7c2c35c5151f75424c316e2c41fd506c8633e8e7dcd5a386b.js?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/courses/courses_index.self-5576f6ba6d66f6172760664d2c9ef61317679c8797097134c4d26fcc11b8de1d.js?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/courses/courses_index_item.self-37f00e04ad9ca16b1b9c1151fdbcf416d92c444a1ba1df8eb1cc088e21b592bf.js?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/utils/composite_view.self-04295107b5cac978dfa00657f2f28ac45314d44b49880f40e8494cf46025b3a0.js?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/models/course.self-90598e12bf8eb153263791a73fce5120e4c31301b4764db51c4afb84f08a61af.js?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/collections/courses.self-4243d417a5107617ad24bc929e9f9cf3da5094f5ad555b38c7682873bf065efc.js?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/views/courses_index_item.self-0276c7d0bc780bf7845639520f65515855cec0b77c24edd55ed4d600873a7572.js?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/routers/router.self-d59574209b8eb1fd9334371c832dd13c0df01efb671fd710e5cc0a307580e2bf.js?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/api/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/assets/application.self-55d2f88127dcaaa99d5c6a5261f9015880991431c520781213525a199c900f0d.js?body=1" for ::1 at 2015-08-11 10:21:10 -0700
+
+
+Started GET "/api/courses" for ::1 at 2015-08-11 10:21:10 -0700
+Processing by Api::CoursesController#index as JSON
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered api/courses/_course.json.jbuilder (0.1ms)
+  Rendered api/courses/index.json.jbuilder (1.7ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/courses" for ::1 at 2015-08-11 10:21:37 -0700
+Processing by Api::CoursesController#index as JSON
+  [1m[35mCourse Load (1.0ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered api/courses/_course.json.jbuilder (0.1ms)
+  Rendered api/courses/index.json.jbuilder (3.3ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-11 10:22:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "cFyiNKcZy2eLmkMVnV0cmg"]]
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 204ms (Views: 203.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/application.self-74d75617525e8c5f018bd48928a1b3799ffdd594bee5f7f5be0df07f5693b525.css?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/underscore.self-b84a7a5ac0e8afc4f176b95606590bfc56044eeae9286097bdee013a6909fde5.js?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/backbone.self-0977290d5e68ce40d516cd4dc3965586680024e51399f0ee54ee8ed3a99b1506.js?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/code_bytes.self-fb697fe45a13adb7c2c35c5151f75424c316e2c41fd506c8633e8e7dcd5a386b.js?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/courses/courses_index.self-5576f6ba6d66f6172760664d2c9ef61317679c8797097134c4d26fcc11b8de1d.js?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/views/courses_index.self-47e99da78e189be8d13c0725c2b0452c7a995d74ee3dcfa2bfaa5b87714b638f.js?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/courses/courses_index_item.self-37f00e04ad9ca16b1b9c1151fdbcf416d92c444a1ba1df8eb1cc088e21b592bf.js?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/utils/composite_view.self-04295107b5cac978dfa00657f2f28ac45314d44b49880f40e8494cf46025b3a0.js?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/models/course.self-90598e12bf8eb153263791a73fce5120e4c31301b4764db51c4afb84f08a61af.js?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/collections/courses.self-4243d417a5107617ad24bc929e9f9cf3da5094f5ad555b38c7682873bf065efc.js?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/views/courses_index_item.self-0276c7d0bc780bf7845639520f65515855cec0b77c24edd55ed4d600873a7572.js?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/routers/router.self-d59574209b8eb1fd9334371c832dd13c0df01efb671fd710e5cc0a307580e2bf.js?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/api/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/assets/application.self-55d2f88127dcaaa99d5c6a5261f9015880991431c520781213525a199c900f0d.js?body=1" for ::1 at 2015-08-11 10:22:36 -0700
+
+
+Started GET "/api/courses" for ::1 at 2015-08-11 10:22:36 -0700
+Processing by Api::CoursesController#index as JSON
+  [1m[35mCourse Load (0.4ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered api/courses/_course.json.jbuilder (0.1ms)
+  Rendered api/courses/index.json.jbuilder (2.5ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-08-11 10:22:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "cFyiNKcZy2eLmkMVnV0cmg"]]
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 78ms (Views: 77.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/application.self-74d75617525e8c5f018bd48928a1b3799ffdd594bee5f7f5be0df07f5693b525.css?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/underscore.self-b84a7a5ac0e8afc4f176b95606590bfc56044eeae9286097bdee013a6909fde5.js?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/backbone.self-0977290d5e68ce40d516cd4dc3965586680024e51399f0ee54ee8ed3a99b1506.js?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/code_bytes.self-fb697fe45a13adb7c2c35c5151f75424c316e2c41fd506c8633e8e7dcd5a386b.js?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/courses/courses_index.self-5576f6ba6d66f6172760664d2c9ef61317679c8797097134c4d26fcc11b8de1d.js?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/courses/courses_index_item.self-37f00e04ad9ca16b1b9c1151fdbcf416d92c444a1ba1df8eb1cc088e21b592bf.js?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/utils/composite_view.self-04295107b5cac978dfa00657f2f28ac45314d44b49880f40e8494cf46025b3a0.js?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/models/course.self-90598e12bf8eb153263791a73fce5120e4c31301b4764db51c4afb84f08a61af.js?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/collections/courses.self-4243d417a5107617ad24bc929e9f9cf3da5094f5ad555b38c7682873bf065efc.js?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/views/courses_index.self-47e99da78e189be8d13c0725c2b0452c7a995d74ee3dcfa2bfaa5b87714b638f.js?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/views/courses_index_item.self-0276c7d0bc780bf7845639520f65515855cec0b77c24edd55ed4d600873a7572.js?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/routers/router.self-d59574209b8eb1fd9334371c832dd13c0df01efb671fd710e5cc0a307580e2bf.js?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/api/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/assets/application.self-55d2f88127dcaaa99d5c6a5261f9015880991431c520781213525a199c900f0d.js?body=1" for ::1 at 2015-08-11 10:22:41 -0700
+
+
+Started GET "/api/courses" for ::1 at 2015-08-11 10:22:41 -0700
+Processing by Api::CoursesController#index as JSON
+  [1m[35mCourse Load (0.5ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered api/courses/_course.json.jbuilder (0.2ms)
+  Rendered api/courses/index.json.jbuilder (2.5ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-08-11 10:22:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "cFyiNKcZy2eLmkMVnV0cmg"]]
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 214ms (Views: 213.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/api/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/application.self-74d75617525e8c5f018bd48928a1b3799ffdd594bee5f7f5be0df07f5693b525.css?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/underscore.self-b84a7a5ac0e8afc4f176b95606590bfc56044eeae9286097bdee013a6909fde5.js?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/backbone.self-0977290d5e68ce40d516cd4dc3965586680024e51399f0ee54ee8ed3a99b1506.js?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/code_bytes.self-fb697fe45a13adb7c2c35c5151f75424c316e2c41fd506c8633e8e7dcd5a386b.js?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/courses/courses_index.self-5576f6ba6d66f6172760664d2c9ef61317679c8797097134c4d26fcc11b8de1d.js?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/courses/courses_index_item.self-37f00e04ad9ca16b1b9c1151fdbcf416d92c444a1ba1df8eb1cc088e21b592bf.js?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/utils/composite_view.self-04295107b5cac978dfa00657f2f28ac45314d44b49880f40e8494cf46025b3a0.js?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/models/course.self-90598e12bf8eb153263791a73fce5120e4c31301b4764db51c4afb84f08a61af.js?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/views/courses_index_item.self-1a3f6acf5492f27cdb58de94975799a1746e3822f91ff7ebbfe4b8dfd0cebf69.js?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/collections/courses.self-4243d417a5107617ad24bc929e9f9cf3da5094f5ad555b38c7682873bf065efc.js?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/views/courses_index.self-47e99da78e189be8d13c0725c2b0452c7a995d74ee3dcfa2bfaa5b87714b638f.js?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/routers/router.self-d59574209b8eb1fd9334371c832dd13c0df01efb671fd710e5cc0a307580e2bf.js?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/api/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/assets/application.self-55d2f88127dcaaa99d5c6a5261f9015880991431c520781213525a199c900f0d.js?body=1" for ::1 at 2015-08-11 10:22:50 -0700
+
+
+Started GET "/api/courses" for ::1 at 2015-08-11 10:22:50 -0700
+Processing by Api::CoursesController#index as JSON
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered api/courses/_course.json.jbuilder (0.1ms)
+  Rendered api/courses/index.json.jbuilder (1.9ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-08-11 10:23:19 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "cFyiNKcZy2eLmkMVnV0cmg"]]
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 194ms (Views: 193.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api/courses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/application.self-74d75617525e8c5f018bd48928a1b3799ffdd594bee5f7f5be0df07f5693b525.css?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/underscore.self-b84a7a5ac0e8afc4f176b95606590bfc56044eeae9286097bdee013a6909fde5.js?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/views/courses_index.self-8eb7dd5d491ef89d14d10df4489f9557dd3db15f0ce2819d873ccf7d4d097d06.js?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/backbone.self-0977290d5e68ce40d516cd4dc3965586680024e51399f0ee54ee8ed3a99b1506.js?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/code_bytes.self-fb697fe45a13adb7c2c35c5151f75424c316e2c41fd506c8633e8e7dcd5a386b.js?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/courses/courses_index.self-5576f6ba6d66f6172760664d2c9ef61317679c8797097134c4d26fcc11b8de1d.js?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/courses/courses_index_item.self-37f00e04ad9ca16b1b9c1151fdbcf416d92c444a1ba1df8eb1cc088e21b592bf.js?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/utils/composite_view.self-04295107b5cac978dfa00657f2f28ac45314d44b49880f40e8494cf46025b3a0.js?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/models/course.self-90598e12bf8eb153263791a73fce5120e4c31301b4764db51c4afb84f08a61af.js?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/collections/courses.self-4243d417a5107617ad24bc929e9f9cf3da5094f5ad555b38c7682873bf065efc.js?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/views/courses_index_item.self-1a3f6acf5492f27cdb58de94975799a1746e3822f91ff7ebbfe4b8dfd0cebf69.js?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/routers/router.self-d59574209b8eb1fd9334371c832dd13c0df01efb671fd710e5cc0a307580e2bf.js?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/api/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/assets/application.self-55d2f88127dcaaa99d5c6a5261f9015880991431c520781213525a199c900f0d.js?body=1" for ::1 at 2015-08-11 10:23:20 -0700
+
+
+Started GET "/api/courses" for ::1 at 2015-08-11 10:23:20 -0700
+Processing by Api::CoursesController#index as JSON
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered api/courses/_course.json.jbuilder (0.1ms)
+  Rendered api/courses/index.json.jbuilder (1.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms)

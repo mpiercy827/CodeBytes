@@ -1,0 +1,1 @@
+I"8function(obj){var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div class="about container">\n  <h3>About</h3>\n  <p>\n    CodeBytes is currently under construction. Come back soon!\n  </p>\n</div>\n\n<div class="courses">\n  <h3>Courses</h3>\n</div>\n');}return __p.join('');}:ET

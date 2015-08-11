@@ -1,11 +1,20 @@
 CodeBytes.Routers.Router = Backbone.Router.extend({
   routes: {
-
+    "": "index"
   },
 
   initialize: function (options) {
     this.courses = options.courses;
     this.$rootEl = options.$rootEl;
+  },
+
+  index: function () {
+    this.courses.fetch();
+    var coursesView = new CodeBytes.Views.CoursesIndex({
+      collection: this.courses
+    });
+
+    this._swapView(coursesView);
   },
 
   _swapView: function (view) {
