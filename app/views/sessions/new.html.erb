@@ -1,4 +1,6 @@
 <h3>Sign In</h3>
 
+<%= render "shared/errors" %>
+
 <%= render partial: "shared/newform",
     locals: {button_text: "Log In", url: session_url} %>
