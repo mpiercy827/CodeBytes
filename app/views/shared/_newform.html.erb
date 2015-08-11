@@ -1,12 +1,4 @@
-<% if type == "session" %>
-  <% action_url = "session_url" %>
-  <% button_text = "Log In" %>
-<% elsif type == "user" %>
-  <% action_url = "users_url" %>
-  <% button_text = "Sign Up" %>
-<% end %>
-
-<form action="<%= action_url %>" method="post">
+<form action="<%= url %>" method="post">
   <input type="hidden"
     name="authenticity_token"
     value="<%= form_authenticity_token %>">

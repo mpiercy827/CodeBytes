@@ -1,11 +1,15 @@
-<!-- TODO: Fixed logged in method. -->
-
-<header>
-  <h3 class="logo">CodeBytes</h3>
-  <% if logged_in? %>
-    <%= button_to "Log Out", session_url, method: :delete %>
-  <% else %>
-    <%= link_to "Log In", new_session_url %>
-    <%= link_to "Sign Up", new_user_url %>
-  <% end %>
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <h3 class="logo">CodeBytes</h3>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <% if logged_in? %>
+          <li><%= link_to "Log Out", session_url, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Log In", new_session_url %></li>
+          <li><%= link_to "Sign Up", new_user_url %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
 </header>
