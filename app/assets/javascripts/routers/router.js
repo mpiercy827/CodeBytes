@@ -1,7 +1,7 @@
 CodeBytes.Routers.Router = Backbone.Router.extend({
   routes: {
     "": "index",
-    "courses/:name": "showCourse"
+    "courses/:id": "showCourse"
   },
 
   initialize: function (options) {
@@ -18,9 +18,12 @@ CodeBytes.Routers.Router = Backbone.Router.extend({
     this._swapView(coursesView);
   },
 
-  showCourse: function (languageName) {
-    var course = this.courses.findWhere({ language: languageName });
-    debugger;
+  showCourse: function (id) {
+    var course = this.courses.getOrFetch(id);
+    var courseShow = new CodeBytes.Views.CourseShow({
+      model: course
+    });
+    this._swapView(courseShow);
   },
 
   _swapView: function (view) {
