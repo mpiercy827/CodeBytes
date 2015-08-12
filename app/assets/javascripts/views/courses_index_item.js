@@ -9,7 +9,7 @@ CodeBytes.Views.CoursesIndexItem = Backbone.View.extend({
 
   render: function () {
     var content = this.template({ course: this.model });
-    this.$el.attr("data-id", this.model.id);
+    this.$el.attr("data-course-id", this.model.id);
     this.$el.html(content);
     return this;
   }

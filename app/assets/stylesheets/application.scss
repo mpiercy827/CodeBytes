@@ -36,7 +36,7 @@ body {
   font-family: helvetica;
 }
 
-/*courses displays*/
+/*course list items displays*/
 
 .course-item {
   width: auto;
@@ -50,5 +50,21 @@ body {
 }
 
 .course-item:hover {
+  background-color: #eee;
+}
+
+/*topic list item displays*/
+.topic-item {
+  width: auto;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 24px;
+}
+
+.topic-item p {
+  font-size: 12px;
+}
+
+.topic-item:hover {
   background-color: #eee;
 }

@@ -25,7 +25,7 @@ CodeBytes.Views.CoursesIndex = Backbone.CompositeView.extend({
 
   showCourse: function (event) {
     event.preventDefault();
-    var id = $(event.currentTarget).data("id");
+    var id = $(event.currentTarget).data("course-id");
     Backbone.history.navigate("courses/"+id, {trigger: true});
   }
 });
