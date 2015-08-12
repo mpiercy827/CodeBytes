@@ -3,7 +3,8 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
 
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);
-    // this.addExercise(this.model.exercises().first);
+    this.listenTo(this.model.exercises(), "sync", this.addExercise);
+    this.model.exercises().each(this.addExercise.bind(this));
   },
 
   addExercise: function (exercise) {
@@ -12,7 +13,8 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
     //   oldExerciseView && oldExerciseView.remove();
     // }
     var exerciseView = new CodeBytes.Views.ExerciseShow({ model: exercise });
-    this.addSubview(".exercise")
+    debugger;
+    this.addSubview(".exercise", exerciseView);
   },
 
   render: function () {
