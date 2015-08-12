@@ -15,6 +15,6 @@ CodeBytes.Models.Course = Backbone.Model.extend({
       this._topics = new CodeBytes.Collections.Topics();
     }
 
-    return this._topics
+    return this._topics;
   }
 });
