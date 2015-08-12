@@ -19,7 +19,8 @@ CodeBytes.Routers.Router = Backbone.Router.extend({
   },
 
   showCourse: function (languageName) {
-
+    var course = this.courses.findWhere({ language: languageName });
+    debugger;
   },
 
   _swapView: function (view) {
