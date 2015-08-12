@@ -1,33 +1,21 @@
-# Phase 2: Viewing Topics and Exercises
+# Phase 2: Creating an Interactive Terminal
 
 ## Rails
 ### Models
-* Topic
-* Exercise
 
 ### Controllers
-Api::CoursesController (show)
-Api::TopicsController (show)
-Api::ExercisesController (show)
 
 ### Views
-* courses/show.json.jbuilder
-* topics/show.json.jbuilder
-* exercises/show.json.jbuilder
 
 ## Backbone
 ### Models
-* Topic
-* Exercise
+* Interpreter
 
 ### Collections
-* Topics
-* Exercises
 
 ### Views
-* CourseShow (composite view; contains TopicsItem subviews)
-* TopicsItem
-* TopicShow (composite view; contains ExerciseShow, Editor and Console subviews)
-* ExerciseShow
+* Editor
+* Console
 
 ## Gems/Libraries
+jsrepl

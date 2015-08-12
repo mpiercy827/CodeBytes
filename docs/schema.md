@@ -29,8 +29,15 @@ column name  | data type | details
 id           | integer   | not null, primary key
 readings     | text      | not null
 instructions | text      | not null
-solution     | text      |
 topic_id     | integer   | not null, foreign key (references topics)
+
+## solutions
+column name  | data type | details
+-------------|-----------|-----------------------
+id           | integer   | not null, primary key
+result       | text      | not null
+output       | text      | not null
+exercise_id  | integer   | not null, foreign key (references exercises)
 
 ## badges
 column name | data type | details

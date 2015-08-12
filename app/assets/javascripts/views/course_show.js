@@ -8,7 +8,6 @@ CodeBytes.Views.CourseShow = Backbone.CompositeView.extend({
   },
 
   addTopic: function (topic) {
-    debugger;
     var topicItemView = new CodeBytes.Views.TopicListItem({ model: topic });
     this.addSubview(".topics-list", topicItemView);
   },

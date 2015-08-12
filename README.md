@@ -12,7 +12,7 @@ CodeBytes is an online learning community inspired by CodeAcademy where users ca
 - [x] Create accounts
 - [x] Create sessions (log in)
 - [x] View courses
-- [ ] View topics (within each course)
+- [x] View topics (within each course)
 - [ ] View exercises in each topic
 - [ ] Use an interactive terminal to complete exercises
 - [ ] Earn badges for completing courses
