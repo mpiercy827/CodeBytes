@@ -12,12 +12,66 @@ Course.create!(
         this one. Great for beginners!"
 )
 
+Topic.create!(
+  title: "Hello World!",
+  description: "Make your very first computer program",
+  course_id: 1
+)
+
+Topic.create!(
+  title: "Data Types",
+  description: "Make your second program!",
+  course_id: 1
+)
+
+Topic.create!(
+  title: "Make Google",
+  description: "Using what you've learned in the last 2 sections, make Google.",
+  course_id: 1
+)
+
 Course.create!(
   language: "HTML/CSS",
   description: "Learn to make and style your very own webpages in this tutorial!"
 )
 
+Topic.create!(
+  title: "Headers",
+  description: "Learn how to make big text appear on a page!",
+  course_id: 2
+)
+
+Topic.create!(
+  title: "Paragraphs",
+  description: "Learn how to make small text appear on a page!",
+  course_id: 2
+)
+
+Topic.create!(
+  title: "CSS Positioning",
+  description: "Waste hours trying to center and position elements on your page!",
+  course_id: 2
+)
+
 Course.create!(
   language: "Javascript",
   description: "Create dynamic content in your webpages using Javascript!"
+)
+
+Topic.create!(
+  title: "Hello World!",
+  description: "Write a simple program in Javascript.",
+  course_id: 3
+)
+
+Topic.create!(
+  title: "Backbone",
+  description: "Duplicate Backbone.js using what you've learned in the first lesson",
+  course_id: 3
+)
+
+Topic.create!(
+  title: "C",
+  description: "Write the C programming language using Javascript",
+  course_id: 3
 )
