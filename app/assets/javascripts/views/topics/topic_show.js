@@ -3,7 +3,6 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
 
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);
-    debugger;
   },
 
   render: function () {
