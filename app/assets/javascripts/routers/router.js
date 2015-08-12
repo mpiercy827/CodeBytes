@@ -1,11 +1,13 @@
 CodeBytes.Routers.Router = Backbone.Router.extend({
   routes: {
     "": "index",
+    "courses/:courseId/topics/:topicId": "showTopic",
     "courses/:id": "showCourse"
   },
 
   initialize: function (options) {
     this.courses = options.courses;
+    this.topics = options.topics;
     this.$rootEl = options.$rootEl;
   },
 
@@ -24,6 +26,14 @@ CodeBytes.Routers.Router = Backbone.Router.extend({
       model: course
     });
     this._swapView(courseShow);
+  },
+
+  showTopic: function (courseId, topicId) {
+    var topic = this.topics.getOrFetch(topicId);
+    var topicShow = new CodeBytes.Views.TopicShow({
+      model: topic
+    });
+    this._swapView(topicShow);
   },
 
   _swapView: function (view) {
