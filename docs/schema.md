@@ -37,7 +37,7 @@ column name  | data type | details
 id           | integer   | not null, primary key
 result       | text      | not null
 output       | text      | not null
-exercise_id  | integer   | not null, foreign key (references exercises)
+exercise_id  | integer   | not null, unique, foreign key (references exercises)
 
 ## badges
 column name | data type | details
