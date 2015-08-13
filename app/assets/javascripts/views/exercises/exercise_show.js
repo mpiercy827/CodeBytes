@@ -4,7 +4,10 @@ CodeBytes.Views.ExerciseShow = Backbone.View.extend({
   className: "exercise-text",
 
   render: function () {
-    var content = this.template({ exercise: this.model });
+    var content = this.template({
+      exercises: this.collection.models,
+      activeExercise: this.model
+    });
     this.$el.html(content);
     return this;
   }
