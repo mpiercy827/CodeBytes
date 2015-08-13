@@ -17,7 +17,6 @@ CodeBytes.Views.CourseShow = Backbone.CompositeView.extend({
   },
 
   onRender: function () {
-    debugger;
     if (!CodeBytes.Interpreter.lang && this.model.has("language")) {
       CodeBytes.Interpreter.loadLanguage(this.model.get("language"));
     }
