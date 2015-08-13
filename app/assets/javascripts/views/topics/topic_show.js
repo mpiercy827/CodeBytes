@@ -5,7 +5,8 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
     "change .exercise-list": "switchToExercise"
   },
 
-  initialize: function () {
+  initialize: function (options) {
+    this.course = options.course;
     this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.model.exercises(), "add", this.addFirstExercise);
   },
@@ -24,6 +25,13 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
     }
   },
 
+  onRender: function () {
+    debugger;
+    if (this.course.has("language")) {
+      CodeBytes.Interpreter.loadLanguage(this.course.get("language"));
+    }
+  },
+
   switchToExercise: function (exercise) {
     alert("You switched to another exercise!");
   },
@@ -33,6 +41,7 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
     var content = this.template({ topic: this.model });
     this.$el.html(content);
     this.attachSubviews();
+    this.onRender();
     return this;
   }
 });
