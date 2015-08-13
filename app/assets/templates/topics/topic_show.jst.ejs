@@ -3,8 +3,57 @@
 
 </div>
 <div class="interactive">
-  <textarea class="editor"></textarea>
-  <button type="submit" class="code-submit">Submit Code</button>
+  <form class="editor-area">
+    <textarea class="editor"></textarea>
+    <button type="submit" class="code-submit">Submit Code</button>
+  </form>
   <section class="terminal">
   </section>
 </div>
+
+<script src="/jsrepl/jsrepl.js" id="jsrepl-script">
+</script>
+<script type="text/javascript">
+  var $editor = $(".editor");
+  var $editorArea = $(".editor-area");
+  var $terminal = $(".terminal");
+
+  var packaged_data = {};
+
+  window.jsrepl = new JSREPL({
+    input: function (callback) { callback(); },
+    output: function (output) {
+      if (output) {
+        packaged_data.output = output.split("\n");
+      }
+    },
+    result: function (result) {
+      packaged_data.result = result;
+      $terminal.text(packaged_data.output + "\n" + packaged_data.result);
+
+    },
+    error: function (error) {
+      packaged_data.error = error;
+    },
+    timeout: {
+      time: 4000,
+      callback: function () {
+        console.log("timing out");
+        window.jsrepl.loadLanguage("ruby", function () {
+          console.log("ruby reloaded");
+        })
+        return true;
+      }
+    },
+  });
+
+  $editorArea.submit(function(event){
+    event.preventDefault();
+    var code = $(event.currentTarget).find("textarea").val();
+    jsrepl.eval(code);
+  });
+
+  jsrepl.loadLanguage('ruby', function () {
+    console.log('ruby loaded');
+  });
+</script>
