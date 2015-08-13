@@ -3,10 +3,6 @@ window.CodeBytes = {
   Collections: {},
   Views: {},
   Routers: {},
-
-  InterpreterOptions: {},
-  Interpreter: new JSREPL(CodeBytes.InterpreterOptions),
-
   initialize: function() {
     var courses = new CodeBytes.Collections.Courses();
     var topics = new CodeBytes.Collections.Topics();
