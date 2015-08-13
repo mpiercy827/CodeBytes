@@ -27,7 +27,8 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
   },
 
   setLang: function () {
-    if (!CodeBytes.Interpreter.lang && this.course.has("language")) {
+    if (this.course.has("language") &&
+          CodeBytes.Interpreter.lang !== this.course.get("language")) {
       CodeBytes.Interpreter.loadLanguage(this.course.get("language"));
     }
   },
@@ -37,11 +38,9 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
   },
 
   render: function () {
-
     var content = this.template({ topic: this.model });
     this.$el.html(content);
     this.attachSubviews();
-    this.onRender();
     return this;
   }
 });

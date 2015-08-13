@@ -7,6 +7,7 @@ CodeBytes.Views.CourseShow = Backbone.CompositeView.extend({
 
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);
+    this.listenTo(this.model, "sync", this.setLang);
     this.listenTo(this.model.topics(), "add", this.addTopic);
     this.model.topics().each(this.addTopic.bind(this));
   },
@@ -16,8 +17,9 @@ CodeBytes.Views.CourseShow = Backbone.CompositeView.extend({
     this.addSubview(".topics-list", topicItemView);
   },
 
-  onRender: function () {
-    if (!CodeBytes.Interpreter.lang && this.model.has("language")) {
+  setLang: function () {
+    if (this.model.has("language") &&
+          CodeBytes.Interpreter.lang !== this.model.get("language")) {
       CodeBytes.Interpreter.loadLanguage(this.model.get("language"));
     }
   },
@@ -26,7 +28,6 @@ CodeBytes.Views.CourseShow = Backbone.CompositeView.extend({
     var content = this.template({ course: this.model });
     this.$el.html(content);
     this.attachSubviews();
-    this.onRender();
     return this;
   },
 
