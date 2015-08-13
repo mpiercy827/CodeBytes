@@ -3,8 +3,8 @@
 
 </div>
 <div class="interactive">
-  <form class="editor-area">
-    <textarea class="editor"></textarea>
+  <form class="editor">
+    <textarea class="text-editor"></textarea>
     <button type="submit" class="code-submit">Submit Code</button>
   </form>
   <section class="terminal">
@@ -13,9 +13,10 @@
 
 <script type="text/javascript">
   CodeBytes.resetInterpreterElements();
-  CodeBytes.InterpreterElements.$editorArea.submit(function(event){
+
+  CodeBytes.InterpreterElements.$editor.submit(function(event){
       event.preventDefault();
-      var code = $(event.currentTarget).find("textarea").val();
+      var code = CodeBytes.InterpreterElements.$textEditor.val();
       CodeBytes.Interpreter.eval(code);
   });
 </script>

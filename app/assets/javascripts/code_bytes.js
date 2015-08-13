@@ -4,8 +4,11 @@ window.CodeBytes = {
   Views: {},
   Routers: {},
   initialize: function() {
+    CodeBytes.resetInterpreterElements();
+
     var courses = new CodeBytes.Collections.Courses();
     var topics = new CodeBytes.Collections.Topics();
+    
     new CodeBytes.Routers.Router({
       courses: courses,
       topics: topics,
@@ -16,10 +19,10 @@ window.CodeBytes = {
 
   resetInterpreterElements: function () {
     CodeBytes.InterpreterElements = {
+      $textEditor: $(".text-editor"),
       $editor: $(".editor"),
-      $editorArea: $(".editor-area"),
       $terminal: $(".terminal"),
-    }
+    };
   }
 };
 

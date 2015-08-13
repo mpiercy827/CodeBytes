@@ -1,10 +1,4 @@
 //These are the options that are used for the interpreter.
-CodeBytes.InterpreterElements = {
-  $editor: $(".editor"),
-  $editorArea: $(".editor-area"),
-  $terminal: $(".terminal"),
-};
-
 InterpreterOptions = {
   input: function (callback) {
     callback();
