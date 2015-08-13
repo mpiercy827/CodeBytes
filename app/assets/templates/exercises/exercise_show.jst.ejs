@@ -1,8 +1,8 @@
 Exercise Number:
 <br>
 <select class="exercise-list">
-  <% for (var i = 1; i <= exercises.length; i++) { %>
-    <option data-id="<%= exercises[i-1].id %>"><%= i %></option>
+  <% for (var i = 0; i < exercises.length; i++) { %>
+    <option data-id="<%= exercises[i].id %>"><%= i + 1 %></option>
   <% } %>
 </select>
 <br>
