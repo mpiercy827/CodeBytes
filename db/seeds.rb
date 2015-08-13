@@ -25,8 +25,8 @@ Exercise.create!(
 )
 
 Exercise.create!(
-  readings: "Follow the instructions!",
-  instructions: "Enter the following command:\nputs 5\n'Hello'",
+  readings: "Do whatever you want now!",
+  instructions: "You are now a master programmer!",
   topic_id: 1
 )
 
