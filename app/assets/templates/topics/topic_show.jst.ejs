@@ -11,8 +11,13 @@
   </section>
 </div>
 
+
 <script src="/jsrepl/jsrepl.js" id="jsrepl-script">
 </script>
+<!--
+  TODO: Set jsrepl in the CodeBytes namespace, loadLanguage on course show,
+  install submit handlers on each individual topic show page.
+-->
 <script type="text/javascript">
   var $editor = $(".editor");
   var $editorArea = $(".editor-area");
@@ -22,11 +27,13 @@
 
   window.jsrepl = new JSREPL({
     input: function (callback) { callback(); },
+
     output: function (output) {
       if (output) {
         packaged_data.output = _(output.split("\n")).without("");
       }
     },
+
     result: function (result) {
       packaged_data.result = result;
       var consoleEl = $("<pre class='output'>");
@@ -36,6 +43,7 @@
       consoleEl.append("> " + packaged_data.result);
       $terminal.html(consoleEl);
     },
+
     error: function (error) {
       packaged_data.error = _(error.split("\n")).without("");
       var consoleEl = $("<pre class='output'>");
@@ -47,6 +55,7 @@
       });
       $terminal.html(consoleEl);
     },
+
     timeout: {
       time: 4000,
       callback: function () {
