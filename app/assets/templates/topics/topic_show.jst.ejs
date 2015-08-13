@@ -37,19 +37,21 @@
       $terminal.html(consoleEl);
     },
     error: function (error) {
-      packaged_data.error = error;
+      packaged_data.error = _(error.split("\n")).without("");
       var consoleEl = $("<pre class='output'>");
       _(packaged_data.output).each(function (out) {
         consoleEl.append(out + "\n");
       });
-      consoleEl.append("> " + packaged_data.error);
+      _(packaged_data.error).each(function (err) {
+        consoleEl.append("> " + err + "\n");
+      });
       $terminal.html(consoleEl);
     },
     timeout: {
       time: 4000,
       callback: function () {
         console.log("timing out");
-        window.jsrepl.loadLanguage("ruby", function () {
+        jsrepl.loadLanguage("ruby", function () {
           console.log("ruby reloaded");
         })
         return true;
