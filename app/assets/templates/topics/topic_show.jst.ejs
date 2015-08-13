@@ -24,13 +24,18 @@
     input: function (callback) { callback(); },
     output: function (output) {
       if (output) {
-        packaged_data.output = output.split("\n");
+        packaged_data.output = _(output.split("\n")).without("");
       }
     },
     result: function (result) {
       packaged_data.result = result;
-      $terminal.text(packaged_data.output + "\n" + packaged_data.result);
-
+      var consoleEl = $("<pre class='output'>");
+      debugger;
+      _(packaged_data.output).each(function (out) {
+        consoleEl.append(out + "\n");
+      });
+      consoleEl.append("> " + packaged_data.result);
+      $terminal.html(consoleEl);
     },
     error: function (error) {
       packaged_data.error = error;
