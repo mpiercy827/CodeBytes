@@ -7,7 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Course.create!(
-  language: "Ruby",
+  title: "Ruby",
+  language: "ruby",
   description: "An easy-to-learn language that can be used to make web apps like
         this one. Great for beginners!"
 )
@@ -81,56 +82,8 @@ Solution.create!(
 #####################################################
 
 Course.create!(
-  language: "HTML/CSS",
-  description: "Learn to make and style your very own webpages in this tutorial!"
-)
-
-#####################################################
-
-Topic.create!(
-  title: "Headers",
-  description: "Learn how to make big text appear on a page!",
-  course_id: 2
-)
-
-Exercise.create!(
-  readings: "Follow the instructions!",
-  instructions: "Enter the following command:\n",
-  topic_id: 4
-)
-
-#####################################################
-
-Topic.create!(
-  title: "Paragraphs",
-  description: "Learn how to make small text appear on a page!",
-  course_id: 2
-)
-
-Exercise.create!(
-  readings: "Follow the instructions!",
-  instructions: "Enter the following command:\n",
-  topic_id: 5
-)
-
-#####################################################
-
-Topic.create!(
-  title: "CSS Positioning",
-  description: "Waste hours trying to center and position elements on your page!",
-  course_id: 2
-)
-
-Exercise.create!(
-  readings: "Follow the instructions!",
-  instructions: "Enter the following command:\n",
-  topic_id: 6
-)
-
-#####################################################
-
-Course.create!(
-  language: "Javascript",
+  title: "Javascript",
+  language: "javascript",
   description: "Create dynamic content in your webpages using Javascript!"
 )
 
@@ -139,13 +92,13 @@ Course.create!(
 Topic.create!(
   title: "Hello World!",
   description: "Write a simple program in Javascript.",
-  course_id: 3
+  course_id: 2
 )
 
 Exercise.create!(
   readings: "Follow the instructions!",
   instructions: "Enter the following command:\n(function(){return 5})();",
-  topic_id: 7
+  topic_id: 4
 )
 
 #####################################################
@@ -153,13 +106,13 @@ Exercise.create!(
 Topic.create!(
   title: "Backbone",
   description: "Duplicate Backbone.js using what you've learned in the first lesson",
-  course_id: 3
+  course_id: 2
 )
 
 Exercise.create!(
   readings: "Follow the instructions!",
   instructions: "Enter the following command:\n(function(){return 5})();",
-  topic_id: 8
+  topic_id: 5
 )
 
 #####################################################
@@ -167,11 +120,11 @@ Exercise.create!(
 Topic.create!(
   title: "C",
   description: "Write the C programming language using Javascript",
-  course_id: 3
+  course_id: 2
 )
 
 Exercise.create!(
   readings: "Follow the instructions!",
   instructions: "Enter the following command:\n(function(){return 5})();",
-  topic_id: 9
+  topic_id: 6
 )

@@ -1,1 +1,1 @@
-json.extract! course, :id, :language, :description
+json.extract! course, :id, :title, :language, :description
