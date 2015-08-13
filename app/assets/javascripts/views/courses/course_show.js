@@ -7,7 +7,6 @@ CodeBytes.Views.CourseShow = Backbone.CompositeView.extend({
 
   initialize: function () {
     CodeBytes.Interpreter.loadLanguage(this.model.get("language"));
-    debugger;
     this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.model.topics(), "add", this.addTopic);
     this.model.topics().each(this.addTopic.bind(this));

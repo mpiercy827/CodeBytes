@@ -1,5 +1,5 @@
 //These are the options that are used for the interpreter.
-InterpreterElements = {
+CodeBytes.InterpreterElements = {
   $editor: $(".editor"),
   $editorArea: $(".editor-area"),
   $terminal: $(".terminal"),
@@ -23,7 +23,7 @@ InterpreterOptions = {
     $consoleText.append(CodeBytes.UserResults.output);
     $consoleText.append("> " + resultData);
 
-    InterpreterElements.$terminal.html($consoleText);
+    CodeBytes.InterpreterElements.$terminal.html($consoleText);
   },
 
   error: function (errorData) {
@@ -33,7 +33,7 @@ InterpreterOptions = {
     $consoleText.append(CodeBytes.UserResults.output);
     $consoleText.append("> " + errorData);
 
-    InterpreterElements.$terminal.html($consoleText);
+    CodeBytes.InterpreterElements.$terminal.html($consoleText);
   },
 
   timeout: {

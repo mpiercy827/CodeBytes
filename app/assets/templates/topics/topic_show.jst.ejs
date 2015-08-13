@@ -11,10 +11,11 @@
   </section>
 </div>
 
-
-<script src="/jsrepl/jsrepl.js" id="jsrepl-script">
+<script type="text/javascript">
+  $(".editor-area").submit(function(event){
+      debugger;
+      event.preventDefault();
+      var code = $(event.currentTarget).find("textarea").val();
+      CodeBytes.Interpreter.eval(code);
+  });
 </script>
-<!--
-  TODO: Set jsrepl in the CodeBytes namespace, loadLanguage on course show,
-  install submit handlers on each individual topic show page.
--->

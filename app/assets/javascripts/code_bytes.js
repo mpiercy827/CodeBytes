@@ -12,6 +12,14 @@ window.CodeBytes = {
       $rootEl: $("#content")
     });
     Backbone.history.start();
+  },
+
+  resetInterpreterElements: function () {
+    CodeBytes.InterpreterElements = {
+      $editor: $(".editor"),
+      $editorArea: $(".editor-area"),
+      $terminal: $(".terminal"),
+    }
   }
 };
 
