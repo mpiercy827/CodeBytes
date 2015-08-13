@@ -12,8 +12,8 @@
 </div>
 
 <script type="text/javascript">
-  $(".editor-area").submit(function(event){
-      debugger;
+  CodeBytes.resetInterpreterElements();
+  CodeBytes.InterpreterElements.$editorArea.submit(function(event){
       event.preventDefault();
       var code = $(event.currentTarget).find("textarea").val();
       CodeBytes.Interpreter.eval(code);
