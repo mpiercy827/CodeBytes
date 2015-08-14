@@ -17,8 +17,9 @@ InterpreterOptions = {
       type: "get",
       url: "api/exercises/" + CodeBytes.UserResults.exercise_id + "/check",
       data: CodeBytes.UserResults,
-      // dataType: "JSON",
-      success: function (responseData) {debugger;}
+      success: function (responseData) {
+        CodeBytes.Terminal.trigger("feedback", [responseData]);
+      }
     });
 
     var $consoleText = $("<pre>").addClass("output");
