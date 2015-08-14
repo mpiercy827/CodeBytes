@@ -18,7 +18,6 @@ CodeBytes.Views.Feedback = Backbone.View.extend({
   },
 
   render: function () {
-    debugger;
     var content = this.template({ results: this.results });
     this.$el.html(content);
     return this;
