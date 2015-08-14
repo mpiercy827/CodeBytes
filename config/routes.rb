@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :courses, only: [:index, :show]
     resources :topics, only: [:index, :show]
     resources :exercises, only: [:index, :show]
+    resources :solutions, only: [:show]
   end
 
   root to: "static_pages#root"
