@@ -9,21 +9,18 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
     this.course = options.course;
     this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.course, "sync", this.setLang);
-    this.listenTo(this.model.exercises(), "add", this.addFirstExercise);
+    this.addFirstExercise();
   },
 
-  addFirstExercise: function (exercise) {
+  addFirstExercise: function () {
     //This function will load the first exercise in a topic when the topic
     //Is first clicked. users can then navigate between exercises on the
     //Exercise show page.
-    if (!this._activeExercise) {
-      this._activeExercise = exercise;
-      var exerciseView = new CodeBytes.Views.ExerciseShow({
-        collection: this.model.exercises(),
-        model: this._activeExercise
-      });
-      this.addSubview(".exercise", exerciseView);
-    }
+    var exerciseView = new CodeBytes.Views.ExerciseShow({
+      activeIndex: 0,
+      collection: this.model.exercises()
+    });
+    this.addSubview(".exercise", exerciseView);
   },
 
   setLang: function () {
@@ -44,8 +41,9 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
     }
   },
 
-  switchToExercise: function (exercise) {
-    alert("You switched to another exercise!");
+  switchToExercise: function (event) {
+    // TODO: select the correct option from the event.
+    this.model.exercises().trigger("activate", [1]);
   },
 
   render: function () {
