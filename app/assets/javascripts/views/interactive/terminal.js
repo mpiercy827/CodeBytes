@@ -6,23 +6,16 @@ CodeBytes.Views.Terminal = Backbone.CompositeView.extend({
   },
 
   giveFeedback: function (event, feedback) {
-    var viewParams = {
-      text: "Not quite, try again!"
-    }
+    // var fbClass = (feedback.result && feedback.output) ? "positive" : "negative";
+    // $(".feedback").attr("class", fbClass);
 
-    if (feedback.result && feedback.output) {
-      alert("awesome!");
-    } else if (feedback.result) {
-      alert("incorrect output");
-    } else if (feedback.output) {
-      alert("incorrect result");
-    } else {
-      alert("You're terrible");
-    }
+    var feedbackView = new CodeBytes.Views.Feedback(feedback);
+    this.attachSubview(".feedback", feedbackView);
   },
 
   render: function () {
     this.$el.html(this.template());
+    this.attachSubviews();
     return this;
   }
 });
