@@ -8,6 +8,6 @@ class Exercise < ActiveRecord::Base
   end
 
   def correct_result(user_result)
-    solution.result == user_result
+    solution.result.to_json == user_result
   end
 end

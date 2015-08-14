@@ -14,6 +14,8 @@ class Api::ExercisesController < ApplicationController
     @feedback["output"] = @exercise.correct_output(params[:output])
     @feedback["result"] = @exercise.correct_result(params[:result])
 
+    fail
+    
     render json: @feedback
   end
 end

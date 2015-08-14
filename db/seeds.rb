@@ -49,13 +49,13 @@ Topic.create!(
 
 Exercise.create!(
   readings: "Follow the instructions!",
-  instructions: "Enter the following command:\nputs 'Hello'\n5",
+  instructions: "Enter the following command:\nputs 5\n'Hello'",
   topic_id: 2
 )
 
 Solution.create!(
-  output: "Hello\n",
-  result: "5",
+  output: "5\n",
+  result: "Hello",
   exercise_id: 3
 )
 
