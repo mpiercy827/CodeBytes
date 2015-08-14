@@ -2,13 +2,16 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
   template: JST["topics/topic_show"],
 
   events: {
-    "change .exercise-list": "switchToExercise"
+    "change .exercise-list": "switchToExercise",
+    "submit": "evaluateCode"
   },
 
   initialize: function (options) {
     this.course = options.course;
     this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.course, "sync", this.setLang);
+    this.addSubview(".interactive", new CodeBytes.Views.Editor());
+    this.addSubview(".interactive", new CodeBytes.Views.Terminal());
     this.addFirstExercise();
   },
 
@@ -21,6 +24,12 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
       collection: this.model.exercises()
     });
     this.addSubview(".exercise", exerciseView);
+  },
+
+  evaluateCode: function (event) {
+    event.preventDefault();
+    var code = CodeBytes.InterpreterElements.$textEditor.val();
+    CodeBytes.Interpreter.eval(code);
   },
 
   setLang: function () {
@@ -41,6 +50,10 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
     }
   },
 
+  onRender: function () {
+    CodeBytes.resetInterpreterElements();
+  },
+
   switchToExercise: function (event) {
     event.preventDefault();
     var index = $(event.currentTarget).val() - 1;
@@ -51,6 +64,7 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
     var content = this.template({ topic: this.model });
     this.$el.html(content);
     this.attachSubviews();
+    this.onRender();
     return this;
   }
 });

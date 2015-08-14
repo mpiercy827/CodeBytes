@@ -1,22 +1,6 @@
 <div class="exercise">
   <%= topic.get("title") %>
-
 </div>
+
 <div class="interactive">
-  <form class="editor">
-    <textarea class="text-editor"></textarea>
-    <button type="submit" class="code-submit">Submit Code</button>
-  </form>
-  <section class="terminal">
-  </section>
 </div>
-
-<script type="text/javascript">
-  CodeBytes.resetInterpreterElements();
-
-  CodeBytes.InterpreterElements.$editor.submit(function(event){
-      event.preventDefault();
-      var code = CodeBytes.InterpreterElements.$textEditor.val();
-      CodeBytes.Interpreter.eval(code);
-  });
-</script>

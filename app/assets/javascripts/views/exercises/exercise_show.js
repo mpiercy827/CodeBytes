@@ -19,6 +19,11 @@ CodeBytes.Views.ExerciseShow = Backbone.View.extend({
     this.render();
   },
 
+  onRender: function () {
+    CodeBytes.UserResults = {};
+    CodeBytes.UserResults.exercise_id = this.activeExercise().id;
+  },
+
   render: function () {
     if (!this.activeExercise()) { return; }
 
@@ -28,6 +33,7 @@ CodeBytes.Views.ExerciseShow = Backbone.View.extend({
     });
 
     this.$el.html(content);
+    this.onRender();
     return this;
   }
 });
