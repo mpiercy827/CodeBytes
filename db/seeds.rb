@@ -23,13 +23,13 @@ Topic.create!(
 
 Exercise.create!(
   readings: "Follow the instructions!",
-  instructions: "Enter the following command:\nputs 5\n'Hello'",
+  instructions: "Enter the following command:\nputs 'Hello'\n5",
   topic_id: 1
 )
 
 Solution.create!(
-  output: "5",
-  result: "Hello",
+  output: "Hello\n",
+  result: "5",
   exercise_id: 1
 )
 
@@ -49,13 +49,13 @@ Topic.create!(
 
 Exercise.create!(
   readings: "Follow the instructions!",
-  instructions: "Enter the following command:\nputs 5\n'Hello'",
+  instructions: "Enter the following command:\nputs 'Hello'\n5",
   topic_id: 2
 )
 
 Solution.create!(
-  output: "5",
-  result: "Hello",
+  output: "Hello\n",
+  result: "5",
   exercise_id: 3
 )
 
@@ -69,13 +69,13 @@ Topic.create!(
 
 Exercise.create!(
   readings: "Follow the instructions!",
-  instructions: "Enter the following command:\nputs 5\n'Hello'",
+  instructions: "Enter the following command:\nputs 'Hello'\n5",
   topic_id: 3
 )
 
 Solution.create!(
-  output: "5",
-  result: "Hello",
+  output: "Hello\n",
+  result: "5",
   exercise_id: 4
 )
 

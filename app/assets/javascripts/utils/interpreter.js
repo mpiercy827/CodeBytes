@@ -12,6 +12,15 @@ InterpreterOptions = {
 
   result: function (resultData) {
     CodeBytes.UserResults.result = resultData;
+
+    $.ajax({
+      type: "get",
+      url: "api/exercises/" + CodeBytes.UserResults.exercise_id + "/check",
+      data: CodeBytes.UserResults,
+      // dataType: "JSON",
+      success: function (responseData) {debugger;}
+    });
+
     var $consoleText = $("<pre>").addClass("output");
 
     $consoleText.append(CodeBytes.UserResults.output);
