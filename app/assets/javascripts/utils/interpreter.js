@@ -17,7 +17,7 @@ InterpreterOptions = {
     $consoleText.append(CodeBytes.UserResults.output);
     $consoleText.append("> " + resultData);
 
-    CodeBytes.InterpreterElements.$terminal.html($consoleText);
+    CodeBytes.Terminal.html($consoleText);
   },
 
   error: function (errorData) {
@@ -27,7 +27,7 @@ InterpreterOptions = {
     $consoleText.append(CodeBytes.UserResults.output);
     $consoleText.append("> " + errorData);
 
-    CodeBytes.InterpreterElements.$terminal.html($consoleText);
+    CodeBytes.Terminal.html($consoleText);
   },
 
   timeout: {

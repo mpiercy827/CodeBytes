@@ -4,11 +4,11 @@ window.CodeBytes = {
   Views: {},
   Routers: {},
   initialize: function() {
-    CodeBytes.resetInterpreterElements();
+    CodeBytes.findTerminal();
 
     var courses = new CodeBytes.Collections.Courses();
     var topics = new CodeBytes.Collections.Topics();
-    
+
     new CodeBytes.Routers.Router({
       courses: courses,
       topics: topics,
@@ -17,12 +17,8 @@ window.CodeBytes = {
     Backbone.history.start();
   },
 
-  resetInterpreterElements: function () {
-    CodeBytes.InterpreterElements = {
-      $textEditor: $(".text-editor"),
-      $editor: $(".editor"),
-      $terminal: $(".terminal"),
-    };
+  findTerminal: function () {
+    CodeBytes.Terminal = $(".terminal");
   }
 };
 

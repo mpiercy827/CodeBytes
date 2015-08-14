@@ -28,7 +28,7 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
 
   evaluateCode: function (event) {
     event.preventDefault();
-    var code = CodeBytes.InterpreterElements.$textEditor.val();
+    var code = $(".text-editor").val();
     CodeBytes.Interpreter.eval(code);
   },
 
@@ -44,14 +44,14 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
       //language is reset.
       int.timeout.callback = function () {
         int.loadLanguage(course.get("language"));
-        CodeBytes.InterpreterElements.$terminal.html("> Code Timed Out.");
+        CodeBytes.Terminal.html("> Code Timed Out.");
         return true;
       };
     }
   },
 
   onRender: function () {
-    CodeBytes.resetInterpreterElements();
+    CodeBytes.findTerminal();
   },
 
   switchToExercise: function (event) {
