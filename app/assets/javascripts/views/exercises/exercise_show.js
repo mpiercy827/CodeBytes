@@ -14,8 +14,8 @@ CodeBytes.Views.ExerciseShow = Backbone.View.extend({
   },
 
   makeActive: function (args) {
-    var idx = args[0];
-    this.activeIndex = idx;
+    var index = args[0];
+    this.activeIndex = index;
     this.render();
   },
 

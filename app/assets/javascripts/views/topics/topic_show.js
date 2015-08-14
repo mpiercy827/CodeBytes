@@ -42,8 +42,9 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
   },
 
   switchToExercise: function (event) {
-    // TODO: select the correct option from the event.
-    this.model.exercises().trigger("activate", [1]);
+    event.preventDefault();
+    var index = $(event.currentTarget).val() - 1;
+    this.model.exercises().trigger("activate", [index]);
   },
 
   render: function () {

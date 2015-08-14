@@ -2,7 +2,11 @@ Exercise Number:
 <br>
 <select class="exercise-list">
   <% exercises.each(function (exercise, idx) { %>
-    <option data-id="<%= exercise.id %>"><%= idx + 1 %></option>
+    <option
+      data-id="<%= exercise.id %>"
+      <% if (exercise === activeExercise) { %>
+        selected
+      <% } %>><%= idx + 1 %></option>
   <% }) %>
 </select>
 <br>

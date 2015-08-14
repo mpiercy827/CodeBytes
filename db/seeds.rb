@@ -128,3 +128,15 @@ Exercise.create!(
   instructions: "Enter the following command:\n(function(){return 5})();",
   topic_id: 6
 )
+
+Exercise.create!(
+  readings: "Do whatever you want now!",
+  instructions: "You are now a master programmer!",
+  topic_id: 6
+)
+
+Exercise.create!(
+  readings: "Does this actually work?",
+  instructions: "I guess it does!",
+  topic_id: 6
+)
