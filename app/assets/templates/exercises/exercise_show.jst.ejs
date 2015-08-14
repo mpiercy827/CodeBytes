@@ -1,5 +1,6 @@
 Exercise Number:
 <br>
+
 <select class="exercise-list">
   <% exercises.each(function (exercise, idx) { %>
     <option
@@ -9,11 +10,22 @@ Exercise Number:
       <% } %>><%= idx + 1 %></option>
   <% }) %>
 </select>
+
 <br>
 <h3>Readings</h3>
-<%= activeExercise.get("readings") %>
+
+<% _(activeExercise.get("readings").split("\n")).each(function (line) { %>
+  <%= line %>
+  <br>
+<%  }) %>
+
 <hr>
+
 <h3>Instructions</h3>
-<%= activeExercise.get("instructions") %>
+
+<% _(activeExercise.get("instructions").split("\n")).each(function (line) { %>
+  <%= line %>
+  <br>
+<%  }) %>
 <br>
 <br>
