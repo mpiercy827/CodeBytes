@@ -31,7 +31,7 @@ InterpreterOptions = {
   },
 
   timeout: {
-    time: 10000,
+    time: 5000,
     callback: function () {
       console.log("timed out");
       CodeBytes.Interpreter.loadLanguage("ruby", function() {
