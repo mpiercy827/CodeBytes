@@ -1,7 +1,11 @@
 CodeBytes.Views.Feedback = Backbone.View.extend({
-  className: "feedback-message",
+  className: "alert-dismissible",
 
   template: JST["interactive/feedback"],
+
+  events: {
+    "click .close": "remove"
+  },
 
   initialize: function (results) {
     this.results = results;
