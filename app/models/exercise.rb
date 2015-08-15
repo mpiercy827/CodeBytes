@@ -4,10 +4,10 @@ class Exercise < ActiveRecord::Base
   has_one :solution
 
   def correct_output(user_output)
-    solution.output && solution.output == user_output
+    solution.output == user_output
   end
 
   def correct_result(user_result)
-    solution.result && solution.result == user_result
+    solution.result == user_result
   end
 end

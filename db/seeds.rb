@@ -69,15 +69,30 @@ Topic.create!(
 ##############################
 
 Exercise.create!(
-  readings: "Follow the instructions!",
-  instructions: "Enter the following command:\nputs 'Hello'\n5",
+  readings:   "Welcome to the CodeBytes Ruby course! If this is your first time programming or your first time using Ruby, you're in the right place! Ruby is a very easy-to-learn language, and a very powerful one as well. It can be used to make web applications, just like this one!
+
+              To warm up to Ruby, we are going to make a simple one line program. Simply follow the instructions below and press submit to continue!",
+  instructions: "Enter the following command:\n\nputs \"Hello World!\"",
   topic_id: 1
 )
 
 Solution.create!(
-  output: "Hello\n",
-  result: "5",
+  output: "Hello World!\n",
   exercise_id: 1
+)
+
+Exercise.create!(
+  readings:   "Nice work! You may have a good idea what 'puts' does after the last exercise. It simply takes whatever follows it and prints it in the terminal ('puts' is short for put string).
+
+              You can print multiple statements on multiple lines, and they will all show up in the terminal. Try it yourself!",
+  instructions: "Print two statements on separate lines. On the first, print
+                \"I'm ready...\" and on the second, pring \"to learn some Ruby!\"",
+  topic_id: 1
+)
+
+Solution.create!(
+  output: "I'm ready...\nto learn some Ruby!\n",
+  exercise_id: 2
 )
 
 
