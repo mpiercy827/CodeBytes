@@ -55,7 +55,7 @@ Exercise.create!(
 
 Solution.create!(
   output: "5\n",
-  result: "Hello",
+  result: "\"Hello\"",
   exercise_id: 3
 )
 

@@ -11,7 +11,6 @@ InterpreterOptions = {
   },
 
   result: function (resultData) {
-    // resultData = JSON.parse(resultData)
     CodeBytes.UserResults.result = resultData;
     $.ajax({
       type: "get",
