@@ -6,6 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+
+#########################
+# RUBY COURSE SEED DATA #
+#########################
+
 Course.create!(
   title: "Ruby",
   language: "ruby",
@@ -13,13 +18,55 @@ Course.create!(
         this one. Great for beginners!"
 )
 
-#####################################################
+###############
+# RUBY TOPICS #
+###############
 
 Topic.create!(
-  title: "Hello World!",
-  description: "Make your very first computer program",
+  title: "Programming 101",
+  description: "Make your very first computer program!",
   course_id: 1
+  #id: 1
 )
+
+Topic.create!(
+  title: "Variables and Data Types",
+  description: "Learn how to use the building blocks of Ruby (and most other languages).",
+  course_id: 1
+  #id: 2
+)
+
+Topic.create!(
+  title: "On One Condition...",
+  description: "Control the flow of your programs with if/else and switch statements",
+  course_id: 1
+  #id: 3
+)
+
+Topic.create!(
+  title: "Getting Loopy",
+  description: "Avoid unnecessary repetition by using loops and iteration!",
+  course_id: 1
+  #id: 4
+)
+
+Topic.create!(
+  title: "Methods & Returns",
+  description: "Use functional programming to make your own Rock, Paper, Scissors Game!",
+  course_id: 1
+  #id: 5
+)
+
+Topic.create!(
+  title: "Introduction to Objects",
+  description: "Finish out the course by learning the basics of Object Oriented Programming in Ruby!",
+  course_id: 1
+  #id: 6
+)
+
+##############################
+# RUBY EXERCISES & SOLUTIONS #
+##############################
 
 Exercise.create!(
   readings: "Follow the instructions!",
@@ -33,110 +80,67 @@ Solution.create!(
   exercise_id: 1
 )
 
-Exercise.create!(
-  readings: "Do whatever you want now!",
-  instructions: "You are now a master programmer!",
-  topic_id: 1
-)
 
-#####################################################
 
-Topic.create!(
-  title: "Data Types",
-  description: "Make your second program!",
-  course_id: 1
-)
 
-Exercise.create!(
-  readings: "Follow the instructions!",
-  instructions: "Enter the following command:\nputs 5\n'Hello'",
-  topic_id: 2
-)
 
-Solution.create!(
-  output: "5\n",
-  result: "\"Hello\"",
-  exercise_id: 3
-)
 
-#####################################################
-
-Topic.create!(
-  title: "Make Google",
-  description: "Using what you've learned in the last 2 sections, make Google.",
-  course_id: 1
-)
-
-Exercise.create!(
-  readings: "Follow the instructions!",
-  instructions: "Enter the following command:\nputs 'Hello'\n5",
-  topic_id: 3
-)
-
-Solution.create!(
-  output: "Hello\n",
-  result: "5",
-  exercise_id: 4
-)
-
-#####################################################
+###############################
+# JAVASCRIPT COURSE SEED DATA #
+###############################
 
 Course.create!(
   title: "Javascript",
   language: "javascript",
-  description: "Create dynamic content in your webpages using Javascript!"
+  description: "Learn Javascript, a powerful language used on almost every web application you'll visit!"
 )
 
-#####################################################
+#####################
+# JAVASCRIPT TOPICS #
+#####################
 
 Topic.create!(
-  title: "Hello World!",
-  description: "Write a simple program in Javascript.",
+  title: "A First Taste of Javascript",
+  description: "Warm up to Javascript with this introductory tutorial.",
   course_id: 2
+  #id: 7
 )
-
-Exercise.create!(
-  readings: "Follow the instructions!",
-  instructions: "Enter the following command:\n(function(){return 5})();",
-  topic_id: 4
-)
-
-#####################################################
 
 Topic.create!(
-  title: "Backbone",
-  description: "Duplicate Backbone.js using what you've learned in the first lesson",
+  title: "Variables and Data Types",
+  description: "Learn about all of the data types available to you as a Javascript programmer!",
   course_id: 2
+  #id: 8
 )
-
-Exercise.create!(
-  readings: "Follow the instructions!",
-  instructions: "Enter the following command:\n(function(){return 5})();",
-  topic_id: 5
-)
-
-#####################################################
 
 Topic.create!(
-  title: "C",
-  description: "Write the C programming language using Javascript",
+  title: "Conditionals",
+  description: "Make your own browser based adventure game!",
   course_id: 2
+  #id: 9
 )
 
-Exercise.create!(
-  readings: "Follow the instructions!",
-  instructions: "Enter the following command:\n(function(){return 5})();",
-  topic_id: 6
+Topic.create!(
+  title: "For and While Loops in JS",
+  description: "Search for the needle in the haystack using loops!",
+  course_id: 2
+  #id: 10
 )
 
-Exercise.create!(
-  readings: "Do whatever you want now!",
-  instructions: "You are now a master programmer!",
-  topic_id: 6
+Topic.create!(
+  title: "Functions",
+  description: "Learn all about Javascript functions.",
+  course_id: 2
+  #id: 11
 )
 
-Exercise.create!(
-  readings: "Does this actually work?",
-  instructions: "I guess it does!",
-  topic_id: 6
+Topic.create!(
+  title: "Javascript Objects",
+  description: "Learn the basics of objects in Javascript and complete the course!",
+  course_id: 2
+  #id: 12
 )
+
+####################################
+# JAVASCRIPT EXERCISES & SOLUTIONS #
+####################################
