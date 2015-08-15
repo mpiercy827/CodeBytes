@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :exercises, only: [:index, :show] do
       get 'check' => "exercises#check"
     end
+    resources :exercise_completions, only: :create
   end
 
   root to: "static_pages#root"

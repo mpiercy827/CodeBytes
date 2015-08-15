@@ -11,8 +11,8 @@ InterpreterOptions = {
   },
 
   result: function (resultData) {
+    // resultData = JSON.parse(resultData)
     CodeBytes.UserResults.result = resultData;
-
     $.ajax({
       type: "get",
       url: "api/exercises/" + CodeBytes.UserResults.exercise_id + "/check",

@@ -11,10 +11,10 @@ class Api::ExercisesController < ApplicationController
     @exercise = Exercise.find(params[:exercise_id])
     @feedback = {}
 
+    fail
     @feedback["output"] = @exercise.correct_output(params[:output])
     @feedback["result"] = @exercise.correct_result(params[:result])
 
-    fail
     # TODO: The return value is not being set properly. Fix this!
 
     render json: @feedback
