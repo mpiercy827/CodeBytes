@@ -21,7 +21,8 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
     //Exercise show page.
     var exerciseView = new CodeBytes.Views.ExerciseShow({
       activeIndex: 0,
-      collection: this.model.exercises()
+      collection: this.model.exercises(),
+      course: this.course
     });
     this.addSubview(".exercise", exerciseView);
   },

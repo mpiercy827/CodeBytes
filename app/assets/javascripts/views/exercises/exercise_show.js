@@ -9,6 +9,7 @@ CodeBytes.Views.ExerciseShow = Backbone.View.extend({
 
   initialize: function (options) {
     this.activeIndex = options.activeIndex;
+    this.course = options.course;
     this.listenTo(this.collection, 'add', this.render);
     this.listenTo(this.collection, 'activate', this.makeActive);
   },
@@ -28,7 +29,8 @@ CodeBytes.Views.ExerciseShow = Backbone.View.extend({
     if (!this.activeExercise()) { return; }
     var content = this.template({
       exercises: this.collection,
-      activeExercise: this.activeExercise()
+      activeExercise: this.activeExercise(),
+      course: this.course
     });
 
     this.$el.html(content);
