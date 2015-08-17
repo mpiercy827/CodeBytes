@@ -4,7 +4,7 @@ class Exercise < ActiveRecord::Base
   has_one :solution
 
   def correct_output(user_output)
-    solution.output == user_output
+    solution.output == user_output || solution.output == user_output.to_s
   end
 
   def correct_result(user_result)
