@@ -4,8 +4,7 @@ CodeBytes.Views.Feedback = Backbone.View.extend({
   template: JST["interactive/feedback"],
 
   events: {
-    "click .close": "remove",
-    "click .next-exercise": "nextExercise"
+    "click .close": "remove"
   },
 
   initialize: function (results) {
@@ -15,15 +14,14 @@ CodeBytes.Views.Feedback = Backbone.View.extend({
   },
 
   addSuccessOrFailure: function (results) {
+    $(".positive").remove();
+    $(".negative").remove();
+
     if (results.result && results.output) {
       this.$el.addClass("positive");
     } else {
       this.$el.addClass("negative");
     }
-  },
-
-  nextExercise: function (event) {
-    event.preventDefault();
   },
 
   render: function () {

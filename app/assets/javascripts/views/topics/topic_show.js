@@ -3,6 +3,7 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
 
   events: {
     "change .exercise-list": "switchToExercise",
+    "click .positive": "nextExerciseOrTopic",
     "submit": "evaluateCode"
   },
 
@@ -56,6 +57,11 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
 
   onRender: function () {
     CodeBytes.findTerminal();
+  },
+
+  nextExerciseOrTopic: function (event) {
+    event.preventDefault();
+    alert("made it here!");
   },
 
   switchToExercise: function (event) {

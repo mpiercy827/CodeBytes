@@ -115,11 +115,12 @@ body {
 
 .course-item {
   width: 25%;
+  min-height: 200px;
   border-radius: 5px;
   display: inline-block;
   box-sizing: border-box;
   margin: 5px;
-  padding: 5px;
+  padding: 15px;
   font-size: 24px;
   transition: background-color 1s;
   -webkit-transition: background-color 1s;
@@ -204,6 +205,12 @@ body {
   font-size: 20px;
 }
 
+.next {
+  display: inline-block;
+  font-size: 20px;
+  color: #fff;
+}
+
 .negative {
   position: relative;
   top: -45px;
@@ -221,8 +228,4 @@ body {
   padding: 5px;
   background-color: white;
   border-radius: 50%;
-}
-
-.next-exercise {
-  height: 100%;
 }
