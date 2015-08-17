@@ -87,11 +87,14 @@ body {
   float: right;
 }
 
-.text-editor {
+.editor-container {
+  postition: relative;
   width: 100%;
   min-height: 400px;
-  background-color: #333;
-  color: #fff;
+}
+
+#editor {
+  height: 400px;
 }
 
 .terminal {

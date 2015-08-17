@@ -3,7 +3,7 @@ CodeBytes.Views.Editor = Backbone.View.extend({
 
   tagName: "form",
 
-  className: "editor",
+  className: "editor-container",
 
   render: function () {
     this.$el.html(this.template());
