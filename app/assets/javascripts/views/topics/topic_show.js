@@ -29,7 +29,8 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
 
   evaluateCode: function (event) {
     event.preventDefault();
-    var code = $(".text-editor").val();
+    var editor = ace.edit("editor");
+    var code = editor.getValue();
     CodeBytes.Interpreter.eval(code);
   },
 
