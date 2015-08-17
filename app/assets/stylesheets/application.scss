@@ -98,29 +98,31 @@ body {
 /* course index */
 
 .about {
-  background-color: #ccc;
-  color: black;
-  width: 60%;
-  margin: 0 auto;
+  background-color: #18bc9c;
+  color: white;
+  // position: absolute;
+  width: 100%;
+  top: 50px;
+  left: 0;
   text-align: center;
   border-radius: 5px;
   transition: background-color 1s, color 1s;
   -webkit-transition: background-color 1s, color 1s;
 }
 
-.about:hover {
-  background-color: #66FF99;
-}
-
 /*course list items displays*/
 
 .course-item {
-  width: auto;
+  width: 25%;
   border-radius: 5px;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 5px;
   padding: 5px;
   font-size: 24px;
   transition: background-color 1s;
   -webkit-transition: background-color 1s;
+  background-color: #eee;
 }
 
 .course-item p {
@@ -128,7 +130,7 @@ body {
 }
 
 .course-item:hover {
-  background-color: #eee;
+  background-color: #fff;
 }
 
 /*topic list item displays*/
