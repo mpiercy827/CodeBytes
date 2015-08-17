@@ -17,7 +17,11 @@ CodeBytes.Views.ExerciseShow = Backbone.View.extend({
   makeActive: function (args) {
     var index = args[0];
     this.activeIndex = index;
-    this.render();
+    if (this.activeExercise()) {
+      this.render();
+    } else {
+      Backbone.history.navigate("/courses/" + this.course.id, {trigger: true});
+    }
   },
 
   onRender: function () {

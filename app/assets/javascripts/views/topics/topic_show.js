@@ -61,7 +61,15 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
 
   nextExerciseOrTopic: function (event) {
     event.preventDefault();
-    alert("made it here!");
+    var nextIndex = $(".exercise-list").val();
+
+    var editor = ace.edit("editor");
+    editor.setValue("");
+    
+    this.model.exercises().trigger("activate", [nextIndex]);
+
+    $(event.currentTarget).remove();
+    CodeBytes.Terminal.empty();
   },
 
   switchToExercise: function (event) {
