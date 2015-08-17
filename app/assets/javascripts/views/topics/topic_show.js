@@ -10,7 +10,9 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
     this.course = options.course;
     this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.course, "sync", this.setLang);
-    this.addSubview(".interactive", new CodeBytes.Views.Editor());
+    this.addSubview(".interactive", new CodeBytes.Views.Editor({
+      model: this.course
+    }));
     this.addSubview(".interactive", new CodeBytes.Views.Terminal());
     this.addFirstExercise();
   },
