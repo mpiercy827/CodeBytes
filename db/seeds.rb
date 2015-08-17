@@ -80,6 +80,7 @@ Exercise.create!(
 
 Solution.create!(
   output: "Hello World!\n",
+  result: "nil",
   exercise_id: 1
 )
 
@@ -95,6 +96,7 @@ Exercise.create!(
 
 Solution.create!(
   output: "1\n2\n3\n4\n5\n",
+  result: "nil",
   exercise_id: 2
 )
 
@@ -108,6 +110,7 @@ Exercise.create!(
 
 Solution.create!(
   output: "moo\n",
+  result: "nil",
   exercise_id: 3
 )
 
@@ -118,6 +121,8 @@ Exercise.create!(
 )
 
 Solution.create!(
+  output: "",
+  result: "nil",
   exercise_id: 4
 )
 
@@ -128,6 +133,8 @@ Exercise.create!(
 )
 
 Solution.create!(
+  output: "",
+  result: "nil",
   exercise_id: 5
 )
 
@@ -138,6 +145,8 @@ Exercise.create!(
 )
 
 Solution.create!(
+  output: "",
+  result: "nil",
   exercise_id: 6
 )
 
@@ -148,6 +157,8 @@ Exercise.create!(
 )
 
 Solution.create!(
+  output: "",
+  result: "nil",
   exercise_id: 7
 )
 
@@ -158,6 +169,8 @@ Exercise.create!(
 )
 
 Solution.create!(
+  output: "",
+  result: "nil",
   exercise_id: 8
 )
 # Exercise.create!(
@@ -309,6 +322,7 @@ Exercise.create!(
 
 Solution.create!(
   output: "Hello World!\n",
+  result: "",
   exercise_id: 9
 )
 
@@ -324,6 +338,7 @@ Exercise.create!(
 
 Solution.create!(
   result: "5",
+  output: "",
   exercise_id: 10
 )
 
@@ -337,6 +352,7 @@ Exercise.create!(
 
 Solution.create!(
   output: "moo\n",
+  result: "",
   exercise_id: 11
 )
 
@@ -347,6 +363,8 @@ Exercise.create!(
 )
 
 Solution.create!(
+  result: "",
+  output: "",
   exercise_id: 12
 )
 
@@ -357,6 +375,8 @@ Exercise.create!(
 )
 
 Solution.create!(
+  result: "",
+  output: "",
   exercise_id: 13
 )
 
@@ -367,6 +387,8 @@ Exercise.create!(
 )
 
 Solution.create!(
+  result: "",
+  output: "",
   exercise_id: 14
 )
 
@@ -377,6 +399,8 @@ Exercise.create!(
 )
 
 Solution.create!(
+  result: "",
+  output: "",
   exercise_id: 15
 )
 
@@ -387,5 +411,7 @@ Exercise.create!(
 )
 
 Solution.create!(
+  result: "",
+  output: "",
   exercise_id: 16
 )
