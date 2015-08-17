@@ -17,11 +17,7 @@ CodeBytes.Views.ExerciseShow = Backbone.View.extend({
   makeActive: function (args) {
     var index = args[0];
     this.activeIndex = index;
-    if (this.activeExercise()) {
-      this.render();
-    } else {
-      this.nextTopicOrCourse();
-    }
+    this.activeExercise() ? this.render() : this.nextTopicOrCourse();
   },
 
   nextTopicOrCourse: function () {
@@ -29,8 +25,7 @@ CodeBytes.Views.ExerciseShow = Backbone.View.extend({
     if (this.course.topics().at(topicId) === this.course.topics().last) {
       Backbone.history.navigate("", {trigger: true});
     } else {
-      // var currTopic = this.course.topics().where({ id: topicId });
-      // debugger;
+      Backbone.history.navigate("courses/" + this.course.id, {trigger: true});
     }
   },
 

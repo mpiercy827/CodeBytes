@@ -19,15 +19,18 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
   },
 
   addFirstExercise: function () {
-    //This function will load the first exercise in a topic when the topic
-    //Is first clicked. users can then navigate between exercises on the
-    //Exercise show page.
     var exerciseView = new CodeBytes.Views.ExerciseShow({
       activeIndex: 0,
       collection: this.model.exercises(),
       course: this.course
     });
     this.addSubview(".exercise", exerciseView);
+  },
+
+  clearEditorAndTerminal: function () {
+    var editor = ace.edit("editor");
+    editor.setValue("");
+    CodeBytes.Terminal.empty();
   },
 
   evaluateCode: function (event) {
@@ -41,12 +44,9 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
     var course = this.course;
     var int = CodeBytes.Interpreter;
 
-    //If the interpreter's language isn't the current course's language,
-    //this sets it correctly
     if (course.has("language") && int.lang !== course.get("language")) {
       int.loadLanguage(course.get("language"));
-      //If the interpreter times out, this ensures that the correct
-      //language is reset.
+
       int.timeout.callback = function () {
         int.loadLanguage(course.get("language"));
         CodeBytes.Terminal.html("> Code Timed Out.");
@@ -63,21 +63,15 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
     event.preventDefault();
     var nextIndex = $(".exercise-list").val();
     this.model.exercises().trigger("activate", [nextIndex]);
-
+    this.clearEditorAndTerminal();
     $(event.currentTarget).remove();
-    var editor = ace.edit("editor");
-    editor.setValue("");
-    CodeBytes.Terminal.empty();
   },
 
   switchToExercise: function (event) {
     event.preventDefault();
     var index = $(event.currentTarget).val() - 1;
     this.model.exercises().trigger("activate", [index]);
-
-    var editor = ace.edit("editor");
-    editor.setValue("");
-    CodeBytes.Terminal.empty();
+    this.clearEditorAndTerminal();
   },
 
   render: function () {
