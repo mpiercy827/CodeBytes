@@ -21,18 +21,71 @@
   top: 20px;
 }
 
-/* header */
-
-.logo {
-  float: left;
-  margin-right: 10px;
-  color: #FFF;
-  text-transform: uppercase;
+/* navbar */
+.navbar-default {
+  background-color: #2f2f2f;
+  border-color: #18bc9c;
+}
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #ffffff;
+  background-color: #18bc9c;
+}
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+.navbar-default nav {
+  float: right;
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+  background-color: #18bc9c;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #18bc9c;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #18bc9c;
+}
+.navbar-default .navbar-toggle {
+  border-color: #18bc9c;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #18bc9c;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-link {
+  color: #ffffff;
+}
+.navbar-default .navbar-link:hover {
+  color: #ffffff;
 }
 
-.logo:hover {
-  color: #ccc;
-  text-decoration: none;
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #18bc9c;
+  }
 }
 
 /* body */
@@ -42,6 +95,23 @@ body {
   font-family: helvetica;
 }
 
+/* course index */
+
+.about {
+  background-color: #ccc;
+  color: black;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 1s, color 1s;
+  -webkit-transition: background-color 1s, color 1s;
+}
+
+.about:hover {
+  background-color: #66FF99;
+}
+
 /*course list items displays*/
 
 .course-item {
@@ -49,6 +119,8 @@ body {
   border-radius: 5px;
   padding: 5px;
   font-size: 24px;
+  transition: background-color 1s;
+  -webkit-transition: background-color 1s;
 }
 
 .course-item p {
