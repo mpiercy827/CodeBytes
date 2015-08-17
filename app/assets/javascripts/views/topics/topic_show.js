@@ -62,13 +62,11 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
   nextExerciseOrTopic: function (event) {
     event.preventDefault();
     var nextIndex = $(".exercise-list").val();
-
-    var editor = ace.edit("editor");
-    editor.setValue("");
-    
     this.model.exercises().trigger("activate", [nextIndex]);
 
     $(event.currentTarget).remove();
+    var editor = ace.edit("editor");
+    editor.setValue("");
     CodeBytes.Terminal.empty();
   },
 
@@ -76,6 +74,10 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
     event.preventDefault();
     var index = $(event.currentTarget).val() - 1;
     this.model.exercises().trigger("activate", [index]);
+
+    var editor = ace.edit("editor");
+    editor.setValue("");
+    CodeBytes.Terminal.empty();
   },
 
   render: function () {

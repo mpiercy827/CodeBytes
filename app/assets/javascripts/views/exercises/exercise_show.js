@@ -20,7 +20,17 @@ CodeBytes.Views.ExerciseShow = Backbone.View.extend({
     if (this.activeExercise()) {
       this.render();
     } else {
-      Backbone.history.navigate("/courses/" + this.course.id, {trigger: true});
+      this.nextTopicOrCourse();
+    }
+  },
+
+  nextTopicOrCourse: function () {
+    var topicId = this.collection.at(0).get("topic_id");
+    if (this.course.topics().at(topicId) === this.course.topics().last) {
+      Backbone.history.navigate("", {trigger: true});
+    } else {
+      // var currTopic = this.course.topics().where({ id: topicId });
+      // debugger;
     }
   },
 
