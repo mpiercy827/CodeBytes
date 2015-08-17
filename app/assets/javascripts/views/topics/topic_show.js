@@ -1,6 +1,8 @@
 CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
   template: JST["topics/topic_show"],
 
+  className: "container topic-show",
+
   events: {
     "change .exercise-list": "switchToExercise",
     "click .positive": "nextExerciseOrTopic",

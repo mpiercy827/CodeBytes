@@ -1,6 +1,8 @@
 CodeBytes.Views.CourseShow = Backbone.CompositeView.extend({
   template: JST["courses/course_show"],
 
+  className: "container course-show",
+
   events: {
     "click .topic-item": "showTopic"
   },
