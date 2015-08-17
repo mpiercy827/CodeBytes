@@ -10,6 +10,8 @@ CodeBytes.Views.Editor = Backbone.View.extend({
   },
 
   onRender: function () {
+    // This first line is needed for Ace Editor to load properly. It must
+    // be able to find the #editor div on the page
     if ($("#editor").length === 0) { return; }
 
     var editor = ace.edit("editor");
@@ -19,7 +21,7 @@ CodeBytes.Views.Editor = Backbone.View.extend({
 
   render: function () {
     if (!this.model.get("language")) { return; }
-    
+
     this.$el.html(this.template());
     this.onRender();
     return this;

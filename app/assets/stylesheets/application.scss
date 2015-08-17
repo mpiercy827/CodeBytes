@@ -77,13 +77,18 @@ body {
 
 /*editor, terminal and exercise styling*/
 .exercise {
-  width: 40%;
+  width: 45%;
   min-height: 600px;
   float: left;
 }
 
+.exercise-text {
+  padding: 15px;
+  text-align: justify;
+}
+
 .interactive {
-  width: 60%;
+  width: 55%;
   float: right;
 }
 
