@@ -3,7 +3,12 @@ class User < ActiveRecord::Base
   validates :email, :session_token, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
   after_initialize :ensure_session_token
+
   has_many :exercise_completions, dependent: :destroy
+  has_many :topic_completions, dependent: :destroy
+  has_many :course_completions, dependent: :destroy
+  has_many :badges, dependent: :destroy
+
   attr_reader :password
 
   def self.find_by_credentials(email, password)
@@ -80,6 +85,7 @@ class User < ActiveRecord::Base
   def add_course_completion(course)
     unless CourseCompletion.exists?(user: self, course: course)
       CourseCompletion.create!(user: self, course: course)
+      Badge.create!(user: self, course: course)
     end
   end
 end
