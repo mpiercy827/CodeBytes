@@ -341,3 +341,15 @@ Solution.create!(
   output: "",
   exercise_id: 16
 )
+
+
+###########################
+# PYTHON COURSE SEED DATA #
+###########################
+
+Course.create!(
+  title: "Python",
+  language: "python",
+  description: "Another beginner-friendly programming language!",
+  image_location: "python.png"
+)
