@@ -97,7 +97,7 @@ Exercise.create!(
 
 Solution.create!(
   output: "1\n2\n3\n4\n5\n",
-  result: "nil",
+  result: "[1,2,3,4,5]",
   exercise_id: 2
 )
 
