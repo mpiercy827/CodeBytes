@@ -12,7 +12,7 @@ Rails.application.routes.draw do
       get 'check' => "exercises#check"
     end
     resources :exercise_completions, only: :create
-    get 'profile'
+    get 'profile', to: 'users#show'
   end
 
   root to: "static_pages#root"
