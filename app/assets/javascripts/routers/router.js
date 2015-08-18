@@ -2,7 +2,8 @@ CodeBytes.Routers.Router = Backbone.Router.extend({
   routes: {
     "": "index",
     "courses/:courseId/topics/:topicId": "showTopic",
-    "courses/:id": "showCourse"
+    "courses/:id": "showCourse",
+    "profile": "showProfile"
   },
 
   initialize: function (options) {
@@ -26,6 +27,14 @@ CodeBytes.Routers.Router = Backbone.Router.extend({
       model: course
     });
     this._swapView(courseShow);
+  },
+
+  showProfile: function () {
+    if (window.logged_in) {
+      alert("Here's your profile!");
+    } else {
+      alert("You're not logged in");
+    }
   },
 
   showTopic: function (courseId, topicId) {

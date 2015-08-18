@@ -11,8 +11,11 @@
           </ul>
         </li>
         <% if logged_in? %>
+          <script type="text/javascript">window.logged_in = true</script>
+          <li><%= link_to "Profile", "/#/profile" %></li>
           <li><%= link_to "Log Out", session_url, method: :delete %></li>
         <% else %>
+          <script type="text/javascript">window.logged_in = false</script>
           <li><%= link_to "Log In", login_url %></li>
           <li><%= link_to "Sign Up", register_url %></li>
         <% end %>
