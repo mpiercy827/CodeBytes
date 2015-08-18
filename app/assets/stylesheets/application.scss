@@ -22,6 +22,12 @@
   width: 100%;
 }
 
+.scripty {
+  font: 400 20px 'Oleo Script', Helvetica, sans-serif;
+  color: #2b2b2b;
+  text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+}
+
 /* navbar */
 .navbar-default {
   background-color: #2f2f2f;
@@ -103,8 +109,9 @@ body {
   position: absolute;
   display:block;
   width: 100%;
-  height: 400px;
+  height: 300px;
   left: 0;
+  padding: 0 20%;
   text-align: center;
   transition: background-color 1s, color 1s;
   -webkit-transition: background-color 1s, color 1s;
@@ -112,38 +119,53 @@ body {
 
 .about h1 {
   font-size: 96px;
+  color: white;
 }
 
 .about p {
   font-size: 24px;
+  color: white;
 }
 
 .courses-index {
   position: relative;
-  top: 400px;
+  top: 300px;
   padding: 10px;
 }
 
-.course-show, .topic-show {
+.course-show {
   padding: 10px;
   position: relative;
   text-align: center;
 }
 
+.topic-show {
+  padding: 10px;
+}
+
+
 /*course list items displays*/
 
 .course-item {
   width: 25%;
-  min-height: 200px;
   border-radius: 5px;
   display: inline-block;
   box-sizing: border-box;
+  float: left;
+  text-align: center;
   margin: 5px;
   padding: 15px;
   font-size: 24px;
-  transition: background-color 1s;
-  -webkit-transition: background-color 1s;
+  filter: grayscale(70%);
+  -webkit-filter: grayscale(70%);
+  transition: background-color 1s, filter 1s, -webkit-filter 1s;
+  -webkit-transition: background-color 1s, filter 1s, -webkit-filter 1s;
   background-color: #eee;
+}
+
+.course-logo {
+  height: 80px;
+  margin: 0 auto;
 }
 
 .course-item p {
@@ -152,6 +174,8 @@ body {
 
 .course-item:hover {
   background-color: #fff;
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
 }
 
 /*topic list item displays*/
