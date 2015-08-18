@@ -11,7 +11,7 @@ CodeBytes.Models.User = Backbone.Model.extend({
 
   parse: function (data) {
     if (data.badges) {
-      this.badges().set(data.badges);
+      this._badges = data.badges;
       delete data.badges;
     }
 

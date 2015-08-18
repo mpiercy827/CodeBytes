@@ -16,7 +16,7 @@ CodeBytes is an online learning community inspired by CodeAcademy where users ca
 - [x] View exercises in each topic
 - [x] Use an interactive terminal to complete exercises
 - [x] Earn badges for completing courses
-- [ ] View badges on their profile (and other users' profiles)
+- [x] View badges on their profile (and other users' profiles)
 - [ ] Search courses for topics
 - [ ] Suggest topics/languages for new courses
 

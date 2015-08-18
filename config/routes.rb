@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       get 'check' => "exercises#check"
     end
     resources :exercise_completions, only: :create
+    resources :badges, only: :show
     get 'profile', to: 'users#show'
   end
 
