@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150818175656) do
+ActiveRecord::Schema.define(version: 20150818175910) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "course_completions", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.integer  "course_id",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "course_completions", ["user_id", "course_id"], name: "index_course_completions_on_user_id_and_course_id", unique: true, using: :btree
 
   create_table "courses", force: :cascade do |t|
     t.string   "language",       null: false
