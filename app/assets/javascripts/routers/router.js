@@ -31,9 +31,12 @@ CodeBytes.Routers.Router = Backbone.Router.extend({
 
   showProfile: function () {
     if (window.logged_in) {
-      alert("Here's your profile!");
+      var user = new CodeBytes.Models.User();
+      user.fetch();
+      var profileView = new CodeBytes.Views.Profile({ model: user });
+      this._swapView(profileView);
     } else {
-      alert("You're not logged in");
+      Backbone.history.navigate("", {trigger: true});
     }
   },
 
