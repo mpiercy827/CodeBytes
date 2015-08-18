@@ -37,13 +37,14 @@ class User < ActiveRecord::Base
   def add_completions(exercise)
     add_exercise_completion(exercise)
 
-    byebug
     topic = Topic
               .includes(exercises: [:exercise_completions])
               .find(exercise.topic_id)
+
     course = Course
               .includes(exercises: [:exercise_completions])
               .find(exercise.course.id)
+
     add_topic_completion(topic) if topic_complete?(topic)
     add_course_completion(course) if course_complete?(course)
   end
