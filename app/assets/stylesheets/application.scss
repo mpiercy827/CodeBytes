@@ -117,6 +117,10 @@ body {
   -webkit-transition: background-color 1s, color 1s;
 }
 
+.about:hover {
+  background-color: #000;
+}
+
 .about h1 {
   font-size: 96px;
   color: white;
