@@ -64,16 +64,16 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
   nextExerciseOrTopic: function (event) {
     event.preventDefault();
     var nextIndex = $(".exercise-list").val();
-    this.model.exercises().trigger("activate", [nextIndex]);
     this.clearEditorAndTerminal();
+    this.model.exercises().trigger("activate", [nextIndex]);
     $(event.currentTarget).remove();
   },
 
   switchToExercise: function (event) {
     event.preventDefault();
     var index = $(event.currentTarget).val() - 1;
-    this.model.exercises().trigger("activate", [index]);
     this.clearEditorAndTerminal();
+    this.model.exercises().trigger("activate", [index]);
   },
 
   render: function () {
