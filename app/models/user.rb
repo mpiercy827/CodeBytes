@@ -33,4 +33,9 @@ class User < ActiveRecord::Base
   def is_password?(password)
     BCrypt::Password.new(self.password_digest).is_password?(password)
   end
+
+  def add_completions(exercise)
+    ex_comp = ExerciseCompletion.new(user: self, exercise: exercise)
+    ex_comp.destroy unless ex_comp.save
+  end
 end

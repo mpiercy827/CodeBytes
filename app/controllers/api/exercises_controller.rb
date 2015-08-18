@@ -14,10 +14,8 @@ class Api::ExercisesController < ApplicationController
     @feedback["output"] = @exercise.correct_output(params[:output])
     @feedback["result"] = @exercise.correct_result(params[:result])
 
-    if logged_in? && @feedback.values.all? { |val| val }
-      ex_comp = ExerciseCompletion.new(user: current_user, exercise: @exercise)
-      ex_comp.save #will fail silently if one already exists
-    end
+    current_user.add_completions(@exercise) if logged_in? &&
+                                              @feedback.values.all? { |val| val }
 
     render json: @feedback
   end
