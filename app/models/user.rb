@@ -1,4 +1,3 @@
-require 'byebug'
 class User < ActiveRecord::Base
   validates :email, :password_digest, :session_token, presence: true
   validates :email, :session_token, uniqueness: true
@@ -36,15 +35,15 @@ class User < ActiveRecord::Base
   end
 
   def add_completions(exercise)
+    add_exercise_completion(exercise)
+
+    byebug
     topic = Topic
               .includes(exercises: [:exercise_completions])
               .find(exercise.topic_id)
     course = Course
               .includes(exercises: [:exercise_completions])
               .find(exercise.course.id)
-    debugger
-
-    add_exercise_completion(exercise)
     add_topic_completion(topic) if topic_complete?(topic)
     add_course_completion(course) if course_complete?(course)
   end
@@ -66,17 +65,20 @@ class User < ActiveRecord::Base
   end
 
   def add_exercise_completion(exercise)
-    ex_comp = ExerciseCompletion.new(user: self, exercise: exercise)
-    ex_comp.destroy unless ex_comp.save
+    unless ExerciseCompletion.exists?(user: self, exercise: exercise)
+      ExerciseCompletion.create!(user: self, exercise: exercise)
+    end
   end
 
   def add_topic_completion(topic)
-    t_comp = TopicCompletion.new(user: self, topic: topic)
-    t_comp.destroy unless t_comp.save
+    unless TopicCompletion.exists?(user: self, topic: topic)
+      TopicCompletion.create!(user: self, topic: topic)
+    end
   end
 
   def add_course_completion(course)
-    c_comp = TopicCompletion.new(user: self, course: course)
-    c_comp.destroy unless c_comp.save
+    unless CourseCompletion.exists?(user: self, course: course)
+      CourseCompletion.create!(user: self, course: course)
+    end
   end
 end
