@@ -64,7 +64,10 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
 
   nextExerciseOrTopic: function (event) {
     event.preventDefault();
-    var nextIndex = $(".exercise-list").val();
+    var currExId = CodeBytes.UserResults.exercise_id;
+    var $currEx = $(".exercise-list a[data-id=" + currExId + "]");
+    var nextIndex = $currEx.data("index") + 1;
+    
     this.clearEditorAndTerminal();
     this.model.exercises().trigger("activate", [nextIndex]);
     $(event.currentTarget).remove();

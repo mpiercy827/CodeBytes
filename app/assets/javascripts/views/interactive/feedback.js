@@ -1,5 +1,5 @@
 CodeBytes.Views.Feedback = Backbone.View.extend({
-  className: "alert-dismissible",
+  className: "alert-dismissible btn",
 
   template: JST["interactive/feedback"],
 
@@ -18,9 +18,9 @@ CodeBytes.Views.Feedback = Backbone.View.extend({
     $(".negative").remove();
 
     if (results.result && results.output) {
-      this.$el.addClass("positive");
+      this.$el.addClass("positive btn-success");
     } else {
-      this.$el.addClass("negative");
+      this.$el.addClass("negative btn-danger");
     }
   },
 
