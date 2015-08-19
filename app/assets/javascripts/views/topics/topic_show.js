@@ -4,7 +4,7 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
   className: "container topic-show",
 
   events: {
-    "change .exercise-list": "switchToExercise",
+    "click .exercise-list>li>a": "switchToExercise",
     "click .positive": "nextExerciseOrTopic",
     "submit": "evaluateCode"
   },
@@ -72,7 +72,7 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
 
   switchToExercise: function (event) {
     event.preventDefault();
-    var index = $(event.currentTarget).val() - 1;
+    var index = $(event.currentTarget).data("index");
     this.clearEditorAndTerminal();
     this.model.exercises().trigger("activate", [index]);
   },

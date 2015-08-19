@@ -1,17 +1,24 @@
-Exercise Number:
-<br>
+<div class="exercise-header">
+  <% var numExercises = exercises.length %>
 
-<select class="exercise-list">
-  <% exercises.each(function (exercise, idx) { %>
-    <option
-      data-id="<%= exercise.id %>"
-      <% if (exercise === activeExercise) { %>
-        selected
-      <% } %>><%= idx + 1 %></option>
-  <% }) %>
-</select>
+  <div class="btn-group">
+    <button type="button" class="btn btn-default btn-xs">
+      <%= activeExercise.id + "/" + numExercises %>
+    </button>
 
-<br>
+    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="caret"></span>
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+
+    <ul class="dropdown-menu exercise-list">
+      <% exercises.each(function (exercise, idx) { %>
+        <li><a data-index="<%= idx %>" data-id="<%= exercise.id %>"><%= idx + 1 %></a></li>
+      <% }) %>
+    </ul>
+  </div>
+</div>
+
 <h3>Readings</h3>
 
 <% _(activeExercise.get("readings").split("\n")).each(function (line) { %>
