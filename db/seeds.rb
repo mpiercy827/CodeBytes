@@ -72,6 +72,7 @@ Topic.create!(
 # Programming 101 Exercises #
 
 Exercise.create!(
+  title: "Hello World!",
   readings: "This is where the first greeting and readings will go.",
   instructions: "To complete this exercise, enter the following command:
 
@@ -86,6 +87,7 @@ Solution.create!(
 )
 
 Exercise.create!(
+  title: "Array Basics",
   readings: "Here is the second exercise in the set for the topic (also to be completed).
 
               Follow the instructions below!",
@@ -102,6 +104,7 @@ Solution.create!(
 )
 
 Exercise.create!(
+  title: "Moo",
   readings: "This is the final exercise in the set. Complete it and click continue to move to the course show page.
 
               Follow the instructions below!",
@@ -116,6 +119,7 @@ Solution.create!(
 )
 
 Exercise.create!(
+  title: "Dummy Exercise",
   readings: "This (like the others) is a dummy exercise. Press submit code to continue.",
   instructions: "Don't enter anything, just submit the code!",
   topic_id: 2
@@ -128,6 +132,7 @@ Solution.create!(
 )
 
 Exercise.create!(
+  title: "Dummy Exercise",
   readings: "This (like the others) is a dummy exercise. Press submit code to continue.",
   instructions: "Don't enter anything, just submit the code!",
   topic_id: 3
@@ -140,6 +145,7 @@ Solution.create!(
 )
 
 Exercise.create!(
+  title: "Dummy Exercise",
   readings: "This (like the others) is a dummy exercise. Press submit code to continue.",
   instructions: "Don't enter anything, just submit the code!",
   topic_id: 4
@@ -152,6 +158,7 @@ Solution.create!(
 )
 
 Exercise.create!(
+  title: "Dummy Exercise",
   readings: "This (like the others) is a dummy exercise. Press submit code to continue.",
   instructions: "Don't enter anything, just submit the code!",
   topic_id: 5
@@ -164,6 +171,7 @@ Solution.create!(
 )
 
 Exercise.create!(
+  title: "Dummy Exercise",
   readings: "This (like the others) is a dummy exercise. Press submit code to continue.",
   instructions: "Don't enter anything, just submit the code!",
   topic_id: 6
@@ -239,6 +247,7 @@ Topic.create!(
 
 
 Exercise.create!(
+  title: "Dummy Exercise",
   readings: "This is where the first greeting and readings will go for the javascript course.",
   instructions: "To complete this exercise, enter the following command:
 
@@ -253,6 +262,7 @@ Solution.create!(
 )
 
 Exercise.create!(
+  title: "Dummy Exercise",
   readings: "Here is the second exercise in the set for the topic (also to be completed).
 
               Follow the instructions below!",
@@ -269,6 +279,7 @@ Solution.create!(
 )
 
 Exercise.create!(
+  title: "Dummy Exercise",
   readings: "This is the final exercise in the set. Complete it and click continue to move to the course show page.
 
               Follow the instructions below!",
@@ -283,6 +294,7 @@ Solution.create!(
 )
 
 Exercise.create!(
+  title: "Dummy Exercise",
   readings: "This (like the others) is a dummy exercise. Press submit code to continue.",
   instructions: "Don't enter anything, just submit the code!",
   topic_id: 8
@@ -295,6 +307,7 @@ Solution.create!(
 )
 
 Exercise.create!(
+  title: "Dummy Exercise",
   readings: "This (like the others) is a dummy exercise. Press submit code to continue.",
   instructions: "Don't enter anything, just submit the code!",
   topic_id: 9
@@ -307,6 +320,7 @@ Solution.create!(
 )
 
 Exercise.create!(
+  title: "Dummy Exercise",
   readings: "This (like the others) is a dummy exercise. Press submit code to continue.",
   instructions: "Don't enter anything, just submit the code!",
   topic_id: 10
@@ -319,6 +333,7 @@ Solution.create!(
 )
 
 Exercise.create!(
+  title: "Dummy Exercise",
   readings: "This (like the others) is a dummy exercise. Press submit code to continue.",
   instructions: "Don't enter anything, just submit the code!",
   topic_id: 11
@@ -331,6 +346,7 @@ Solution.create!(
 )
 
 Exercise.create!(
+  title: "Dummy Exercise",
   readings: "This (like the others) is a dummy exercise. Press submit code to continue.",
   instructions: "Don't enter anything, just submit the code!",
   topic_id: 12

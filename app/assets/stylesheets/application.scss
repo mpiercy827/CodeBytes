@@ -317,6 +317,17 @@ header {
   text-align: justify;
 }
 
+.exercise-header {
+  width: 100%;
+  h3 {
+    display: inline-block;
+  }
+}
+
+.btn-group {
+  float: right;
+}
+
 .btn-group.open .dropdown-menu {
   min-width: 20px;
 }
