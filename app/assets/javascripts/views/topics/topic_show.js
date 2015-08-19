@@ -33,6 +33,7 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
     var editor = ace.edit("editor");
     editor.setValue("");
     CodeBytes.Terminal.empty();
+    $(".feedback").empty();
   },
 
   evaluateCode: function (event) {

@@ -39,7 +39,6 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 14px;
 	vertical-align: middle;
 }
 /* HTML5 display-role reset for older browsers */
@@ -70,6 +69,7 @@ table {
 
 html, body {
   font-family: helvetica;
+  font-size: 14px;
   margin: 0;
   padding:0;
   height: 100%;
@@ -326,16 +326,23 @@ header {
   position: relative;
   width: 100%;
   min-height: 400px;
+  background-color: black;
+}
+
+.submit-code {
+  width: 100%;
 }
 
 #editor {
-  position: absolute;
   height: 400px;
+  font-size: 12px;
+  width: 100%;
 }
 
 .terminal {
   width: 100%;
   min-height: 200px;
+  padding: 10px;
   background-color: #000;
   color: #fff;
 }

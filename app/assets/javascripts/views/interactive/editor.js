@@ -15,6 +15,7 @@ CodeBytes.Views.Editor = Backbone.View.extend({
     if ($("#editor").length === 0) { return; }
 
     var editor = ace.edit("editor");
+    editor.setValue("");
     editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/" + this.model.get("language"));
   },
