@@ -317,13 +317,8 @@ header {
   text-align: justify;
 }
 
-.btn-group > button {
-  height: 20px;
-  border-radius: 10px;
-}
-
 .btn-group.open .dropdown-menu {
-  width: 20px;
+  min-width: 20px;
 }
 
 .interactive {
