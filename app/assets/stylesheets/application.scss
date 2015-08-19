@@ -277,23 +277,29 @@ header {
 
 .topics-list {
   width: 75%;
+  max-width: 700px;
   margin: 0 auto;
 }
 
 /*topic list item displays*/
 .topic-item {
+  text-align: left;
   a, a:hover, a:active, a:visited {
     color: #000;
   }
 
   a {
-    transition: background-color 1s, color 0.5s;
+    transition: background-color 0.25s;
   }
 }
 
 .topic-item:hover a:hover {
   color: #fff;
   background-color: $codebytes-blue;
+  .glyphicon.pull-right {
+    color: $codebytes-blue;
+    background-color: white;
+  }
 }
 
 .topic-item h2 {
@@ -301,8 +307,12 @@ header {
 }
 
 .glyphicon.pull-right {
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: $codebytes-blue;
   position: relative;
-  transform: translateY(100%);
+  transition: color 0.25s, background-color 0.25s;
 }
 
 /*editor, terminal and exercise styling*/

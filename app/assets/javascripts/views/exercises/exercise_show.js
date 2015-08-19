@@ -39,7 +39,8 @@ CodeBytes.Views.ExerciseShow = Backbone.View.extend({
     var content = this.template({
       exercises: this.collection,
       activeExercise: this.activeExercise(),
-      course: this.course
+      course: this.course,
+      activeIndex: this.activeIndex
     });
 
     this.$el.html(content);
