@@ -75,9 +75,9 @@ the app should be fully functioning and ready for bonus features!
 [Details][phase-five]
 
 ### Bonus Features (TBD)
+- [x] Allow anonymous users to access everything but badges
 - [ ] Experiment with a language by using a sandbox terminal
 - [ ] Multiple sessions/session management
-- [x] Allow anonymous users to access everything but badges
 - [ ] Password reset with email confirmation
 - [ ] Allow users to create courses
 - [ ] Video Tutorials
