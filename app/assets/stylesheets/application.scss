@@ -18,6 +18,8 @@
 
 $footer-height: 40px;
 $header-height: 50px;
+$about-height: 400px;
+$codebytes-blue: #18bc9c;
 
 /* CSS RESET */
 
@@ -93,7 +95,6 @@ html, body {
 .scripty {
   font: 400 20px 'Oleo Script', Helvetica, sans-serif;
   color: #2b2b2b;
-  text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
 }
 
 /* navbar & header */
@@ -104,14 +105,14 @@ header {
 
 .navbar-default {
   background-color: #2f2f2f;
-  border-color: #18bc9c;
+  border-color: $codebytes-blue;
 }
 .navbar-default .navbar-brand {
   color: #ffffff;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
   color: #ffffff;
-  background-color: #18bc9c;
+  background-color: $codebytes-blue;
 }
 .navbar-default .navbar-text {
   color: #ffffff;
@@ -128,21 +129,21 @@ header {
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: #ffffff;
-  background-color: #18bc9c;
+  background-color: $codebytes-blue;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: #ffffff;
-  background-color: #18bc9c;
+  background-color: $codebytes-blue;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   color: #ffffff;
-  background-color: #18bc9c;
+  background-color: $codebytes-blue;
 }
 .navbar-default .navbar-toggle {
-  border-color: #18bc9c;
+  border-color: $codebytes-blue;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #18bc9c;
+  background-color: $codebytes-blue;
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #ffffff;
@@ -167,24 +168,25 @@ header {
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #ffffff;
-    background-color: #18bc9c;
+    background-color: $codebytes-blue;
   }
 }
 
 /* course index */
 
 .about {
-  background-color: #18bc9c;
+  background-color: $codebytes-blue;
   color: white;
   position: absolute;
   display:block;
   width: 100%;
-  height: 300px;
+  height: $about-height;
   left: 0;
   padding: 0 20%;
   text-align: center;
-  transition: background-color 1s, color 1s;
-  -webkit-transition: background-color 1s, color 1s;
+  transition: background-color 1s;
+  -webkit-transition: background-color 1s;
+  text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
 }
 
 .about:hover {
@@ -194,38 +196,39 @@ header {
 .about h1 {
   font-size: 96px;
   color: white;
+  transform: translateY(50%);
 }
 
 .about p {
   font-size: 24px;
   color: white;
+  transform: translateY(150%);
 }
 
 .courses-index {
   position: relative;
-  top: 300px;
+  top: $about-height;
   padding: 10px;
+  margin: 0 auto;
 }
 
-.course-show {
-  padding: 10px;
-  position: relative;
+.courses-index h3 {
   text-align: center;
+  font-size: 36px;
 }
-
-.topic-show {
-  padding: 10px;
-}
-
 
 /*course list items displays*/
+
+.courses-list {
+  margin: 0 auto;
+}
 
 .course-item {
   width: 25%;
   border-radius: 5px;
   display: inline-block;
   box-sizing: border-box;
-  float: left;
+  // float: left;
   text-align: center;
   margin: 5px;
   padding: 15px;
@@ -252,23 +255,47 @@ header {
   -webkit-filter: grayscale(0%);
 }
 
+.topic-show {
+  padding: 10px;
+}
+
+/* course show */
+
+.course-show {
+  padding: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.course-show h1 {
+  font-size: 48px;
+}
+
+.course-show p {
+  font-size: 16px;
+}
+
+.topics-list {
+  width: 75%;
+  margin: 0 auto;
+}
+
 /*topic list item displays*/
 .topic-item {
-  width: 50%;
-  margin: 0 auto;
-  text-align: left;
-  border-radius: 5px;
-  padding: 5px;
+  a, a:hover, a:active, a:visited {
+    color: #000;
+  }
+}
+
+.topic-item:hover a:hover {
+  background: $codebytes-blue;
+}
+
+.topic-item h2 {
   font-size: 24px;
 }
 
-.topic-item p {
-  font-size: 12px;
-}
 
-.topic-item:hover {
-  background-color: #eee;
-}
 
 /*editor, terminal and exercise styling*/
 .exercise {
@@ -288,13 +315,13 @@ header {
 }
 
 .editor-container {
-  postition: relative;
+  position: relative;
   width: 100%;
   min-height: 400px;
 }
 
 #editor {
-  postion: absolute;
+  position: absolute;
   height: 400px;
 }
 

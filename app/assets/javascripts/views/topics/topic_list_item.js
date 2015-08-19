@@ -3,6 +3,8 @@ CodeBytes.Views.TopicListItem = Backbone.View.extend({
 
   className: "topic-item",
 
+  tagName: "li",
+
   render: function () {
     var content = this.template({ topic: this.model });
     this.$el.attr("data-topic-id", this.model.id);
