@@ -285,17 +285,25 @@ header {
   a, a:hover, a:active, a:visited {
     color: #000;
   }
+
+  a {
+    transition: background-color 1s, color 0.5s;
+  }
 }
 
 .topic-item:hover a:hover {
-  background: $codebytes-blue;
+  color: #fff;
+  background-color: $codebytes-blue;
 }
 
 .topic-item h2 {
   font-size: 24px;
 }
 
-
+.glyphicon.pull-right {
+  position: relative;
+  transform: translateY(100%);
+}
 
 /*editor, terminal and exercise styling*/
 .exercise {
