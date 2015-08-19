@@ -13,12 +13,16 @@
 
     <ul class="dropdown-menu exercise-list pull-right">
       <% exercises.each(function (exercise, idx) { %>
-        <li><a data-index="<%= idx %>" data-id="<%= exercise.id %>"><%= idx + 1 + " - " + exercise.get("title") %></a></li>
+        <li>
+          <a data-index="<%= idx %>" data-id="<%= exercise.id %>">
+            <%= idx + 1 + " - " + exercise.get("title") %>
+          </a>
+        </li>
       <% }) %>
     </ul>
   </div>
 </div>
-<br>
+<hr>
 
 
 <% _(activeExercise.get("readings").split("\n")).each(function (line) { %>
@@ -29,12 +33,11 @@
 <hr>
 
 <h3>Instructions</h3>
-
+<br>
 <% _(activeExercise.get("instructions").split("\n")).each(function (line) { %>
   <%= line %>
   <br>
 <%  }) %>
-<br>
-<br>
+<hr>
 
 <a href="#/courses/<%= course.id %>">Back to Topics</a>

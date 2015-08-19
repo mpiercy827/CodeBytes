@@ -317,6 +317,10 @@ header {
   text-align: justify;
 }
 
+.exercise-text > h3 {
+  text-align: center;
+}
+
 .exercise-header {
   width: 100%;
   h3 {
@@ -334,6 +338,7 @@ header {
 
 .interactive {
   width: 55%;
+  min-width: 300px;
   float: right;
 }
 
