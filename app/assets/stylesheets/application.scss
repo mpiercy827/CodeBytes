@@ -205,6 +205,12 @@ header {
   transform: translateY(150%);
 }
 
+.courses {
+  padding-top: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .courses-index {
   position: relative;
   top: $about-height;
@@ -219,16 +225,17 @@ header {
 
 /*course list items displays*/
 
-.courses-list {
-  margin: 0 auto;
-}
+// .courses-list {
+//   width: 100%;
+//   margin: auto;
+// }
 
 .course-item {
-  width: 25%;
+  width: calc(25% - 40px);
+  height: 260px;
   border-radius: 5px;
   display: inline-block;
-  box-sizing: border-box;
-  // float: left;
+  box-sizing: content-box;
   text-align: center;
   margin: 5px;
   padding: 15px;
@@ -240,13 +247,29 @@ header {
   background-color: #eee;
 }
 
-.course-logo {
-  height: 80px;
-  margin: 0 auto;
+@media screen and (max-width: 500px) {
+  .course-item {
+    width: calc(100% - 40px);
+  }
 }
 
-.course-item p {
-  font-size: 12px;
+@media screen and (max-width: 800px) and (min-width: 500px) {
+  .course-item {
+    width: calc(50% - 40px);
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 800px) {
+  .course-item {
+    width: calc(33% - 40px);
+  }
+}
+
+.course-logo {
+  max-width: 90%;
+  max-height: 200px;
+  margin: 0 auto;
+  display: block;
 }
 
 .course-item:hover {

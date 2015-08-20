@@ -369,3 +369,10 @@ Course.create!(
   description: "Another beginner-friendly programming language!",
   image_location: "python.png"
 )
+
+Course.create!(
+  title: "Rails Authentication",
+  language: "ruby",
+  description: "Use Rails to make your own user sign-in/sign-up system!",
+  image_location: "rails.png"
+)
