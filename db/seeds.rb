@@ -59,7 +59,7 @@ ruby_intro3 = Exercise.create!(
             Another data type we can use is a <b>number</b>, which we are all familiar with. Numbers have all the familiar operations (addition, subtraction, etc.), which we will cover in the next exercise, and are used fairly often when programming, although you don't have to be a math genius to be a great programmer!
 
             The last data type we will talk about in this section is a <b>boolean</b>, which is a value that can only be <i>true</i> or <i>false</i>. We will get into this and even more data types in later topics.",
-  instructions: "For now, let's use 'puts' to print the number 100 to the console."
+  instructions: "For now, let's use 'puts' to print the number 100 to the console. (Hint: we don't need quotes for numbers, only for strings!)"
 )
 
 ruby_intro4 = Exercise.create!(
@@ -76,19 +76,45 @@ ruby_intro4 = Exercise.create!(
   instructions: "Use 'puts' to print the result of multiplying 117 by 4."
 )
 
-# ruby_intro5 = Exercise.create!(
-#   topic: ruby_intro,
-#   title: "Variables",
-#   readings: "One very useful ",
-#   instructions: ""
-# )
-#
-# ruby_intro6 = Exercise.create!(
-#   topic: ruby_intro,
-#   title: "Simple Strings",
-#   readings: "",
-#   instructions: ""
-# )
+ruby_intro5 = Exercise.create!(
+  topic: ruby_intro,
+  title: "Variables",
+  readings: "One very useful concept of all programming language is a <b>variable</b>, which is just a name we give to a value. For example, say from our last example that we needed the result of the last exercise (117 * 4), but we wouldn't need it in our program for a while.
+
+            This is where a variable can help. In Ruby, we assign a variable like so:
+
+            my_variable = 117 * 4
+
+            The left hand side is the name of the variable we are assigning, and it can be (almost) anything you want! The right hand side is simply what we will be 'renaming' with the variable. Lastly, the '=' is what tells the computer that when ever we use 'my_variable' in our program, that we want to use (117 * 4).
+
+            What can we store in a variable? Anything! We could make a variable for a string, for a boolean, or any other object (more on objects later) in Ruby.",
+  instructions: "Make a variable with whatever name you'd like, and assign it a value of 1000. Then use puts to print the variable to the console. (Hint: we don't need to put quotes around a variable name)"
+)
+
+ruby_intro6 = Exercise.create!(
+  topic: ruby_intro,
+  title: "Simple Strings",
+  readings: "For the last exercise in our introduction to Ruby, we will be going back to strings. Ruby allows us to to a lot of neat things with strings, like so:
+
+            puts \"hello\".upcase
+
+            will make every letter in the string uppercase and give us the string \"HELLO\" in the console. We could also use <i>reverse</i> method, which does exactly what you'd thing it does:
+
+            puts \"siht esrever\".reverse
+
+            If we entered this, we will get an output of \"reverse this\". We can use these methods by adding a '.' after the string, followed by the name of the method. More useful methods include:
+
+            .capitalize - capitalizes the first letter of a string (not of each word!)
+            .downcase - makes every letter in a string lowercase
+
+            If we have a string stored in a variable, we can call the methods on the variable like so:
+
+            my_variable = \"looc\"
+            puts my_variable.reverse.upcase
+
+            which will give us \"COOL\" as a result. Note that we can chain multiple methods together!",
+  instructions: "Create a variable for the string \"I did it!\". Then reverse the string, make it uppercase, and print the result to the console. You can do it!"
+)
 
 ruby_intro1_sol = Solution.create!(
   exercise: ruby_intro1,
@@ -114,13 +140,17 @@ ruby_intro4_sol = Solution.create!(
   output: "468\n"
 )
 
-# ruby_intro5_sol = Solution.create!(
-#   exercise: ruby_intro2
-# )
-#
-# ruby_intro6_sol = Solution.create!(
-#   exercise: ruby_intro3
-# )
+ruby_intro5_sol = Solution.create!(
+  exercise: ruby_intro5,
+  result: "nil",
+  output: "1000\n"
+)
+
+ruby_intro6_sol = Solution.create!(
+  exercise: ruby_intro6,
+  result: "nil",
+  output: "!TI DID I\n"
+)
 
 ########################################
 
