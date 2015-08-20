@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
   has_many :exercise_completions, dependent: :destroy
   has_many :topic_completions, dependent: :destroy
   has_many :course_completions, dependent: :destroy
-  has_many :badges, dependent: :destroy
 
   attr_reader :password
 

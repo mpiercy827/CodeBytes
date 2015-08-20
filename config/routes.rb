@@ -13,7 +13,6 @@ Rails.application.routes.draw do
     end
     resources :exercise_completions, only: :create
     resources :course_completions, only: :show
-    resources :badges, only: :show
     get 'profile', to: 'users#show'
   end
 

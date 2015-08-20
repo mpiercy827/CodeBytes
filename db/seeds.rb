@@ -219,4 +219,3 @@ alan = User.create!(
 )
 
 CourseCompletion.create!(course: ruby, user: ada)
-Badge.create!(course: ruby, user: ada)
