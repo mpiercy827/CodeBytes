@@ -1,7 +1,7 @@
 BADGES BADGES BADGES!!!
 
 <% courses.each(function (course) { %>
-  <%= course.get("title") %>
+  <img src="<%= course.get("badge_image_location") %>" />
 <%  }) %>
 
 <% courseCompletions.each(function (cc) { %>

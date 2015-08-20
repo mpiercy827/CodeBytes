@@ -15,7 +15,8 @@ ruby = Course.create!(
   language: "ruby",
   description: "An easy-to-learn language that can be used to make web apps like
         this one. Great for beginners!",
-  image_location: "ruby.png"
+  image_location: "ruby.png",
+  badge_image_location: "ruby_badge.png"
 )
 
 ########################################
@@ -201,7 +202,8 @@ Course.create!(
   title: "Javascript",
   language: "javascript",
   description: "Learn one of the most widely-used languages for web development!",
-  image_location: "js.png"
+  image_location: "js.png",
+  badge_image_location: "js_badge.png"
 )
 
 ##############
