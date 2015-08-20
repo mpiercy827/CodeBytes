@@ -341,7 +341,8 @@ header {
 /*editor, terminal and exercise styling*/
 .exercise {
   width: 45%;
-  min-height: 600px;
+  height: 600px;
+  overflow-y: auto;
   float: left;
 }
 
@@ -384,10 +385,11 @@ header {
 
 .submit-code {
   width: 100%;
+  height: 20px;
 }
 
 #editor {
-  height: 400px;
+  height: 380px;
   font-size: 12px;
   width: 100%;
 }
