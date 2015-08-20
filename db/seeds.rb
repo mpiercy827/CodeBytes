@@ -11,7 +11,7 @@
 # RUBY COURSE SEED DATA #
 #########################
 
-Course.create!(
+ruby = Course.create!(
   title: "Ruby",
   language: "ruby",
   description: "An easy-to-learn language that can be used to make web apps like
@@ -19,360 +19,148 @@ Course.create!(
   image_location: "ruby.png"
 )
 
-###############
-# RUBY TOPICS #
-###############
+########################################
+# RUBY TOPICS, EXERCISES AND SOLUTIONS #
+########################################
 
-Topic.create!(
-  title: "Programming 101",
-  description: "Make your very first computer program!",
-  course_id: 1
-  #id: 1
+ruby_intro = Topic.create!(
+  title: "Introduction to Ruby",
+  description: "Learn the basics of the Ruby language in this simple tutorial!",
+  course: ruby
 )
 
-Topic.create!(
-  title: "Variables and Data Types",
-  description: "Learn how to use the building blocks of Ruby (and most other languages).",
-  course_id: 1
-  #id: 2
+ruby_intro1 = Exercise.create!(
+  topic: ruby_intro,
+  title: "Overview",
+  readings: "Ruby is a powerful, easy-to-learn language you can use in web-development, to create simple games, and as part of the Ruby on Rails web framework (be sure to look out for our Rails course which will teach you the basics of web development!).
+
+            There are several aspects of Ruby that make it such a popular language. Perhaps the most appealing is that Ruby was intentionally designed to be very easy to use, and looks a lot like regular English as a result! We will discuss more of the features as the course progresses, so for now, let's dive in!",
+  instructions: "If you're ready to learn Ruby, click the submit button to begin!"
 )
 
-Topic.create!(
-  title: "On One Condition...",
-  description: "Control the flow of your programs with if/else and switch statements",
-  course_id: 1
-  #id: 3
+ruby_intro2 = Exercise.create!(
+  topic: ruby_intro,
+  title: "Hello, World!",
+  readings: "Ruby, like all other programming languages, gives us a way to 'speak' with computers. Think of a program as a set of instructions that a computer will read and obey.
+
+            The simplest instruction that we can tell a computer is to say something back to us. In Ruby, we can do this using the <i>puts</i> method:
+
+            <b>puts \"I am a printed statement!\"</b>
+
+            When the Ruby interpreter (the part of the computer that 'speaks' and understands Ruby) gets this line of code, it will print the words in quotes to the console.",
+  instructions: "In the editor to the right, make your own <i>puts</i> statement that will print \"Hello World!\" to the console underneath the editor."
 )
 
-Topic.create!(
-  title: "Getting Loopy",
-  description: "Avoid unnecessary repetition by using loops and iteration!",
-  course_id: 1
-  #id: 4
+ruby_intro3 = Exercise.create!(
+  topic: ruby_intro,
+  title: "Data Types",
+  readings: "In Ruby, there are several <i><u>data types</i></u> that we have access to. One of those data types is a <b>string</b>, which is a collection of one or more letters (we printed a string to the console in the last exercise). For example, both \"Hello There!\" and \"asdf\" are both strings.
+
+            Another data type we can use is a <b>number</b>, which we are all familiar with. Numbers have all the familiar operations (addition, subtraction, etc.), which we will cover in the next exercise, and are used fairly often when programming, although you don't have to be a math genius to be a great programmer!
+
+            The last data type we will talk about in this section is a <b>boolean</b>, which is a value that can only be <i>true</i> or <i>false</i>. We will get into this and even more data types in later topics.",
+  instructions: "For now, let's use 'puts' to print the number 100 to the console."
 )
 
-Topic.create!(
-  title: "Methods & Returns",
-  description: "Use functional programming to make your own Rock, Paper, Scissors Game!",
-  course_id: 1
-  #id: 5
+ruby_intro4 = Exercise.create!(
+  topic: ruby_intro,
+  title: "Math",
+  readings: "Now that we know we can use numbers in Ruby, we'd like to be able to add, subtract, multiply and divide them. You can do this the same way you would with pen and paper:
+
+            Add: puts 1 + 1
+            Subtract: puts 5 - 3
+            Multiply: puts 4 * 4
+            Divide: puts 49 / 7
+
+            All we have to do is place one of the four symbols (+, -, *, /) between any two numbers and the result will be calculated.",
+  instructions: "Use 'puts' to print the result of multiplying 117 by 4."
 )
 
-Topic.create!(
-  title: "Introduction to Objects",
-  description: "Finish out the course by learning the basics of Object Oriented Programming in Ruby!",
-  course_id: 1
-  #id: 6
-)
+# ruby_intro5 = Exercise.create!(
+#   topic: ruby_intro,
+#   title: "Variables",
+#   readings: "One very useful ",
+#   instructions: ""
+# )
+#
+# ruby_intro6 = Exercise.create!(
+#   topic: ruby_intro,
+#   title: "Simple Strings",
+#   readings: "",
+#   instructions: ""
+# )
 
-##############################
-# RUBY EXERCISES & SOLUTIONS #
-##############################
-
-# Programming 101 Exercises #
-
-Exercise.create!(
-  title: "Hello World!",
-  readings: "This is where the first greeting and readings will go.",
-  instructions: "To complete this exercise, enter the following command:
-
-                puts \"Hello World!\"",
-  topic_id: 1
-)
-
-Solution.create!(
-  output: "Hello World!\n",
+ruby_intro1_sol = Solution.create!(
+  exercise: ruby_intro1,
   result: "nil",
-  exercise_id: 1
+  output: ""
 )
 
-Exercise.create!(
-  title: "Array Basics",
-  readings: "Here is the second exercise in the set for the topic (also to be completed).
-
-              Follow the instructions below!",
-  instructions: "To complete this exercise, enter the following command:
-
-                [1, 2, 3, 4, 5].each { |el| puts el }",
-  topic_id: 1
-)
-
-Solution.create!(
-  output: "1\n2\n3\n4\n5\n",
-  result: "[1, 2, 3, 4, 5]",
-  exercise_id: 2
-)
-
-Exercise.create!(
-  title: "Moo",
-  readings: "This is the final exercise in the set. Complete it and click continue to move to the course show page.
-
-              Follow the instructions below!",
-  instructions: "Define a method that prints \"moo\" to the terminal and call it!",
-  topic_id: 1
-)
-
-Solution.create!(
-  output: "moo\n",
+ruby_intro2_sol = Solution.create!(
+  exercise: ruby_intro2,
   result: "nil",
-  exercise_id: 3
+  output: "Hello World!\n"
 )
 
-Exercise.create!(
-  title: "Dummy Exercise",
-  readings: "This (like the others) is a dummy exercise. Press submit code to continue.",
-  instructions: "Don't enter anything, just submit the code!",
-  topic_id: 2
-)
-
-Solution.create!(
-  output: "",
+ruby_intro3_sol = Solution.create!(
+  exercise: ruby_intro3,
   result: "nil",
-  exercise_id: 4
+  output: "100\n"
 )
 
-Exercise.create!(
-  title: "Dummy Exercise",
-  readings: "This (like the others) is a dummy exercise. Press submit code to continue.",
-  instructions: "Don't enter anything, just submit the code!",
-  topic_id: 3
-)
-
-Solution.create!(
-  output: "",
+ruby_intro4_sol = Solution.create!(
+  exercise: ruby_intro4,
   result: "nil",
-  exercise_id: 5
+  output: "468\n"
 )
 
-Exercise.create!(
-  title: "Dummy Exercise",
-  readings: "This (like the others) is a dummy exercise. Press submit code to continue.",
-  instructions: "Don't enter anything, just submit the code!",
-  topic_id: 4
-)
+# ruby_intro5_sol = Solution.create!(
+#   exercise: ruby_intro2
+# )
+#
+# ruby_intro6_sol = Solution.create!(
+#   exercise: ruby_intro3
+# )
 
-Solution.create!(
-  output: "",
-  result: "nil",
-  exercise_id: 6
-)
+########################################
 
-Exercise.create!(
-  title: "Dummy Exercise",
-  readings: "This (like the others) is a dummy exercise. Press submit code to continue.",
-  instructions: "Don't enter anything, just submit the code!",
-  topic_id: 5
-)
-
-Solution.create!(
-  output: "",
-  result: "nil",
-  exercise_id: 7
-)
-
-Exercise.create!(
-  title: "Dummy Exercise",
-  readings: "This (like the others) is a dummy exercise. Press submit code to continue.",
-  instructions: "Don't enter anything, just submit the code!",
-  topic_id: 6
-)
-
-Solution.create!(
-  output: "",
-  result: "nil",
-  exercise_id: 8
-)
-
-
-###############################
-# JAVASCRIPT COURSE SEED DATA #
-###############################
-
-Course.create!(
-  title: "Javascript",
-  language: "javascript",
-  description: "Learn Javascript, a powerful language used on almost every web application you'll visit!",
-  image_location: "js.png"
-)
-
-#####################
-# JAVASCRIPT TOPICS #
-#####################
-
-Topic.create!(
-  title: "A First Taste of Javascript",
-  description: "Warm up to Javascript with this introductory tutorial.",
-  course_id: 2
-  #id: 7
-)
-
-Topic.create!(
-  title: "Variables and Data Types",
-  description: "Learn about all of the data types available to you as a Javascript programmer!",
-  course_id: 2
-  #id: 8
-)
-
-Topic.create!(
-  title: "Conditionals",
-  description: "Make your own browser based adventure game!",
-  course_id: 2
-  #id: 9
-)
-
-Topic.create!(
-  title: "For and While Loops in JS",
-  description: "Search for the needle in the haystack using loops!",
-  course_id: 2
-  #id: 10
-)
-
-Topic.create!(
-  title: "Functions",
-  description: "Learn all about Javascript functions.",
-  course_id: 2
-  #id: 11
-)
-
-Topic.create!(
-  title: "Javascript Objects",
-  description: "Learn the basics of objects in Javascript and complete the course!",
-  course_id: 2
-  #id: 12
-)
-
-####################################
-# JAVASCRIPT EXERCISES & SOLUTIONS #
-####################################
-
-
-Exercise.create!(
-  title: "Dummy Exercise",
-  readings: "This is where the first greeting and readings will go for the javascript course.",
-  instructions: "To complete this exercise, enter the following command:
-
-                console.log(\"Hello World!\")",
-  topic_id: 7
-)
-
-Solution.create!(
-  output: "Hello World!\n",
-  result: "",
-  exercise_id: 9
-)
-
-Exercise.create!(
-  title: "Dummy Exercise",
-  readings: "Here is the second exercise in the set for the topic (also to be completed).
-
-              Follow the instructions below!",
-  instructions: "To complete this exercise, enter the following command:
-
-                (function () { return 5 })();",
-  topic_id: 7
-)
-
-Solution.create!(
-  result: "5",
-  output: "",
-  exercise_id: 10
-)
-
-Exercise.create!(
-  title: "Dummy Exercise",
-  readings: "This is the final exercise in the set. Complete it and click continue to move to the course show page.
-
-              Follow the instructions below!",
-  instructions: "Define a method that prints \"moo\" to the terminal and call it!",
-  topic_id: 7
-)
-
-Solution.create!(
-  output: "moo\n",
-  result: "",
-  exercise_id: 11
-)
-
-Exercise.create!(
-  title: "Dummy Exercise",
-  readings: "This (like the others) is a dummy exercise. Press submit code to continue.",
-  instructions: "Don't enter anything, just submit the code!",
-  topic_id: 8
-)
-
-Solution.create!(
-  result: "",
-  output: "",
-  exercise_id: 12
-)
-
-Exercise.create!(
-  title: "Dummy Exercise",
-  readings: "This (like the others) is a dummy exercise. Press submit code to continue.",
-  instructions: "Don't enter anything, just submit the code!",
-  topic_id: 9
-)
-
-Solution.create!(
-  result: "",
-  output: "",
-  exercise_id: 13
-)
-
-Exercise.create!(
-  title: "Dummy Exercise",
-  readings: "This (like the others) is a dummy exercise. Press submit code to continue.",
-  instructions: "Don't enter anything, just submit the code!",
-  topic_id: 10
-)
-
-Solution.create!(
-  result: "",
-  output: "",
-  exercise_id: 14
-)
-
-Exercise.create!(
-  title: "Dummy Exercise",
-  readings: "This (like the others) is a dummy exercise. Press submit code to continue.",
-  instructions: "Don't enter anything, just submit the code!",
-  topic_id: 11
-)
-
-Solution.create!(
-  result: "",
-  output: "",
-  exercise_id: 15
-)
-
-Exercise.create!(
-  title: "Dummy Exercise",
-  readings: "This (like the others) is a dummy exercise. Press submit code to continue.",
-  instructions: "Don't enter anything, just submit the code!",
-  topic_id: 12
-)
-
-Solution.create!(
-  result: "",
-  output: "",
-  exercise_id: 16
-)
-
-
-###########################
-# PYTHON COURSE SEED DATA #
-###########################
-
-Course.create!(
-  title: "Python",
-  language: "python",
-  description: "Another beginner-friendly programming language!",
-  image_location: "python.png"
-)
-
-Course.create!(
-  title: "Rails Authentication",
-  language: "ruby",
-  description: "Use Rails to make your own user sign-in/sign-up system!",
-  image_location: "rails.png"
-)
+#
+# ruby_loops = Topic.create!(
+#   title: "Introduction to Ruby",
+#   description: "Learn the basics of the Ruby language in this simple tutorial and
+#       why it is so popular!",
+#   course: ruby
+# )
+#
+# ruby_loops1 = Exercise.create!(
+#   topic: ruby_loops,
+#   title: "",
+#   readings: "",
+#   instructions: ""
+# )
+#
+# ruby_loops2 = Exercise.create!(
+#   topic: ruby_loops,
+#   title: "",
+#   readings: "",
+#   instructions: ""
+# )
+#
+# ruby_loops3 = Exercise.create!(
+#   topic: ruby_loops,
+#   title: "",
+#   readings: "",
+#   instructions: ""
+# )
+#
+# ruby_loops1_sol = Solution.create!(
+#   exercise: ruby_loops1
+# )
+#
+# ruby_loops2_sol = Solution.create!(
+#   exercise: ruby_loops2
+# )
+#
+# ruby_loops3_sol = Solution.create!(
+#   exercise: ruby_loops3
+# )
