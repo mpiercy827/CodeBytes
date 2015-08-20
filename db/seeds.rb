@@ -6,7 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
 #########################
 # RUBY COURSE SEED DATA #
 #########################
@@ -156,12 +155,11 @@ ruby_intro6_sol = Solution.create!(
 
 #
 # ruby_loops = Topic.create!(
-#   title: "Introduction to Ruby",
-#   description: "Learn the basics of the Ruby language in this simple tutorial and
-#       why it is so popular!",
+#   title: "Loops and Iteration",
+#   description: "",
 #   course: ruby
 # )
-#
+
 # ruby_loops1 = Exercise.create!(
 #   topic: ruby_loops,
 #   title: "",
@@ -194,3 +192,31 @@ ruby_intro6_sol = Solution.create!(
 # ruby_loops3_sol = Solution.create!(
 #   exercise: ruby_loops3
 # )
+
+###############################
+# JAVASCRIPT COURSE SEED DATA #
+###############################
+
+Course.create!(
+  title: "Javascript",
+  language: "javascript",
+  description: "Learn one of the most widely-used languages for web development!",
+  image_location: "js.png"
+)
+
+##############
+# DEMO USERS #
+##############
+
+ada = User.create!(
+  email: "ada.lovelace@gmail.com",
+  password: "first!"
+)
+
+alan = User.create!(
+  email: "alan.turing@gmail.com",
+  password: "enigma"
+)
+
+CourseCompletion.create!(course: ruby, user: ada)
+Badge.create!(course: ruby, user: ada)
