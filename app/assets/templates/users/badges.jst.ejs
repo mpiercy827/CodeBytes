@@ -1,6 +1,8 @@
 BADGES BADGES BADGES!!!
 
-
+<% courses.each(function (course) { %>
+  <%= course.get("title") %>
+<%  }) %>
 
 <% courseCompletions.each(function (cc) { %>
   <%= cc.get("course_id") %>

@@ -9,8 +9,12 @@ CodeBytes.Views.Profile = Backbone.CompositeView.extend({
   },
 
   addBadges: function () {
+    var courses = new CodeBytes.Collections.Courses();
+    courses.fetch();
+
     var badgesView = new CodeBytes.Views.Badges({
-      collection: this.model.courseCompletions()
+      collection: this.model.courseCompletions(),
+      courses: courses
     });
     this.addSubview(".badges", badgesView);
   },
