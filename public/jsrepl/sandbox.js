@@ -75,7 +75,7 @@
       current = current[parts[i]];
     }
 
-    current(message.data)
+    current(message.data);
   };
   global.addEventListener('message', msg_handler, false);
 
@@ -199,7 +199,7 @@
     },
 
     flush: function () {
-      if (!this.output_buffer.length) return;
+      if (!this.output_buffer.length) {return;}
       var message = {
         type: 'output',
         data: this.output_buffer.join('')
@@ -334,7 +334,7 @@
       xhr.open(method, url, false);
     }
     return xhr;
-  }
+  };
 
   // Synchronous input for emscripted languages.
   if (self.openDatabaseSync) {
@@ -342,14 +342,14 @@
     self.prompt = function () {
       Sandboss.dbInput();
       var t = null;
-      DB.transaction(function (tx) {t=tx});
+      DB.transaction(function (tx) {t=tx;});
       var i, j, res;
       while (!(res = t.executeSql('SELECT * FROM input').rows).length) {
-        for (i = 0; i < 100000000; i++);
+        for (i = 0; i < 100000000; i++){}
       }
       t.executeSql('DELETE FROM input');
       return res.item(0).text;
-    }
+    };
     Sandboss.hide('prompt');
   } else if (!Sandboss.isFrame) {
     self.prompt = function () {
