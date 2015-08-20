@@ -39,14 +39,6 @@ result       | text      | not null
 output       | text      | not null
 exercise_id  | integer   | not null, unique, foreign key (references exercises)
 
-## badges
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-user_id     | integer   | not null, foreign key (references users)
-course_id   | integer   | not null, foreign key (references courses)
-description | string    | not null
-
 ## exercise_completions
 column name | data type | details
 ------------|-----------|-----------------------

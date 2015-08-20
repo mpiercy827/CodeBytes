@@ -2,14 +2,17 @@
 
 ## Rails
 ### Models
-* Badge
+* ExerciseCompletion
+* TopicCompletion
+* CourseCompletion
 
 ### Controllers
 Api::UsersController (show)
-Api::BadgesController (new, create, show)
+Api::CourseCompletionsController (show)
 
 ### Views
-* badges/show.json.jbuilder
+* api/course_completions/show.json.jbuilder
+* api/users/show.json.jbuilder
 
 ## Backbone
 ### Models

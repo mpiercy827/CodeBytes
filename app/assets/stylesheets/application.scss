@@ -415,7 +415,7 @@ header {
   min-width: 100%;
 }
 
-/* badges */
+/* badges & profile */
 
 .badge-container {
   width: 200px;
@@ -438,4 +438,9 @@ header {
 .inactive-badge {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
+}
+
+.profile {
+  padding-top: 20px;
+  text-align: center;
 }

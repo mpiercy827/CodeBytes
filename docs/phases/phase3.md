@@ -8,7 +8,7 @@
 ### Controllers
 Api::CoursesController (show)
 Api::TopicsController (show)
-Api::ExercisesController (show)
+Api::ExercisesController (show, check)
 
 ### Views
 * courses/show.json.jbuilder
