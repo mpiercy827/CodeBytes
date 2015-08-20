@@ -414,3 +414,28 @@ header {
 .alert-dismissible {
   min-width: 100%;
 }
+
+/* badges */
+
+.badge-container {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  padding: 10px;
+}
+
+.badge-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.active-badge {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+}
+
+.inactive-badge {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}

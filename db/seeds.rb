@@ -198,7 +198,7 @@ ruby_intro6_sol = Solution.create!(
 # JAVASCRIPT COURSE SEED DATA #
 ###############################
 
-Course.create!(
+javascript = Course.create!(
   title: "Javascript",
   language: "javascript",
   description: "Learn one of the most widely-used languages for web development!",
@@ -221,3 +221,4 @@ alan = User.create!(
 )
 
 CourseCompletion.create!(course: ruby, user: ada)
+CourseCompletion.create!(course: javascript, user: alan)

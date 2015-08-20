@@ -1,11 +1,9 @@
 BADGES BADGES BADGES!!!
-
+<br>
 <% courses.each(function (course) { %>
-  <img src="<%= course.get("badge_image_location") %>" />
-<%  }) %>
-
-<% courseCompletions.each(function (cc) { %>
-  <%= cc.get("course_id") %>
-  <%= cc.get("course_id") %>
-  <%= cc.get("course_id") %>
+  <% var imgClass %>
+  <% imgClass = courseCompletions.findWhere({ course_id: course.id}) ? "active-badge" : "inactive-badge" %>
+  <div class="badge-container">
+    <img src="<%= course.get("badge_image_location") %>" class="<%= imgClass %>"/>
+  </div>
 <%  }) %>
