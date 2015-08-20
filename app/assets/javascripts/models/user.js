@@ -1,18 +1,18 @@
 CodeBytes.Models.User = Backbone.Model.extend({
   urlRoot: "api/profile",
 
-  badges: function () {
-    if (!this._badges) {
-      this._badges = new CodeBytes.Collections.Badges();
+  courseCompletions: function () {
+    if (!this._courseCompletions) {
+      this._courseCompletions = new CodeBytes.Collections.CourseCompletions();
     }
 
-    return this._badges;
+    return this._courseCompletions;
   },
 
   parse: function (data) {
-    if (data.badges) {
-      this.badges().set(data.badges);
-      delete data.badges;
+    if (data.course_completions) {
+      this.courseCompletions().set(data.course_completions);
+      delete data.course_completions
     }
 
     return data;
