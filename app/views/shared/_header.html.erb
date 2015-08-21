@@ -7,7 +7,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses <span class="caret"></span></a>
           <ul class="dropdown-menu pull-right">
             <% all_courses.each do |course| %>
-              <li><a href="<%= root_url %>/#/courses/<%= course.id %>">
+              <li><a href="/#/courses/<%= course.id %>">
                 <%= course.title %>
               </a></li>
             <% end %>
