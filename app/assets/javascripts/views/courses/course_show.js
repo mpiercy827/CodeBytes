@@ -20,21 +20,7 @@ CodeBytes.Views.CourseShow = Backbone.CompositeView.extend({
   },
 
   setLang: function () {
-    var course = this.model;
-    var int = CodeBytes.Interpreter;
-
-    //If the interpreter's language isn't the current course's language,
-    //this sets it correctly
-    if (course.has("language") && (!int.lang || int.lang.system_name !== course.get("language"))) {
-      int.loadLanguage(course.get("language"), CodeBytes.submitCodeActivate);
-      //If the interpreter times out, this ensures that the correct
-      //language is reset.
-      int.timeout.callback = function () {
-        int.loadLanguage(course.get("language"), CodeBytes.submitCodeActivate);
-        CodeBytes.Terminal.html("> Code Timed Out.");
-        return true;
-      };
-    }
+    CodeBytes.Interpreter.setNewLang(this.model);
   },
 
   render: function () {
