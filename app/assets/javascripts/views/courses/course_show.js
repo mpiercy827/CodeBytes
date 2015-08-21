@@ -33,7 +33,9 @@ CodeBytes.Views.CourseShow = Backbone.CompositeView.extend({
       //language is reset.
       int.timeout.time = 5000;
       int.timeout.callback = function () {
-        int.loadLanguage(course.get("language"));
+        int.loadLanguage(course.get("language"), function () {
+            console.log("language loaded");
+        });
         CodeBytes.Terminal.html("> Code Timed Out.");
         return true;
       };
