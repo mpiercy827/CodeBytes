@@ -19,6 +19,11 @@ window.CodeBytes = {
 
   findTerminal: function () {
     CodeBytes.Terminal = $(".terminal");
+  },
+
+  submitCodeActivate: function () {
+    CodeBytes.LangLoaded = true;
+    $(".submit-code").prop("disabled", false);
   }
 };
 

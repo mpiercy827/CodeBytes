@@ -50,16 +50,10 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
     var int = CodeBytes.Interpreter;
 
     if (course.has("language") && (!int.lang || int.lang.system_name !== course.get("language"))) {
-      int.loadLanguage(course.get("language"), function () {
-        CodeBytes.LangLoaded = true;
-        $(".submit-code").prop("disabled", false);
-      });
+      int.loadLanguage(course.get("language"), CodeBytes.submitCodeActivate);
 
       int.timeout.callback = function () {
-        int.loadLanguage(course.get("language"), function () {
-          CodeBytes.LangLoaded = true;
-          $(".submit-code").prop("disabled", false);
-        });
+        int.loadLanguage(course.get("language"), CodeBytes.submitCodeActivate);
         CodeBytes.Terminal.html("> Code Timed Out.");
         return true;
       };
