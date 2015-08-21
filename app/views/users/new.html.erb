@@ -1,6 +1,10 @@
-<h3>Sign Up</h3>
+<div class="container register">
+  <div class="jumbotron center">
+    <h1 class="center">Sign Up</h1>
 
-<%= render "shared/errors" %>
+    <%= render "shared/errors" %>
 
-<%= render partial: "shared/newform",
-    locals: {button_text: "Sign Up", url: users_url} %>
+    <%= render partial: "shared/newform",
+        locals: {button_text: "Register", url: users_url} %>
+  </div>
+</div>
