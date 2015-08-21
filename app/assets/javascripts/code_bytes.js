@@ -23,7 +23,9 @@ window.CodeBytes = {
 
   submitCodeActivate: function () {
     CodeBytes.LangLoaded = true;
-    $(".submit-code").prop("disabled", false);
+    var $submitCodeButton = $(".submit-code");
+    $submitCodeButton.prop("disabled", false);
+    $submitCodeButton.removeClass("spinner").html("Submit Code");
   }
 };
 

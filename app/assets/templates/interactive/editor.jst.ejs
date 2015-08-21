@@ -2,7 +2,11 @@
 </div>
 
 
-<% var disabledStatus = CodeBytes.LangLoaded ? "" : "disabled" %>
-<button type="submit" class="btn btn-primary submit-code" <%= disabledStatus %>>
-  Submit Code
-</button>
+<% if (CodeBytes.LangLoaded) { %>
+  <button type="submit" class="btn btn-primary submit-code">
+    Submit Code
+  </button>
+<% } else { %>
+  <button type="submit" class="btn btn-primary submit-code spinner" disabled>
+  </button>
+<%  } %>

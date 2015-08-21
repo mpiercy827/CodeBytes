@@ -39,6 +39,7 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
 
   evaluateCode: function (event) {
     event.preventDefault();
+    $(event.currentTarget).find(".submit-code").blur();
     var editor = ace.edit("editor");
     var code = editor.getValue();
 

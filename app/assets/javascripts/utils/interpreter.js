@@ -52,7 +52,8 @@ CodeBytes.UserResults = {};
 CodeBytes.Interpreter = new JSREPL(InterpreterOptions);
 
 CodeBytes.Interpreter.setNewLang = function (course) {
-  if (course.has("language") && (!this.lang || this.lang.system_name !== course.get("language"))) {
+  if (course.has("language") &&
+      (!this.lang || this.lang.system_name !== course.get("language"))) {
     this.loadLanguage(course.get("language"), CodeBytes.submitCodeActivate);
 
     this.timeout.callback = function () {
@@ -61,4 +62,4 @@ CodeBytes.Interpreter.setNewLang = function (course) {
       return true;
     };
   }
-}
+};
