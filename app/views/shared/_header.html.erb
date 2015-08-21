@@ -5,10 +5,12 @@
       <ul class="nav navbar-nav">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="<%= root_url %>/#/courses/1">Ruby</a></li>
-            <li><a href="<%= root_url %>/#/courses/2">Javascript</a></li>
-            <li><a href="<%= root_url %>/#/courses/3">Python</a></li>
+          <ul class="dropdown-menu pull-right">
+            <% all_courses.each do |course| %>
+              <li><a href="<%= root_url %>/#/courses/<%= course.id %>">
+                <%= course.title %>
+              </a></li>
+            <% end %>
           </ul>
         </li>
         <% if logged_in? %>
