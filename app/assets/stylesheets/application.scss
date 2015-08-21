@@ -173,17 +173,16 @@ header {
 /* sticky footer */
 
 footer, .push {
-  height: 60px;
+  height: 50px;
 }
 
 footer {
   background-color: #E6E7E8;
 }
 
-footer a {
-  display: inline-block;
-  height: 100%;
-  padding: 10px;
+footer nav {
+  float: right;
+  color: #204056;
 }
 
 /* course index */
