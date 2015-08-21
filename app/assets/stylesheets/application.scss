@@ -16,7 +16,6 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
-$footer-height: 40px;
 $header-height: 50px;
 $about-height: 400px;
 $codebytes-blue: #18bc9c;
@@ -81,7 +80,6 @@ html, body {
 }
 
 .main {
-  padding-bottom: $footer-height + 10;
   padding-top: $header-height;
 }
 
@@ -172,17 +170,28 @@ header {
   }
 }
 
+/* sticky footer */
+
+footer, .push {
+  height: 60px;
+}
+
+footer {
+  background-color: #E6E7E8;
+}
+
+footer a {
+  display: inline-block;
+  height: 100%;
+  padding: 10px;
+}
+
 /* course index */
 
 .about {
   background-color: $codebytes-blue;
   color: white;
-  position: absolute;
-  display:block;
-  width: 100%;
-  height: $about-height;
-  left: 0;
-  padding: 0 20%;
+  padding: 100px 20%;
   text-align: center;
   transition: background-color 1s;
   -webkit-transition: background-color 1s;
@@ -194,15 +203,8 @@ header {
 }
 
 .about h1 {
-  font-size: 96px;
+  font-size: 72px;
   color: white;
-  transform: translateY(50%);
-}
-
-.about p {
-  font-size: 24px;
-  color: white;
-  transform: translateY(150%);
 }
 
 .courses {
@@ -212,9 +214,6 @@ header {
 }
 
 .courses-index {
-  position: relative;
-  top: $about-height;
-  padding: 10px;
   margin: 0 auto;
 }
 
@@ -223,14 +222,10 @@ header {
   font-size: 36px;
 }
 
+
 /*course list items displays*/
 
-// .courses-list {
-//   width: 100%;
-//   margin: auto;
-// }
-
-.course-item {
+.course-item, .upcoming-course-item {
   width: calc(25% - 40px);
   height: 260px;
   border-radius: 5px;
@@ -248,19 +243,19 @@ header {
 }
 
 @media screen and (max-width: 500px) {
-  .course-item {
+  .course-item, .upcoming-course-item {
     width: calc(100% - 40px);
   }
 }
 
 @media screen and (max-width: 800px) and (min-width: 500px) {
-  .course-item {
+  .course-item, .upcoming-course-item {
     width: calc(50% - 40px);
   }
 }
 
 @media screen and (max-width: 1200px) and (min-width: 800px) {
-  .course-item {
+  .course-item, .upcoming-course-item {
     width: calc(33% - 40px);
   }
 }
@@ -272,7 +267,7 @@ header {
   display: block;
 }
 
-.course-item:hover {
+.course-item:hover, .upcoming-course-item:hover {
   background-color: #fff;
   filter: grayscale(0%);
   -webkit-filter: grayscale(0%);
@@ -407,7 +402,7 @@ header {
 }
 
 .feedback {
-  width: 50%;
+  max-width: 50%;
   margin: 0 auto;
   margin-top: -40px;
 }

@@ -1,10 +1,6 @@
 <button class="close">&times;</button>
 <% if (results.result && results.output) { %>
   Nice Work! Continue
-<% } else if (results.result) { %>
-  Looks like your output isn't quite right!
-<% } else if (results.output) { %>
-  Your return value isn't quite right!
 <% } else { %>
   Not quite, try again!
 <% } %>
