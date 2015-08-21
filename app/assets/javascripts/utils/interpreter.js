@@ -40,8 +40,9 @@ InterpreterOptions = {
   },
 
   timeout: {
-    time: 100000,
+    time: 10000,
     callback: function () {
+      console.log("10 second time out")
       return true;
     }
   }

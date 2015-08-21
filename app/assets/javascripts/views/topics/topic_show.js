@@ -48,8 +48,11 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
     var int = CodeBytes.Interpreter;
 
     if (course.has("language") && int.lang !== course.get("language")) {
-      int.loadLanguage(course.get("language"));
+      int.loadLanguage(course.get("language"), function () {
+        console.log("language loaded");
+      });
 
+      int.timeout.time = 5000;
       int.timeout.callback = function () {
         int.loadLanguage(course.get("language"));
         CodeBytes.Terminal.html("> Code Timed Out.");
@@ -67,7 +70,7 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
     var currExId = CodeBytes.UserResults.exercise_id;
     var $currEx = $(".exercise-list a[data-id=" + currExId + "]");
     var nextIndex = $currEx.data("index") + 1;
-    
+
     this.clearEditorAndTerminal();
     this.model.exercises().trigger("activate", [nextIndex]);
     $(event.currentTarget).remove();

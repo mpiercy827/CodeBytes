@@ -26,7 +26,9 @@ CodeBytes.Views.CourseShow = Backbone.CompositeView.extend({
     //If the interpreter's language isn't the current course's language,
     //this sets it correctly
     if (course.has("language") && int.lang !== course.get("language")) {
-      int.loadLanguage(course.get("language"));
+      int.loadLanguage(course.get("language"), function () {
+        console.log("language loaded");
+      });
       //If the interpreter times out, this ensures that the correct
       //language is reset.
       int.timeout.time = 5000;
