@@ -40,7 +40,7 @@ InterpreterOptions = {
   },
 
   timeout: {
-    time: 5000,
+    time: 100000,
     callback: function () {
       return true;
     }
