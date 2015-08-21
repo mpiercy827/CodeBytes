@@ -6,6 +6,7 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
   events: {
     "click .exercise-list>li>a": "switchToExercise",
     "click .positive": "nextExerciseOrTopic",
+    "click .negative": "removeAlert",
     "submit": "evaluateCode"
   },
 
@@ -48,16 +49,16 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
     var course = this.course;
     var int = CodeBytes.Interpreter;
 
-    if (course.has("language") && int.lang !== course.get("language")) {
+    if (course.has("language") && (!int.lang || int.lang.system_name !== course.get("language"))) {
       int.loadLanguage(course.get("language"), function () {
+        CodeBytes.LangLoaded = true;
         $(".submit-code").prop("disabled", false);
-        console.log("language loaded");
       });
 
       int.timeout.callback = function () {
         int.loadLanguage(course.get("language"), function () {
+          CodeBytes.LangLoaded = true;
           $(".submit-code").prop("disabled", false);
-          console.log("language loaded");
         });
         CodeBytes.Terminal.html("> Code Timed Out.");
         return true;
@@ -85,6 +86,11 @@ CodeBytes.Views.TopicShow = Backbone.CompositeView.extend({
     var index = $(event.currentTarget).data("index");
     this.clearEditorAndTerminal();
     this.model.exercises().trigger("activate", [index]);
+  },
+
+  removeAlert: function (event) {
+    event.preventDefault();
+    $(event.currentTarget).remove();
   },
 
   render: function () {
