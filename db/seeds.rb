@@ -38,6 +38,12 @@ ruby_intro1 = Exercise.create!(
   instructions: "If you're ready to learn Ruby, click the submit button to begin!"
 )
 
+ruby_intro1_sol = Solution.create!(
+  exercise: ruby_intro1,
+  result: "nil",
+  output: ""
+)
+
 ruby_intro2 = Exercise.create!(
   topic: ruby_intro,
   title: "Hello, World!",
@@ -51,6 +57,12 @@ ruby_intro2 = Exercise.create!(
   instructions: "In the editor to the right, make your own <i>puts</i> statement that will print \"Hello World!\" to the console underneath the editor. (Hint: Make sure to pay attention to capitalization!)"
 )
 
+ruby_intro2_sol = Solution.create!(
+  exercise: ruby_intro2,
+  result: "nil",
+  output: "Hello World!\n"
+)
+
 ruby_intro3 = Exercise.create!(
   topic: ruby_intro,
   title: "Strings",
@@ -62,6 +74,12 @@ ruby_intro3 = Exercise.create!(
 
               By simply tacking a '.reverse' on to the end of our string, we can reverse it. Other useful methods include '.upcase', which capitalizes every character in a string, '.downcase', which sets every character in lower case, and '.capitalize', which capitalizes the first character of the string. All of these methods are called that same way, by adding them to the end of the string.",
   instructions: "Let's use 'puts' and '.upcase' to print an uppercase version of the string \"i'm learning ruby!\" to the console."
+)
+
+ruby_intro3_sol = Solution.create!(
+  exercise: ruby_intro3,
+  result: "nil",
+  output: "I'M LEARNING RUBY!\n"
 )
 
 ruby_intro4 = Exercise.create!(
@@ -78,6 +96,12 @@ ruby_intro4 = Exercise.create!(
             <div class=\"sample\">puts 4 * 4 <span class=\"sample-result\"># 16</span></div>
             <div class=\"sample\">puts 49 / 7<span class=\"sample-result\"># 7</span></div>",
   instructions: "Use 'puts' to print the result of multiplying 117 by 4."
+)
+
+ruby_intro4_sol = Solution.create!(
+  exercise: ruby_intro4,
+  result: "nil",
+  output: "468\n"
 )
 
 ruby_intro5 = Exercise.create!(
@@ -101,6 +125,12 @@ ruby_intro5 = Exercise.create!(
   instructions: "Use 'puts' and the modulo operator (%) to find the remainder when 100 is divided by 7."
 )
 
+ruby_intro5_sol = Solution.create!(
+  exercise: ruby_intro5,
+  result: "nil",
+  output: "2\n"
+)
+
 ruby_intro6 = Exercise.create!(
   topic: ruby_intro,
   title: "Variables",
@@ -118,6 +148,12 @@ ruby_intro6 = Exercise.create!(
   instructions: "Create a variable called my_cool_variable and set it equal to the string \"My First Ruby Variable!\". Then print it to the console using 'puts'."
 )
 
+ruby_intro6_sol = Solution.create!(
+  exercise: ruby_intro6,
+  result: "nil",
+  output: "My First Ruby Variable!\n"
+)
+
 ruby_intro7 = Exercise.create!(
   topic: ruby_intro,
   title: "Booleans",
@@ -133,42 +169,6 @@ ruby_intro7 = Exercise.create!(
   instructions: "Using '==' and puts, check whether (884 / 13) is equal to 68 and print the result to the console."
 )
 
-ruby_intro1_sol = Solution.create!(
-  exercise: ruby_intro1,
-  result: "nil",
-  output: ""
-)
-
-ruby_intro2_sol = Solution.create!(
-  exercise: ruby_intro2,
-  result: "nil",
-  output: "Hello World!\n"
-)
-
-ruby_intro3_sol = Solution.create!(
-  exercise: ruby_intro3,
-  result: "nil",
-  output: "I'M LEARNING RUBY!\n"
-)
-
-ruby_intro4_sol = Solution.create!(
-  exercise: ruby_intro4,
-  result: "nil",
-  output: "468\n"
-)
-
-ruby_intro5_sol = Solution.create!(
-  exercise: ruby_intro5,
-  result: "nil",
-  output: "2\n"
-)
-
-ruby_intro6_sol = Solution.create!(
-  exercise: ruby_intro6,
-  result: "nil",
-  output: "My First Ruby Variable!\n"
-)
-
 ruby_intro7_sol = Solution.create!(
   exercise: ruby_intro7,
   result: "nil",
@@ -177,45 +177,107 @@ ruby_intro7_sol = Solution.create!(
 
 ########################################
 
+ruby_conditionals = Topic.create!(
+  title: "Conditionals",
+  description: "Learn to control the flow of your programs with if-else statments!",
+  course: ruby
+)
 
-# ruby_loops = Topic.create!(
-#   title: "Loops and Iteration",
-#   description: "",
-#   course: ruby
-# )
-#
-# ruby_loops1 = Exercise.create!(
-#   topic: ruby_loops,
-#   title: "",
-#   readings: "",
-#   instructions: ""
-# )
-#
-# ruby_loops2 = Exercise.create!(
-#   topic: ruby_loops,
-#   title: "",
-#   readings: "",
-#   instructions: ""
-# )
-#
-# ruby_loops3 = Exercise.create!(
-#   topic: ruby_loops,
-#   title: "",
-#   readings: "",
-#   instructions: ""
-# )
-#
-# ruby_loops1_sol = Solution.create!(
-#   exercise: ruby_loops1
-# )
-#
-# ruby_loops2_sol = Solution.create!(
-#   exercise: ruby_loops2
-# )
-#
-# ruby_loops3_sol = Solution.create!(
-#   exercise: ruby_loops3
-# )
+ruby_conditionals1 = Exercise.create!(
+  topic: ruby_conditionals,
+  title: "Overview",
+  readings: "So far, we have been working with very simple programs. But eventually, we are going to need make more complex programs. For example, we may have a program that asks a user for a number, then returns whether that number is a multiple of 17.
+
+            While such a program may seem simple, we can't yet build it with the tools we have. To do so, we need to learn about conditional statements and how they can be used to handle a variety of cases.",
+  instructions: "Go ahead and press the submit button if you're ready to start!"
+)
+
+ruby_conditionals1_sol = Solution.create!(
+  exercise: ruby_conditionals1,
+  result: "nil",
+  output: ""
+)
+
+ruby_conditionals2 = Exercise.create!(
+  topic: ruby_conditionals,
+  title: "Boolean Refresher",
+  readings: "Let's recall from the last section of the course that a boolean value is one that is either true or false. If we wanted to see if 105 / 7 gives a remainder of zero, we could do so as follows:
+
+            <div class=\"sample\">puts (105 % 7) == 0 <span class=\"sample-result\"># true</span></div>
+
+            Here we are writing (105 % 7) to see what the remainder is after dividing 105 by 7, then using '==' to check and see if that remainder is equal to zero.
+            ",
+  instructions: "Using a similar setup to the example above, see if 1001 divided by 3 gives a remainder of 1, and print the result to the console."
+)
+
+ruby_conditionals2_sol = Solution.create!(
+  exercise: ruby_conditionals2,
+  result: "nil",
+  output: "false\n"
+)
+
+ruby_conditionals3 = Exercise.create!(
+  topic: ruby_conditionals,
+  title: "If...",
+  readings: "Say we have written an app where a user inputs a number, and we want to display a message to them only if that number is divisible by 17 (the remainder is zero after dividing). To do this, we can use an 'if' statement:
+
+            <div class=\"sample\">my_number = 51<br>if my_number % 17 == 0<br>&nbsp;&nbsp;puts 'Your number is divisible by 17'<br>end</div>
+
+            If we ran this code, we would see the message, as 51 / 17 == 3. Let's take a look at how the if statement works.
+
+            First, the statement after the word 'if' is evaluated. So Ruby checks if 51 % 17 == 0. Since this is true, our program will run all of the code in between the 'if' and 'end' lines. If we instead had:
+
+            <div class=\"sample\">my_other_number = 5<br>if my_other_number % 17 == 0<br>&nbsp;&nbsp;puts 'Your number is divisible by 17'<br>end</div>
+
+            We would not see anything printed in the console. This is because 5 % 17 == 5, not 0. So our program simply skips over everything between the 'if' and 'end' lines.",
+  instructions: "Use an if statement like the one above to print \"I'm in an if statement\" if 12321 gives a remainder of 0 when divided by 3."
+)
+
+ruby_conditionals3_sol = Solution.create!(
+  exercise: ruby_conditionals3,
+  result: "nil",
+  output: "I'm in an if statement\n"
+)
+
+ruby_conditionals4 = Exercise.create!(
+  topic: ruby_conditionals,
+  title: "Else...",
+  readings: "In our last exercise, we learned how to print a message if a given condition was true. But what if we wanted to let the user know if their number wasn't divisible by 17? We would accomplish that with an else statement:
+
+            <div class=\"sample\">my_number = 5<br>if my_number % 17 == 0<br>&nbsp;&nbsp;puts 'Your number is divisible by 17'<br>else<br>&nbsp;&nbsp;puts 'Your number is not divisible by 17'<br>end</div>
+
+            We would see the second message in the console, since 5 is not divisible by 17 (we get a remainder of 5). Notice that the code from the if statement will not get run. Only the code from the else statement will be run. Similarly, if we had:
+
+            <div class=\"sample\">if true<br>&nbsp;&nbsp;puts 'I'm in the if statment'<br>else<br>&nbsp;&nbsp;puts 'I'm in the else statment'<br>end</div>
+
+            We will only see the first message since the condition next to if is true (true is true!), and not the second.",
+  instructions: "Write an if else statement that checks whether or not 111 * 111 = 12331. If it does, print \"I'm in the if statement!\". If it does not, print \"I'm in the else statement!\""
+)
+
+ruby_conditionals4_sol = Solution.create!(
+  exercise: ruby_conditionals4,
+  result: "nil",
+  output: "I'm in the else statement!\n"
+)
+
+ruby_conditionals5 = Exercise.create!(
+  topic: ruby_conditionals,
+  title: "Elsif",
+  readings: "To wrap up this section, we will introduce 'elsif'. Suppose a user had given us a number, and we wanted to print a message depending on whether that number was positive (> 0), negative (< 0), or equal to 0 (== 0).
+
+            With if-else statement, we can only have two possible outcomes. But by adding elsif statements, we can have as many possible outputs as we'd like!
+
+            <div class=\"sample\">user_number = -1<br>if user_number > 0<br>&nbsp;&nbsp;puts 'That number is positive'<br>elsif user_number < 0<br>&nbsp;&nbsp; puts 'That number is negative'<br>else<br>&nbsp;&nbsp;puts 'That number is zero'<br>end</div>
+
+            As we might expect, we would see 'That number is negative' in the console.",
+  instructions: "Use an if-elsif-else statement with what ever conditions you like to print the message: \"I'm ready for more Ruby!\""
+)
+
+ruby_conditionals5_sol = Solution.create!(
+  exercise: ruby_conditionals5,
+  result: "nil",
+  output: "I'm ready for more Ruby!\n"
+)
 
 ###############################
 # JAVASCRIPT COURSE SEED DATA #

@@ -88,6 +88,7 @@ html, body {
 #content {
   position: relative;
   width: 100%;
+  min-width: 600px;
 }
 
 .scripty {
@@ -187,7 +188,7 @@ footer nav {
 
 /* course index */
 
-.about {
+.index-banner {
   background-color: $codebytes-blue;
   color: white;
   padding: 100px 20%;
@@ -197,11 +198,11 @@ footer nav {
   text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
 }
 
-.about:hover {
+.index-banner:hover {
   background-color: #000;
 }
 
-.about h1 {
+.index-banner h1 {
   font-size: 72px;
   color: white;
 }
@@ -361,13 +362,17 @@ footer nav {
   background-color: #eeffff;
   border: 1px solid #dddddd;
   border-radius: 2px;
-  padding: 5px;
+  padding: 5px 10px;
   width: auto;
-  text-align: center;
+  text-align: left;
 }
 
 .sample-result {
   color: #666666;
+  padding-left: 5px;
+}
+
+.tabbed {
   padding-left: 5px;
 }
 
