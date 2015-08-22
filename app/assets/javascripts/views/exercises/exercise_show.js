@@ -32,6 +32,7 @@ CodeBytes.Views.ExerciseShow = Backbone.View.extend({
   onRender: function () {
     CodeBytes.UserResults = {};
     CodeBytes.UserResults.exercise_id = this.activeExercise().id;
+    $(".exercise").scrollTop(0);
   },
 
   render: function () {

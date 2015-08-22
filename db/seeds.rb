@@ -24,96 +24,113 @@ ruby = Course.create!(
 ########################################
 
 ruby_intro = Topic.create!(
-  title: "Introduction to Ruby",
-  description: "Learn the basics of the Ruby language in this simple tutorial!",
+  title: "Programming Basics",
+  description: "Learn the basics of the Ruby programming language in this intro tutorial!",
   course: ruby
 )
 
 ruby_intro1 = Exercise.create!(
   topic: ruby_intro,
   title: "Overview",
-  readings: "Ruby is a powerful, easy-to-learn language you can use in web-development, to create simple games, and as part of the Ruby on Rails web framework (be sure to look out for our Rails course which will teach you the basics of web development!).
+  readings: "Ruby is a very simple, easy-to-learn programming language that is a great for beginning programmers and experienced developers alike. It is often used in Ruby on Rails, a web development framework that is used to build awesome web applications like Basecamp, Kickstarter, and CodeBytes.
 
-            There are several aspects of Ruby that make it such a popular language. Perhaps the most appealing is that Ruby was intentionally designed to be very easy to use, and looks a lot like regular English as a result! We will discuss more of the features as the course progresses, so for now, let's dive in!",
+            So whether you're looking to dive into web development or just starting to program, Ruby is an excellent language to learn! This course will focus on the basics of the language as well as fundamental programming concepts.",
   instructions: "If you're ready to learn Ruby, click the submit button to begin!"
 )
 
 ruby_intro2 = Exercise.create!(
   topic: ruby_intro,
   title: "Hello, World!",
-  readings: "Ruby, like all other programming languages, gives us a way to 'speak' with computers. Think of a program as a set of instructions that a computer will read and obey.
+  readings: "Ruby, like all other computer languages, gives us a way to communicate a set of instructions to computers that we want to be executed. One of the first things than many programmers do is write a simple program that prints a message to the screen.
 
-            The simplest instruction that we can tell a computer is to say something back to us. In Ruby, we can do this using the <i>puts</i> method:
+            To honor that tradition, we are going to use the Ruby 'puts' method to make our first program. Here is an example of how it is used:
 
-            <b>puts \"I am a printed statement!\"</b>
+            <div class=\"sample\">puts \"Programming is awesome!\" <span class=\"sample-result\"># \"Programming is awesome!\"</span></div>
 
-            When the Ruby interpreter (the part of the computer that 'speaks' and understands Ruby) gets this line of code, it will print the words in quotes to the console.",
-  instructions: "In the editor to the right, make your own <i>puts</i> statement that will print \"Hello World!\" to the console underneath the editor."
+            In the example above, puts takes the string (the message in quotes) and prints it. It's as simple as that!",
+  instructions: "In the editor to the right, make your own <i>puts</i> statement that will print \"Hello World!\" to the console underneath the editor. (Hint: Make sure to pay attention to capitalization!)"
 )
 
 ruby_intro3 = Exercise.create!(
   topic: ruby_intro,
-  title: "Data Types",
-  readings: "In Ruby, there are several <i><u>data types</i></u> that we have access to. One of those data types is a <b>string</b>, which is a collection of one or more letters (we printed a string to the console in the last exercise). For example, both \"Hello There!\" and \"asdf\" are both strings.
+  title: "Strings",
+  readings: "In the last exercise, we printed a string, which is simply a collection of letters, numbers, and symbols surrounded by double or single quotes, to the console. Before we move on to some of the other types of data Ruby can work with, let's check out some of the cool things we can do with strings.
 
-            Another data type we can use is a <b>number</b>, which we are all familiar with. Numbers have all the familiar operations (addition, subtraction, etc.), which we will cover in the next exercise, and are used fairly often when programming, although you don't have to be a math genius to be a great programmer!
+              Ruby has a lot of different ways of manipulating strings. For example, we can reverse a string like so:
 
-            The last data type we will talk about in this section is a <b>boolean</b>, which is a value that can only be <i>true</i> or <i>false</i>. We will get into this and even more data types in later topics.",
-  instructions: "For now, let's use 'puts' to print the number 100 to the console. (Hint: we don't need quotes for numbers, only for strings!)"
+              <div class=\"sample\">puts \"Whoa...\".reverse <span class=\"sample-result\"># \"...aohW\"</span></div>
+
+              By simply tacking a '.reverse' on to the end of our string, we can reverse it. Other useful methods include '.upcase', which capitalizes every character in a string, '.downcase', which sets every character in lower case, and '.capitalize', which capitalizes the first character of the string. All of these methods are called that same way, by adding them to the end of the string.",
+  instructions: "Let's use 'puts' and '.upcase' to print an uppercase version of the string \"i'm learning ruby!\" to the console."
 )
 
 ruby_intro4 = Exercise.create!(
   topic: ruby_intro,
-  title: "Math",
-  readings: "Now that we know we can use numbers in Ruby, we'd like to be able to add, subtract, multiply and divide them. You can do this the same way you would with pen and paper:
+  title: "Numbers",
+  readings: "In addition to strings, Ruby also lets us work with numbers. While strings need to be surrounded by quotes, numbers do not. This means if we wanted to print the number 1000 to the console, it would be as easy as:
 
-            Add: puts 1 + 1
-            Subtract: puts 5 - 3
-            Multiply: puts 4 * 4
-            Divide: puts 49 / 7
+            <div class=\"sample\">puts 1000 <span class=\"sample-result\"># \"1000\"</span></div>
 
-            All we have to do is place one of the four symbols (+, -, *, /) between any two numbers and the result will be calculated.",
+            But we can do more than simply print numbers to the screen. Ruby gives us the ability to add, subtract, multiply and divide numbers as well. We can do this just like we would on paper:
+
+            <div class=\"sample\">puts 1 + 1 <span class=\"sample-result\"># 2</span></div>
+            <div class=\"sample\">puts 15 - 6 <span class=\"sample-result\"># 9</span></div>
+            <div class=\"sample\">puts 4 * 4 <span class=\"sample-result\"># 16</span></div>
+            <div class=\"sample\">puts 49 / 7<span class=\"sample-result\"># 7</span></div>",
   instructions: "Use 'puts' to print the result of multiplying 117 by 4."
 )
 
 ruby_intro5 = Exercise.create!(
   topic: ruby_intro,
-  title: "Variables",
-  readings: "One very useful concept of all programming language is a <b>variable</b>, which is just a name we give to a value. For example, say from our last example that we needed the result of the last exercise (117 * 4), but we wouldn't need it in our program for a while.
+  title: "More Numbers",
+  readings: "Now that we know we can work with numbers in Ruby, we might try to do something like 5 / 2. If we did this on a calculator, we would get 2.5, which is what we would expect from Ruby:
 
-            This is where a variable can help. In Ruby, we assign a variable like so:
+            <div class=\"sample\">puts 5 / 2 <span class=\"sample-result\"># 2</span></div>
 
-            my_variable = 117 * 4
+            What?! This may seem a little strange at first, but we can get the result we want like so:
 
-            The left hand side is the name of the variable we are assigning, and it can be (almost) anything you want! The right hand side is simply what we will be 'renaming' with the variable. Lastly, the '=' is what tells the computer that when ever we use 'my_variable' in our program, that we want to use (117 * 4).
+            <div class=\"sample\">puts 5 / 2.0 <span class=\"sample-result\"># 2.5</span></div>
 
-            What can we store in a variable? Anything! We could make a variable for a string, for a boolean, or any other object (more on objects later) in Ruby.",
-  instructions: "Make a variable with whatever name you'd like, and assign it a value of 1000. Then use puts to print the variable to the console. (Hint: we don't need to put quotes around a variable name)"
+            If we want Ruby to give us decimals, we have to use decimals in the expression we type. To see what was going on in the first example, we will introduce the <i>modulo</i> operator ( % ). While you might not be too familiar with this, an example might be able to clarify it:
+
+            <div class=\"sample\">puts 5 / 2 <span class=\"sample-result\"># 2</span></div>
+            <div class=\"sample\">puts 5 % 2 <span class=\"sample-result\"># 1</span></div>
+
+
+            When we divide 5 by 2, we get 2 with a remainder of 1. So a % b gives us the remainder when a is divided by b (no decimals are used). It's ok if this is a bit confusing now, it should hopefully become a bit more clear with practice!",
+  instructions: "Use 'puts' and the modulo operator (%) to find the remainder when 100 is divided by 7."
 )
 
 ruby_intro6 = Exercise.create!(
   topic: ruby_intro,
-  title: "Simple Strings",
-  readings: "For the last exercise in our introduction to Ruby, we will be going back to strings. Ruby allows us to to a lot of neat things with strings, like so:
+  title: "Variables",
+  readings: "Before we take a look at one more data type in this section, it will be worth our while to discuss variables. You may or may not be familiar with the concept of a variable, but a variable is essentially a name we give to some value so we can refer to it later.
 
-            puts \"hello\".upcase
+            Say, for example, we know that we will be using the string \"I love programming!\" a lot in our program. Instead of having to write that out over and over again, we can assign it to a variable like so:
 
-            will make every letter in the string uppercase and give us the string \"HELLO\" in the console. We could also use <i>reverse</i> method, which does exactly what you'd thing it does:
+            <div class=\"sample\">my_string = \"I love programming!\"</div>
 
-            puts \"siht esrever\".reverse
+            The name on the left is what we will refer to the string as later in our program, and it can be anything you like! Now if we wanted to print this string to the console:
 
-            If we entered this, we will get an output of \"reverse this\". We can use these methods by adding a '.' after the string, followed by the name of the method. More useful methods include:
+            <div class=\"sample\">puts my_string <span class=\"sample-result\"># \"I love programming!\"</span></div>
 
-            .capitalize - capitalizes the first letter of a string (not of each word!)
-            .downcase - makes every letter in a string lowercase
+            Note that like numbers, we don't have to put quotes around the name of a variable.",
+  instructions: "Create a variable called my_cool_variable and set it equal to the string \"My First Ruby Variable!\". Then print it to the console using 'puts'."
+)
 
-            If we have a string stored in a variable, we can call the methods on the variable like so:
+ruby_intro7 = Exercise.create!(
+  topic: ruby_intro,
+  title: "Booleans",
+  readings: "The last data type we will focus on in this section is the boolean. A boolean is a value that can only be 'true' or 'false'. We will use these a lot more in future sections of the course. We can assign booleans to variables just like numbers or strings:
 
-            my_variable = \"looc\"
-            puts my_variable.reverse.upcase
+            <div class=\"sample\">my_boolean = true</div>
 
-            which will give us \"COOL\" as a result. Note that we can chain multiple methods together!",
-  instructions: "Create a variable for the string \"I did it!\". Then reverse the string, make it uppercase, and print the result to the console. You can do it!"
+            We could then use this throughout our program. Say we wanted to check if two values are equal, and get true or false as our result. We can't use '=', because that is how we assign variables. The way we get around this is by using '=='. For example:
+
+            <div class=\"sample\">puts (16/8) == 2 <span class=\"sample-result\"># true</span></div>
+
+            When we use '==', if the value on the left is equal to the value on the right, we will get true as a result. If they are not equal, we will get false.",
+  instructions: "Using '==' and puts, check whether (884 / 13) is equal to 68 and print the result to the console."
 )
 
 ruby_intro1_sol = Solution.create!(
@@ -131,7 +148,7 @@ ruby_intro2_sol = Solution.create!(
 ruby_intro3_sol = Solution.create!(
   exercise: ruby_intro3,
   result: "nil",
-  output: "100\n"
+  output: "I'M LEARNING RUBY!\n"
 )
 
 ruby_intro4_sol = Solution.create!(
@@ -143,24 +160,30 @@ ruby_intro4_sol = Solution.create!(
 ruby_intro5_sol = Solution.create!(
   exercise: ruby_intro5,
   result: "nil",
-  output: "1000\n"
+  output: "2\n"
 )
 
 ruby_intro6_sol = Solution.create!(
   exercise: ruby_intro6,
   result: "nil",
-  output: "!TI DID I\n"
+  output: "My First Ruby Variable!\n"
+)
+
+ruby_intro7_sol = Solution.create!(
+  exercise: ruby_intro7,
+  result: "nil",
+  output: "true\n"
 )
 
 ########################################
 
-#
+
 # ruby_loops = Topic.create!(
 #   title: "Loops and Iteration",
 #   description: "",
 #   course: ruby
 # )
-
+#
 # ruby_loops1 = Exercise.create!(
 #   topic: ruby_loops,
 #   title: "",
