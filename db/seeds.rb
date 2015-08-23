@@ -438,6 +438,58 @@ ruby_methods1sol = Solution.create!(
   output: ""
 )
 
+ruby_methods2 = Exercise.create!(
+  topic: ruby_methods,
+  title: "Method Definition",
+  readings: "",
+  instructions: ""
+)
+
+ruby_methods2sol = Solution.create!(
+  exercise: ruby_methods2,
+  result: "nil",
+  output: ""
+)
+
+ruby_methods3 = Exercise.create!(
+  topic: ruby_methods,
+  title: "Return Values",
+  readings: "",
+  instructions: ""
+)
+
+ruby_methods3sol = Solution.create!(
+  exercise: ruby_methods3,
+  result: "nil",
+  output: ""
+)
+
+ruby_methods4 = Exercise.create!(
+  topic: ruby_methods,
+  title: "Arguments",
+  readings: "",
+  instructions: ""
+)
+
+ruby_methods4sol = Solution.create!(
+  exercise: ruby_methods4,
+  result: "nil",
+  output: ""
+)
+
+ruby_methods5 = Exercise.create!(
+  topic: ruby_methods,
+  title: "Final Ruby Exercise",
+  readings: "",
+  instructions: ""
+)
+
+ruby_methods5sol = Solution.create!(
+  exercise: ruby_methods5,
+  result: "nil",
+  output: ""
+)
+
 ###############################
 # JAVASCRIPT COURSE SEED DATA #
 ###############################
@@ -448,6 +500,12 @@ javascript = Course.create!(
   description: "Learn one of the most widely-used languages for web development!",
   image_location: "js.png",
   badge_image_location: "js_badge.png"
+)
+
+javascript_intro = Topic.create!(
+  course: javascript,
+  title: "Introduction to Javascript",
+  description: "Cover the basics of Javascript and learn one of the most popular programming languages!"
 )
 
 ##############
