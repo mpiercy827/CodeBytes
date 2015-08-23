@@ -32,7 +32,7 @@ ruby_intro = Topic.create!(
 ruby_intro1 = Exercise.create!(
   topic: ruby_intro,
   title: "Overview",
-  readings: "Ruby is a very simple, easy-to-learn programming language that is a great for beginning programmers and experienced developers alike. It is often used in Ruby on Rails, a web development framework that is used to build awesome web applications like Basecamp, Kickstarter, and CodeBytes.
+  readings: "Ruby is a very simple, easy-to-learn programming language that is very powerful and flexible. It is often used in Ruby on Rails, a web development framework that is used to build awesome web applications like Basecamp, Kickstarter, and this one!
 
             So whether you're looking to dive into web development or just starting to program, Ruby is an excellent language to learn! This course will focus on the basics of the language as well as fundamental programming concepts.",
   instructions: "If you're ready to learn Ruby, click the submit button to begin!"
@@ -53,7 +53,7 @@ ruby_intro2 = Exercise.create!(
 
             <div class=\"sample\">puts \"Programming is awesome!\" <span class=\"sample-result\"># \"Programming is awesome!\"</span></div>
 
-            In the example above, puts takes the string (the message in quotes) and prints it. It's as simple as that!",
+            In the example above, 'puts' takes the string (the message in quotes) and prints it. It's as simple as that!",
   instructions: "In the editor to the right, make your own <i>puts</i> statement that will print \"Hello World!\" to the console underneath the editor. (Hint: Make sure to pay attention to capitalization!)"
 )
 
@@ -72,7 +72,7 @@ ruby_intro3 = Exercise.create!(
 
               <div class=\"sample\">puts \"Whoa...\".reverse <span class=\"sample-result\"># \"...aohW\"</span></div>
 
-              By simply tacking a '.reverse' on to the end of our string, we can reverse it. Other useful methods include '.upcase', which capitalizes every character in a string, '.downcase', which sets every character in lower case, and '.capitalize', which capitalizes the first character of the string. All of these methods are called that same way, by adding them to the end of the string.",
+              By simply tacking a '.reverse' on to the end of our string, we can reverse it. Other useful methods include '.upcase', which capitalizes every character in a string, '.downcase', which sets every character in lower case, and '.capitalize', which capitalizes the first character of the string. All of these methods are called the same way as .reverse, by adding them to the end of the string.",
   instructions: "Let's use 'puts' and '.upcase' to print an uppercase version of the string \"i'm learning ruby!\" to the console."
 )
 
@@ -91,10 +91,7 @@ ruby_intro4 = Exercise.create!(
 
             But we can do more than simply print numbers to the screen. Ruby gives us the ability to add, subtract, multiply and divide numbers as well. We can do this just like we would on paper:
 
-            <div class=\"sample\">puts 1 + 1 <span class=\"sample-result\"># 2</span></div>
-            <div class=\"sample\">puts 15 - 6 <span class=\"sample-result\"># 9</span></div>
-            <div class=\"sample\">puts 4 * 4 <span class=\"sample-result\"># 16</span></div>
-            <div class=\"sample\">puts 49 / 7<span class=\"sample-result\"># 7</span></div>",
+            <div class=\"sample\">puts 1 + 1 <span class=\"sample-result\"># 2</span><br>puts 15 - 6 <span class=\"sample-result\"># 9</span><br>puts 4 * 4 <span class=\"sample-result\"># 16</span><br>puts 49 / 7<span class=\"sample-result\"># 7</span></div>",
   instructions: "Use 'puts' to print the result of multiplying 117 by 4."
 )
 
@@ -117,8 +114,7 @@ ruby_intro5 = Exercise.create!(
 
             If we want Ruby to give us decimals, we have to use decimals in the expression we type. To see what was going on in the first example, we will introduce the <i>modulo</i> operator ( % ). While you might not be too familiar with this, an example might be able to clarify it:
 
-            <div class=\"sample\">puts 5 / 2 <span class=\"sample-result\"># 2</span></div>
-            <div class=\"sample\">puts 5 % 2 <span class=\"sample-result\"># 1</span></div>
+            <div class=\"sample\">puts 5 / 2 <span class=\"sample-result\"># 2</span><br>puts 5 % 2 <span class=\"sample-result\"># 1</span></div>
 
 
             When we divide 5 by 2, we get 2 with a remainder of 1. So a % b gives us the remainder when a is divided by b (no decimals are used). It's ok if this is a bit confusing now, it should hopefully become a bit more clear with practice!",
@@ -161,7 +157,9 @@ ruby_intro7 = Exercise.create!(
 
             <div class=\"sample\">my_boolean = true</div>
 
-            We could then use this throughout our program. Say we wanted to check if two values are equal, and get true or false as our result. We can't use '=', because that is how we assign variables. The way we get around this is by using '=='. For example:
+            We could then use this throughout our program.
+
+            Say we wanted to check if two values are equal, and get true or false as our result. We can't use '=', because that is how we assign variables. The way we get around this is by using '=='. For example:
 
             <div class=\"sample\">puts (16/8) == 2 <span class=\"sample-result\"># true</span></div>
 
@@ -186,7 +184,7 @@ ruby_conditionals = Topic.create!(
 ruby_conditionals1 = Exercise.create!(
   topic: ruby_conditionals,
   title: "Overview",
-  readings: "So far, we have been working with very simple programs. But eventually, we are going to need make more complex programs. For example, we may have a program that asks a user for a number, then returns whether that number is a multiple of 17.
+  readings: "So far, we have been working with very simple programs. But eventually, we are going to want to make something a bit more complex. For example, we may have a program that asks a user for a number, then returns whether that number is a multiple of 17.
 
             While such a program may seem simple, we can't yet build it with the tools we have. To do so, we need to learn about conditional statements and how they can be used to handle a variety of cases.",
   instructions: "Go ahead and press the submit button if you're ready to start!"
@@ -219,11 +217,11 @@ ruby_conditionals2_sol = Solution.create!(
 ruby_conditionals3 = Exercise.create!(
   topic: ruby_conditionals,
   title: "If...",
-  readings: "Say we have written an app where a user inputs a number, and we want to display a message to them only if that number is divisible by 17 (the remainder is zero after dividing). To do this, we can use an 'if' statement:
+  readings: "Say we have written a program where a user inputs a number, and we want to display a message to them only if that number is divisible by 17 (the remainder is zero after dividing by 17). To do this, we can use an 'if' statement:
 
             <div class=\"sample\">my_number = 51<br>if my_number % 17 == 0<br>&nbsp;&nbsp;puts 'Your number is divisible by 17'<br>end</div>
 
-            If we ran this code, we would see the message, as 51 / 17 == 3. Let's take a look at how the if statement works.
+            If we ran this code, we would see the message, because 51 == 17 * 3. Let's take a look at how the if statement works.
 
             First, the statement after the word 'if' is evaluated. So Ruby checks if 51 % 17 == 0. Since this is true, our program will run all of the code in between the 'if' and 'end' lines. If we instead had:
 
@@ -250,7 +248,7 @@ ruby_conditionals4 = Exercise.create!(
 
             <div class=\"sample\">if true<br>&nbsp;&nbsp;puts 'I'm in the if statment'<br>else<br>&nbsp;&nbsp;puts 'I'm in the else statment'<br>end</div>
 
-            We will only see the first message since the condition next to if is true (true is true!), and not the second.",
+            We will only see the first message since the condition next to 'if' is true (true is true!), and not the second.",
   instructions: "Write an if else statement that checks whether or not 111 * 111 = 12331. If it does, print \"I'm in the if statement!\". If it does not, print \"I'm in the else statement!\""
 )
 
@@ -293,7 +291,7 @@ ruby_loops1 = Exercise.create!(
 
             <div class=\"sample\">puts 1<br>puts 2<br>puts 3<br>puts 4<br>...</div>
 
-            There has to be a better way of doing this, and there is!",
+            This seems like an unnecessarily tedious task, and fortunately for us, there is a way to avoid this!",
   instructions: "Press submit to move on and start learning about loops and iteraton!"
 )
 
@@ -322,7 +320,7 @@ ruby_loops2 = Exercise.create!(
 
 ruby_loops2sol = Solution.create!(
   exercise: ruby_loops2,
-  result: "nil",
+  result: "16..22",
   output: "16\n17\n18\n19\n20\n21\n22\n"
 )
 
@@ -331,7 +329,7 @@ ruby_loops3 = Exercise.create!(
   title: "The While Loop",
   readings: "There is another way to loop, and that is a <i>while loop</i>. A for loop is good when we want to loop over a specific range or set of values (like numbers from 1 to 100). A while loop is good when we don't know how many times we will be iterating.
 
-            <div class=\"sample\">my_num = 14<br>while my_num < 50<br>&nbsp;&nbsp;puts my_num<br>my_num = my_num + 1<br>end</div>
+            <div class=\"sample\">my_num = 14<br>while my_num < 50<br>&nbsp;&nbsp;puts my_num<br>&nbsp;&nbsp;my_num = my_num + 1<br>end</div>
 
             This code might seem a bit complicated, but let's break it down. First, we are assigning a variable called my_num to the number 14. The rest of the code is saying: 'while my_num is less than 50, execute the code in the between while and end'.
 
@@ -346,7 +344,7 @@ ruby_loops3 = Exercise.create!(
             To avoid this, each time we add 1 to my_num and run the code again. Eventually, my_num == 50 and the code will stop. Now that we have broken it down, we can see that all this code does is prints out the numbers 14 through 49 (why not 50?).",
   instructions: "Use a while loop to print out the even numbers between and including 2 and 10.
 
-                (Hint: like in the example, set a variable before the loop. Also, adding one will print every number between 2 and 10, but we want to skip a number, so we add 2 in the loop instead of 1!)"
+                (Hint: like in the example, set a variable before the loop. Also, adding one will print every number between 2 and 10, but we want to skip every other number, so we add 2 in the loop instead of 1!)"
 )
 
 ruby_loops3sol = Solution.create!(
@@ -384,18 +382,61 @@ ruby_loops4sol = Solution.create!(
   output: "0\n"
 )
 
-# ruby_loops5 = Exercise.create!(
-#   topic: ruby_loops,
-#   title: "Iteration with .each",
-#   readings: "",
-#   instructions: ""
-# )
-#
-# ruby_loops5sol = Solution.create!(
-#   exercise: ruby_loops5,
-#   result: "nil",
-#   output: ""
-# )
+ruby_loops5 = Exercise.create!(
+  topic: ruby_loops,
+  title: "Iteration with .each",
+  readings: "Everything we've covered in this section so far is common across many programming languages. If you continue to learn more languages, you'll find that many contain some type of for and while loops, as well as arrays.
+
+            Ruby, however, offers something that many other languages do not, and that is several methods we can use to loop through a collection (like an array). Suppose we had the array from the last example:
+
+            <div class=\"sample\">my_array = [1, 2, 3, \"moo\", \"meow\", true]</div>
+
+            If we wanted to print every element of this array on a separate line, we might have to do something like this:
+
+            <div class=\"sample\">my_array = [1, 2, 3, \"moo\", \"meow\", true]<br>for i in (0..my_array.length-1)<br>&nbsp;&nbsp;puts my_array[i]<br>end</div>
+
+            While that might not seem too complicated, there is a much neater way:
+
+            <div class=\"sample\">my_array = [1, 2, 3, \"moo\", \"meow\", true]<br>my_array.each { |element| puts element }</div>
+
+            We call .each on an array much like we call .reverse on a string, by appending it to the end of our variable. The .each method, however, takes a <i>block</i>, which is the part in the braces ( {} ). The |element| takes the place of i in the for loop, acting as a variable that refers it to each element of the array.
+
+            After the |element| portion of the block, we write what we would like to do with each element, which is printing to the console in this case. As is often the case, the name 'element' here isn't special, and can be replaced with any name of our choosing.
+
+            Lastly, there is another way of writing the each block that is much more useful if we want to do more than thing with each element:
+
+            <div class=\"sample\">my_array = [1, 2, 3, \"moo\", \"meow\", true]<br>my_array.each do |element|<br>&nbsp;&nbsp;puts element<br>end</div>
+
+            Note that these two ways of using .each will give us the same results!",
+  instructions: "Use each to print every element of the array [1, \"hi\", 2, \"bye\"] to the console on a separate line and finish out this section!"
+)
+
+ruby_loops5sol = Solution.create!(
+  exercise: ruby_loops5,
+  result: "[1, \"hi\", 2, \"bye\"]",
+  output: "1\nhi\n2\nbye\n"
+)
+
+ruby_methods = Topic.create!(
+  title: "Ruby Methods",
+  description: "Finish the Ruby course by learning how to define your own methods!",
+  course: ruby
+)
+
+ruby_methods1 = Exercise.create!(
+  topic: ruby_methods,
+  title: "Overview",
+  readings: "Up until now, we have been using methods that have already been defined for us, such as .reverse, .each, etc. But what if we want to define our own methods that will carry out some custom behavior?
+
+            And what is up with that 'nil' that has been showing up in the console after every exercise? This section aims to answer both of those questions and prepare you to become a Ruby Guru!",
+  instructions: "Click the submit button to start making your own methods!"
+)
+
+ruby_methods1sol = Solution.create!(
+  exercise: ruby_methods1,
+  result: "nil",
+  output: ""
+)
 
 ###############################
 # JAVASCRIPT COURSE SEED DATA #
