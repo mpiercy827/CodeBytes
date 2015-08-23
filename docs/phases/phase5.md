@@ -3,8 +3,6 @@
 ### Models
 
 ### Controllers
-Api::CoursesController (search)
-Api::TopicsController (search)
 AdminMailer
 
 ### Views
@@ -15,7 +13,6 @@ AdminMailer
 ### Collections
 
 ### Views
-* SearchList
 * SuggestionForm
 
 ## Gems/Libraries

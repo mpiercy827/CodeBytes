@@ -19,3 +19,4 @@
 
 ## Gems/Libraries
 jsrepl
+ace-editor

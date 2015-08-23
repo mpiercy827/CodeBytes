@@ -19,9 +19,8 @@ Api::CourseCompletionsController (show)
 * User
 
 ### Collections
-* Users
 
 ### Views
-* UserShow
+* Profile
 
 ## Gems/Libraries

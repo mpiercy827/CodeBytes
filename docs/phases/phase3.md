@@ -4,6 +4,7 @@
 ### Models
 * Topic
 * Exercise
+* Solution
 
 ### Controllers
 Api::CoursesController (show)
@@ -29,5 +30,6 @@ Api::ExercisesController (show, check)
 * TopicsItem
 * TopicShow (composite view; contains ExerciseShow, Editor and Console subviews)
 * ExerciseShow
+* Feedback
 
 ## Gems/Libraries

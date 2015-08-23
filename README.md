@@ -17,7 +17,6 @@ CodeBytes is an online learning community inspired by CodeAcademy where users ca
 - [x] Use an interactive terminal to complete exercises
 - [x] Earn badges for completing courses
 - [x] View badges on their profile (and other users' profiles)
-- [ ] Search courses for topics
 - [ ] Suggest topics/languages for new courses
 
 ## Design Docs
@@ -39,7 +38,7 @@ to Heroku before moving on.
 
 [Details][phase-one]
 
-### Phase 2: Creating an Interactive Terminal (~2 days)
+### Phase 2: Creating an Interactive Terminal (~3 days)
 At the core of the app, this phase will be focused on the development of an
 interactive page that users use to complete exercises. Taking place on the
 'TopicShow' page, there will be a text editor subview where users enter their
@@ -65,22 +64,20 @@ their newly acquired coding skills!
 
 [Details][phase-four]
 
-### Phase 5: Searching and Suggesting Courses + Styling (~2 days)
-Lastly, I will work on a search bar that allows users to search for specific
-topics/courses on the site. I will also implement a mailer on the Rails side that
-allows users to suggest future courses for the site. I will also add some much-
-needed styling to the site to make it look great! By the end of the phase,
-the app should be fully functioning and ready for bonus features!
+### Phase 5: Styling and Course Suggestion (~1 days)
+Lastly, I will work create a modal that allows a user to suggest a course, and
+focus on styling the app to be responsive and user friendly. By the end of this
+phase, the minimum viable product should be complete and ready for bonus features!
 
 [Details][phase-five]
 
 ### Bonus Features (TBD)
 - [x] Allow anonymous users to access everything but badges
+- [ ] Show registered users which courses, topics and exercises they've completed
 - [ ] Experiment with a language by using a sandbox terminal
 - [ ] Multiple sessions/session management
 - [ ] Password reset with email confirmation
 - [ ] Allow users to create courses
-- [ ] Video Tutorials
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
