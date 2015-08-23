@@ -279,6 +279,124 @@ ruby_conditionals5_sol = Solution.create!(
   output: "I'm ready for more Ruby!\n"
 )
 
+
+ruby_loops = Topic.create!(
+  title: "Loops & Iteration",
+  description: "Learn how to use loops and methods unique to Ruby to automate repetitive tasks!",
+  course: ruby
+)
+
+ruby_loops1 = Exercise.create!(
+  topic: ruby_loops,
+  title: "Overview",
+  readings: "In the previous section, we learned about how to control the flow of our programs. In this section, we will add another useful skill: the ability to automate repetitive tasks. Suppose we wanted to print the number 1 through 100 to the console. With our current knowledge, we would have to do it like this:
+
+            <div class=\"sample\">puts 1<br>puts 2<br>puts 3<br>puts 4<br>...</div>
+
+            There has to be a better way of doing this, and there is!",
+  instructions: "Press submit to move on and start learning about loops and iteraton!"
+)
+
+ruby_loops1sol = Solution.create!(
+  exercise: ruby_loops1,
+  result: "nil",
+  output: ""
+)
+
+ruby_loops2 = Exercise.create!(
+  topic: ruby_loops,
+  title: "The For Loop",
+  readings: "The first way we could solve the problem from the previous exercise is using a <i>for loop</i>. Let's take a look at an example:
+
+            <div class=\"sample\">for i in (1..100)<br>&nbsp;&nbsp;puts i<br>end</div>
+
+            For each number (in this case, i) between and including 1 and 100, we execute the code in between the for and end lines. Here, that is simply printing the number. Note that we need two dots between the one and the ten.
+
+            Note that there is nothing special about i. It is just a variable. We could have just as easily written:
+
+            <div class=\"sample\">for banana in (1..100)<br>&nbsp;&nbsp;puts banana<br>end</div>
+
+            This would have given us the same result (although it is usually a good idea to give your variables a name that makes sense!).",
+  instructions: "Using a for loop, print the numbers 16 through 22 to the console. If you need help, use the example above!"
+)
+
+ruby_loops2sol = Solution.create!(
+  exercise: ruby_loops2,
+  result: "nil",
+  output: "16\n17\n18\n19\n20\n21\n22\n"
+)
+
+ruby_loops3 = Exercise.create!(
+  topic: ruby_loops,
+  title: "The While Loop",
+  readings: "There is another way to loop, and that is a <i>while loop</i>. A for loop is good when we want to loop over a specific range or set of values (like numbers from 1 to 100). A while loop is good when we don't know how many times we will be iterating.
+
+            <div class=\"sample\">my_num = 14<br>while my_num < 50<br>&nbsp;&nbsp;puts my_num<br>my_num = my_num + 1<br>end</div>
+
+            This code might seem a bit complicated, but let's break it down. First, we are assigning a variable called my_num to the number 14. The rest of the code is saying: 'while my_num is less than 50, execute the code in the between while and end'.
+
+            Note that the code inside the while block will only run if the condition next to 'while' (here, it is my_num < 50) is true. If my_num was set to 100 before the while, none of the code inside the while block would run.
+
+            The rest of the code looks very similar to the for loop, with the exception of the line:
+
+            <div class=\"sample\">my_num = my_num + 1</div>
+
+            Why do we need that? The code inside the while loop will keep running until my_num is greater than or equal to 50. But if we never modify my_num, it will <b><i>always</i></b> be less than 50 and our code will get stuck in an <i>infinite loop</i>, causing our program to crash.
+
+            To avoid this, each time we add 1 to my_num and run the code again. Eventually, my_num == 50 and the code will stop. Now that we have broken it down, we can see that all this code does is prints out the numbers 14 through 49 (why not 50?).",
+  instructions: "Use a while loop to print out the even numbers between and including 2 and 10.
+
+                (Hint: like in the example, set a variable before the loop. Also, adding one will print every number between 2 and 10, but we want to skip a number, so we add 2 in the loop instead of 1!)"
+)
+
+ruby_loops3sol = Solution.create!(
+  exercise: ruby_loops3,
+  result: "nil",
+  output: "2\n4\n6\n8\n10\n"
+)
+
+ruby_loops4 = Exercise.create!(
+  topic: ruby_loops,
+  title: "Arrays",
+  readings: "Now that we have covered the basics of looping, we are going to check out some of the cool methods Ruby has that are even easier than looping! Before we do that, we need to learn about a data structure: an array.
+
+            An array is just a collection of data, formatted like so:
+
+            <div class=\"sample\">my_array = [1, 2, 3, \"moo\", \"meow\", true]</div>
+
+            While you can put any data types you like into an array, it is usually best practice to have all <i>elements</i> of an array be of the same data type (e.g., having an array of numbers, or an array of strings).
+
+            Say we want to grab the first element of my_array. We can do this in the following way:
+
+            <div class=\"sample\">puts my_array[0] <span class=\"sample-result\"># 1</span></div>
+
+            If we want the fourth:
+
+            <div class=\"sample\">puts my_array[3] <span class=\"sample-result\"># \"moo\"</span></div>
+
+            We can get the nth element of my_array by using my_array[n-1]. Here, n-1 is said to be the <i>index</i> of the nth element.",
+  instructions: "Create an array with five elements, one of which is the number 0, and use the [] notation to print that element to the console."
+)
+
+ruby_loops4sol = Solution.create!(
+  exercise: ruby_loops4,
+  result: "nil",
+  output: "0\n"
+)
+
+# ruby_loops5 = Exercise.create!(
+#   topic: ruby_loops,
+#   title: "Iteration with .each",
+#   readings: "",
+#   instructions: ""
+# )
+#
+# ruby_loops5sol = Solution.create!(
+#   exercise: ruby_loops5,
+#   result: "nil",
+#   output: ""
+# )
+
 ###############################
 # JAVASCRIPT COURSE SEED DATA #
 ###############################
