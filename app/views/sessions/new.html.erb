@@ -6,5 +6,27 @@
 
     <%= render partial: "shared/newform",
         locals: {button_text: "Log In", url: session_url} %>
+
+    <script type="text/javascript">
+      var $form = $("form");
+      var $adaButton = $("<button class='btn btn-large btn-primary guest-login-ada'>")
+                          .text("Sign In as Ada");
+      var $alanButton = $("<button class='btn btn-large btn-warning guest-login-alan'>")
+                          .text("Sign In as Alan");
+
+      $form.append($adaButton).append($alanButton);
+
+      $(".guest-login-ada").click(function (event) {
+        event.preventDefault();
+        $form.populate({email: 'ada.lovelace@gmail.com', password: 'first!'});
+        $form.submit();
+      });
+
+      $(".guest-login-alan").click(function (event) {
+        event.preventDefault();
+        $form.populate({email: 'alan.turing@gmail.com', password: 'enigma'});
+        $form.submit();
+      });
+    </script>
   </div>
 </div>
