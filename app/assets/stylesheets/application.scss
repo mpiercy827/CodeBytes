@@ -189,17 +189,17 @@ footer nav {
 /* course index */
 
 .index-banner {
-  background-color: $codebytes-blue;
+  background: $codebytes-blue;
   color: white;
   padding: 100px 20%;
   text-align: center;
-  transition: background-color 1s;
-  -webkit-transition: background-color 1s;
+  transition: background 1s;
+  -webkit-transition: background 1s;
   text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
 }
 
 .index-banner:hover {
-  background-color: #000;
+  background: #000000;
 }
 
 .index-banner h1 {
