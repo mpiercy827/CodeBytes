@@ -72,6 +72,7 @@ html, body {
   margin: 0;
   padding:0;
   height: 100%;
+  background-color: #dddddd;
 }
 
 .wrapper {
@@ -218,6 +219,7 @@ footer nav {
 .courses {
   width: 100%;
   margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 .courses-index {
@@ -229,6 +231,13 @@ footer nav {
   font-size: 36px;
 }
 
+.header {
+  background-color: #ffffff;
+  padding: 10px 0px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  margin-bottom: 10px;
+}
 
 /*course list items displays*/
 
@@ -242,8 +251,8 @@ footer nav {
   margin: 5px;
   padding: 15px;
   font-size: 24px;
-  filter: grayscale(70%);
-  -webkit-filter: grayscale(70%);
+  filter: grayscale(80%);
+  -webkit-filter: grayscale(80%);
   transition: background-color 1s, filter 1s, -webkit-filter 1s;
   -webkit-transition: background-color 1s, filter 1s, -webkit-filter 1s;
   background-color: #eee;
@@ -308,6 +317,7 @@ footer nav {
 
 /*topic list item displays*/
 .topic-item {
+  background-color: #fff;
   text-align: left;
   a, a:hover, a:active, a:visited {
     color: #000;
@@ -344,6 +354,8 @@ footer nav {
 .exercise {
   width: 45%;
   height: 600px;
+  background-color: #fff;
+  border: 1px solid #000;
   overflow-y: auto;
   float: left;
 }

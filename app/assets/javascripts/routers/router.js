@@ -4,7 +4,8 @@ CodeBytes.Routers.Router = Backbone.Router.extend({
     "courses/:courseId/topics/:topicId": "showTopic",
     "courses/:id": "showCourse",
     "profile": "showProfile",
-    "about": "showAbout"
+    "about": "showAbout",
+    "suggest": "suggestCourse"
   },
 
   initialize: function (options) {
@@ -25,8 +26,7 @@ CodeBytes.Routers.Router = Backbone.Router.extend({
   showCourse: function (id) {
     var course = this.courses.getOrFetch(id);
     var courseShow = new CodeBytes.Views.CourseShow({
-      model: course,
-      user: user
+      model: course
     });
     this._swapView(courseShow);
   },
@@ -48,14 +48,17 @@ CodeBytes.Routers.Router = Backbone.Router.extend({
 
     var topicShow = new CodeBytes.Views.TopicShow({
       model: topic,
-      course: course,
-      user: user
+      course: course
     });
     this._swapView(topicShow);
   },
 
   showAbout: function () {
     this._swapView(new CodeBytes.Views.AboutView());
+  },
+
+  suggestCourse: function () {
+    this._swapView(new CodeBytes.Views.SuggestCourse());
   },
 
   _swapView: function (view) {
