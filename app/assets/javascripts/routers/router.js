@@ -3,7 +3,8 @@ CodeBytes.Routers.Router = Backbone.Router.extend({
     "": "index",
     "courses/:courseId/topics/:topicId": "showTopic",
     "courses/:id": "showCourse",
-    "profile": "showProfile"
+    "profile": "showProfile",
+    "about": "showAbout"
   },
 
   initialize: function (options) {
@@ -48,6 +49,10 @@ CodeBytes.Routers.Router = Backbone.Router.extend({
       course: course
     });
     this._swapView(topicShow);
+  },
+
+  showAbout: function () {
+    this._swapView(new CodeBytes.Views.AboutView());
   },
 
   _swapView: function (view) {
