@@ -174,7 +174,7 @@ header {
 
 /* sticky footer */
 
-footer, .push {
+footer {
   height: 50px;
 }
 
@@ -216,7 +216,7 @@ footer nav {
   color: white;
 }
 
-.courses {
+.courses, .coming-soon {
   width: 100%;
   margin: 0 auto;
   margin-bottom: 10px;
