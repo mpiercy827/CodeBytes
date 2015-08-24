@@ -6,5 +6,33 @@
 
     <%= render partial: "shared/newform",
         locals: {button_text: "Register", url: users_url} %>
+
+    <script type="text/javascript">
+      var $form = $("form");
+
+      var changeForm = function () {
+        $("h1.center").text("Sign In");
+        $("button.submit").text("Log In");
+        $form.attr("action", "/session");
+      }
+
+      $(".guest-login-ada").click(function (event) {
+        event.preventDefault();
+        changeForm();
+        $form.populate({email: 'ada.lovelace@gmail.com', password: 'first!'});
+        setTimeout(function () {
+          $form.submit();
+        }, 1000);
+      });
+
+      $(".guest-login-alan").click(function (event) {
+        event.preventDefault();
+        changeForm();
+        $form.populate({email: 'alan.turing@gmail.com', password: 'enigma'});
+        setTimeout(function () {
+          $form.submit();
+        }, 1000);
+      });
+    </script>
   </div>
 </div>
