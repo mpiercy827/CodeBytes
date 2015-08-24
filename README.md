@@ -77,7 +77,6 @@ phase, the minimum viable product should be complete and ready for bonus feature
 - [ ] Experiment with a language by using a sandbox terminal
 - [ ] Multiple sessions/session management
 - [ ] Password reset with email confirmation
-- [ ] Allow users to create courses
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md

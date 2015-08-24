@@ -542,6 +542,90 @@ javascript_intro = Topic.create!(
   description: "Cover the basics of Javascript and learn one of the most popular programming languages!"
 )
 
+javascript_intro1 = Exercise.create!(
+  topic: javascript_intro,
+  title: "Overview",
+  readings: "Javascript is one of the most widely used languages on the web, and is a very powerful tool for creating web applications, games, animations, and almost anything else you can think of!
+
+            In this tutorial, we are going to cover the basics of the language in a few short exercises. If you would like to learn Javascript in greater depth, visit <a href=\"http://www.codecademy.com\">Codecademy</a>.
+
+            We will start this tutorial by introducing the 'console.log' function, which is very similar to the 'puts' method in Ruby:
+
+            <div class=\"sample\">console.log(\"Hello\");<div class='sample-result'># Hello</div></div>
+
+            console.log accepts a string as an argument, and prints that to the console.",
+  instructions: "Use the 'console.log' function to log \"I'm ready!\" to the console and continue!"
+)
+
+javascript_intro1sol = Solution.create!(
+  exercise: javascript_intro1,
+  result: "",
+  output: "I'm ready!\n"
+)
+
+javascript_intro2 = Exercise.create!(
+  topic: javascript_intro,
+  title: "Variables",
+  readings: "Declaring variables in Javascript is very similar to declaring variables in Ruby. A variable is simply a name for a value that we may want to use several times throughout our program. The syntax of Javascript is different from Ruby's, so this looks a little different:
+
+            <div class=\"sample\">var message = \"This is a variable!\";<br>console.log(message);<div class='sample-result'># \"This is a variable!\"</div></div>
+
+            It is important to note that we must use the 'var' keyword to signify that we are assigning a variable. Now, the variable 'message' can be used throughout the rest of our program!",
+  instructions: "Assign a variable to the number 1000, and log the variable to the console."
+)
+
+javascript_intro2sol = Solution.create!(
+  exercise: javascript_intro2,
+  result: "",
+  output: "1000\n"
+)
+
+javascript_intro3 = Exercise.create!(
+  topic: javascript_intro,
+  title: "Functions",
+  readings: "Just like we could define methods in Ruby, we can also define <i>functions</i> in Javascript. Here is an example that we will look at more closely:
+
+            <div class=\"sample\">var my_function = function (name) {<br>&nbsp;&nbsp;console.log(\"Hello \" + name + \"!\");<br>};<br>my_function(\"Gizmo\");<div class='sample-result'># Hello Gizmo!</div></div>
+
+            First we see that we assign functions just like we assign variables, using the 'var' keyword. We must also use the 'function' keyword to signify that we are defining a function, not another type of variable.
+
+            We can also pass arguments to the function (name, in this case), just like we did in Ruby. One important difference between Javascript an ruby is that you <b>must always</b> put parentheses after the name of a function if you want to call it, even if it takes no arguments. If we had the following function:
+
+            <div class=\"sample\">var my_func = function() {<br>&nbsp;&nbsp;console.log(\"Your message here!\")<br>};</div>
+
+            then:
+
+            <div class='sample'>my_func</div>
+
+            will not print the message, while
+
+            <div class='sample'>my_func()</div>
+
+            will. We will cover this more in a future tutorial!",
+  instructions: "Let's make a function that prints \"My first Javascript function!\" to the console and call it. (Hint: don't forget the parentheses ())"
+)
+
+javascript_intro3sol = Solution.create!(
+  exercise: javascript_intro3,
+  result: "",
+  output: "My first Javascript function!\n"
+)
+
+javascript_intro4 = Exercise.create!(
+  topic: javascript_intro,
+  title: "Closing",
+  readings: "That's all we've got for this short Javascript tutorial (it's almost like this tutorial's main purpose is to show that the interpreter for this site can handle multiple languages!).
+
+            If you'd like to learn more about Javascript, jQuery and many other Javascript libraries used in web development, check out <a href=\"http://www.codecademy.com\">Codecademy</a>.",
+  instructions: "For now, just hit the submit button to complete the tutorial!"
+)
+
+javascript_intro4sol = Solution.create!(
+  exercise: javascript_intro4,
+  result: "",
+  output: ""
+)
+
 ##############
 # DEMO USERS #
 ##############

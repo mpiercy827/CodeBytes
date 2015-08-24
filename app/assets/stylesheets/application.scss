@@ -208,7 +208,6 @@ footer nav {
 }
 
 .courses {
-  padding-top: 20px;
   width: 100%;
   margin: 0 auto;
 }
@@ -467,6 +466,11 @@ footer nav {
 
 .register, .login {
   padding-top: 20px;
+}
+
+.alert-danger {
+  width: 60%;
+  margin: 0 auto;
 }
 
 .form-group {
