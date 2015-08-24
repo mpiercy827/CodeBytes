@@ -441,47 +441,81 @@ ruby_methods1sol = Solution.create!(
 ruby_methods2 = Exercise.create!(
   topic: ruby_methods,
   title: "Method Definition",
-  readings: "",
-  instructions: ""
+  readings: "Similar to variables, methods are useful for when we have a specific chunk of code that we may want to run repeatedly in our program. Suppose there are several points in our program where we want to print the following statements:
+
+            <div class=\"sample\">puts \"Hello\"<br>puts \"Another Line\"<br>puts \"A Third Line\"<br>puts \"Bye\"</div>
+
+            We could copy and paste those four lines everywhere we need them, but it might be better to avoid all of that unnecessary code. What we'll do, is put those four statements in a method:
+
+            <div class=\"sample\">def my_method<br>&nbsp;&nbsp;puts \"Hello\"<br>&nbsp;&nbsp;puts \"Another Line\"<br>&nbsp;&nbsp;puts \"A Third Line\"<br>&nbsp;&nbsp;puts \"Bye\"<br>end</div>
+
+            The 'def' tells the computer that we are defining a new method, while the my_method is the name which we will use to refer to the method throughout the rest of the program (this can be anything!). Now we can simply write:
+
+            <div class=\"sample\">my_method</div>
+
+            and all four lines of code between the 'def' and 'end' will be run! Note that we can only call my_method after we have defined it, meaning we must call it below its definition in our program.",
+  instructions: "Define a method that prints \"My First Ruby Method!\" to the console and call the method!"
 )
 
 ruby_methods2sol = Solution.create!(
   exercise: ruby_methods2,
   result: "nil",
-  output: ""
+  output: "My First Ruby Method!\n"
 )
 
 ruby_methods3 = Exercise.create!(
   topic: ruby_methods,
-  title: "Return Values",
-  readings: "",
-  instructions: ""
+  title: "Arguments",
+  readings: "Say the next method we would like to write is one that greets someone by their name. We would have to pass that person's name into the method for it to be used in the greeting, and we can do that by <i>passing arguments</i>:
+
+            <div class=\"sample\">def greet(name)<br>&nbsp;&nbsp;puts \"Hello \" + name<br>end</div>
+
+            Here, we say that we are passing in the variable 'name' to the greet method. On the second line, we are <i>concatenating</i> (or adding) whatever string is stored in the name variable to the string \"Hello \" (notice the space).
+
+            Now if we are to call the method:
+
+            <div class=\"sample\">user_name = \"Earl\"<br>greet(user_name) <div class='sample-result'># Hello Earl</div></div>
+
+            Notice that the variable we pass to greet doesn't have to be labelled 'name'. It can be anything! Without going into too much detail, once something gets passed to the greet method, the greet method refers to that by the variable 'name'.",
+  instructions: "Write a method that takes a programming language name as an argument, and prints out \"I've almost finished the \" + language_name + \" course!\". Then, call this method, passing it the string \"Ruby\"."
 )
 
 ruby_methods3sol = Solution.create!(
   exercise: ruby_methods3,
   result: "nil",
-  output: ""
+  output: "I've almost finished the Ruby course!\n"
 )
 
 ruby_methods4 = Exercise.create!(
   topic: ruby_methods,
-  title: "Arguments",
-  readings: "",
-  instructions: ""
+  title: "Return Values",
+  readings: "It's time to finally address that 'nil' you've seen floating around in the terminal at the bottom of almost every exercise. In our previous exercise, we designed a method that printed to the console. But what if we wanted to design a method that gave us a value we could use later in our program?
+
+            For that, we need the method to <i>return a value</i> for later use. If we defined a method that squared a number:
+
+            <div class=\"sample\">def my_square(x)<br>&nbsp;&nbsp;return x * x<br>end</div>
+
+            This method takes an argument x, squares x, then returns the result.
+
+            <div class=\"sample\">y = my_square(2)<br>puts y <div class='sample-result'># 4</div></div>
+
+            Here, my_square(2) returns the value 4, which is then stored in the variable y. This is what we see when we write 'puts y'. So why have we been seeing 'nil' all this time?
+
+            <b>nil</b> is a special data type in Ruby that means 'nothing'. 'puts' prints a message to the screen, but it doesn't have a return value (i.e., it returns nil).",
+  instructions: "Write a method that cubes a number (multiplies it by itself three times) and call it with the number 4 as an argument. (Hint: don't use 'puts' anywhere, just call the method after you define it!)"
 )
 
 ruby_methods4sol = Solution.create!(
   exercise: ruby_methods4,
-  result: "nil",
+  result: "64",
   output: ""
 )
 
 ruby_methods5 = Exercise.create!(
   topic: ruby_methods,
-  title: "Final Ruby Exercise",
-  readings: "",
-  instructions: ""
+  title: "Closing",
+  readings: "You've made it through our whole Ruby tutorial, nice work! This is just the beginning, however. If you would like to learn more Ruby, head on over to <a href=\"http://www.codecademy.com\">Codecademy</a> for more comprehensive tutorials. Or, checkout some of our other courses we have to offer!",
+  instructions: "Simply press the submit button to complete the course!"
 )
 
 ruby_methods5sol = Solution.create!(
