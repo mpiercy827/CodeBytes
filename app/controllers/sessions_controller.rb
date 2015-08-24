@@ -1,6 +1,8 @@
 class SessionsController < ApplicationController
   before_action :redirect_unless_logged_in, only: :destroy
   def new
+    @ada = User.find_by(email: "ada.lovelace@gmail.com")
+    @alan = User.find_by(email: "alan.turing@gmail.com")
   end
 
   def create

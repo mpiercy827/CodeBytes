@@ -24,6 +24,27 @@
         <%= button_text %>
       </button>
 
+      <button type="button" class="btn btn-large btn-primary guest-login-ada">
+        Sign In as Ada
+      </button>
+
+      <button type="button" class="btn btn-large btn-warning guest-login-alan">
+        Sign In as Alan
+      </button>
     </form>
   </div>
 </div>
+
+<script type="text/javascript">
+  $(".guest-login-ada").click(function (event) {
+    event.preventDefault();
+    $("form").populate({email: 'ada.lovelace@gmail.com', password: 'first!'});
+    $("form").submit();
+  });
+
+  $(".guest-login-alan").click(function (event) {
+    event.preventDefault();
+    $("form").populate({email: 'alan.turing@gmail.com', password: 'enigma'});
+    $("form").submit();
+  });
+</script>
