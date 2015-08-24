@@ -25,7 +25,8 @@ CodeBytes.Routers.Router = Backbone.Router.extend({
   showCourse: function (id) {
     var course = this.courses.getOrFetch(id);
     var courseShow = new CodeBytes.Views.CourseShow({
-      model: course
+      model: course,
+      user: user
     });
     this._swapView(courseShow);
   },
@@ -44,9 +45,11 @@ CodeBytes.Routers.Router = Backbone.Router.extend({
   showTopic: function (courseId, topicId) {
     var topic = this.topics.getOrFetch(topicId);
     var course = this.courses.getOrFetch(courseId);
+
     var topicShow = new CodeBytes.Views.TopicShow({
       model: topic,
-      course: course
+      course: course,
+      user: user
     });
     this._swapView(topicShow);
   },
