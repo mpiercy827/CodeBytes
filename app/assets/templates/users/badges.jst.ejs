@@ -2,6 +2,13 @@
   <% var imgClass %>
   <% imgClass = courseCompletions.findWhere({ course_id: course.id}) ? "active-badge" : "inactive-badge" %>
   <div class="badge-container">
+    <div class="badge-info">
+      <% if (imgClass === "active-badge") { %>
+        Awarded for completing the <%= course.get("title") %> course.
+      <% } else { %>
+        Complete the <%= course.get("title") %> course to earn this badge!
+      <% } %>
+    </div>
     <img src="<%= course.get("badge_image_location") %>" class="<%= imgClass %>"/>
   </div>
 <%  }) %>
