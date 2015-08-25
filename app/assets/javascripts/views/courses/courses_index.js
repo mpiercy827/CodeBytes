@@ -2,7 +2,8 @@ CodeBytes.Views.CoursesIndex = Backbone.CompositeView.extend({
   template: JST["courses/courses_index"],
 
   events: {
-    "click .course-item": "showCourse"
+    "click .course-item": "showCourse",
+    "click .suggest": "courseSuggestion"
   },
 
   initialize: function (options) {
@@ -14,6 +15,10 @@ CodeBytes.Views.CoursesIndex = Backbone.CompositeView.extend({
   addCourseItem: function (course) {
     var courseItemView = new CodeBytes.Views.CoursesIndexItem({ model: course });
     this.addSubview(".courses-list", courseItemView);
+  },
+
+  courseSuggestion: function (event) {
+    event.preventDefault();
   },
 
   render: function () {

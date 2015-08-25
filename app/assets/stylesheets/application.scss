@@ -12,6 +12,9 @@
  *
  *= require_tree .
  *= require_self
+ *= require jquery-ui
+ *= require jquery-ui.structure
+ *= require jquery-ui.theme
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
@@ -95,6 +98,31 @@ html, body {
 .scripty {
   font: 400 20px 'Oleo Script', Helvetica, sans-serif;
   color: #2b2b2b;
+}
+
+.modal-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal {
+  display: block;
+  z-index: 20000;
+  background-color: #dddddd;
+  position: absolute;
+  border-radius: 5px;
+  top: 25%;
+  left: 10%;
+  width: 80%;
+  height: 50%;
+  overflow-y: scroll;
+  padding: 10px;
+  margin: 0 auto;
 }
 
 /* navbar & header */
@@ -216,7 +244,7 @@ footer nav {
   color: white;
 }
 
-.courses, .coming-soon {
+.courses, .upcoming-courses {
   width: 100%;
   margin: 0 auto;
   margin-bottom: 10px;
@@ -259,7 +287,7 @@ footer nav {
   display: inline-block;
   box-sizing: content-box;
   text-align: center;
-  margin: 5px;
+  margin: 4px;
   padding: 15px;
   font-size: 24px;
   filter: grayscale(80%);
