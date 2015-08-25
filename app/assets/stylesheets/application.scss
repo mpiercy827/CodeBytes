@@ -15,6 +15,7 @@
  *= require jquery-ui
  *= require jquery-ui.structure
  *= require jquery-ui.theme
+ *= require_tree ../../../vendor/assets/stylesheets
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
@@ -100,29 +101,11 @@ html, body {
   color: #2b2b2b;
 }
 
-.modal-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 10000;
-  background-color: rgba(0,0,0,0.5);
-}
-
-.modal {
-  display: block;
-  z-index: 20000;
-  background-color: #dddddd;
-  position: absolute;
-  border-radius: 5px;
-  top: 25%;
-  left: 10%;
-  width: 80%;
-  height: 50%;
-  overflow-y: scroll;
-  padding: 10px;
-  margin: 0 auto;
+.ui-widget-header {
+  background-color: $codebytes-blue !important;
+  background-image: none;
+  color: #000;
+  border: 1px solid $codebytes-blue !important;
 }
 
 /* navbar & header */

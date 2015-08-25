@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= require jquery-ui
 //= require jquery.populate
 //= require underscore
@@ -24,4 +25,3 @@
 //= require_tree ./views
 //= require_tree ./routers
 //= require_tree .
-//= require bootstrap

@@ -19,6 +19,31 @@ CodeBytes.Views.CoursesIndex = Backbone.CompositeView.extend({
 
   courseSuggestion: function (event) {
     event.preventDefault();
+    var suggestForm = new CodeBytes.Views.SuggestCourse();
+    $("body").append(suggestForm.render().$el);
+    $(".suggestion-form").dialog({
+      width: 500,
+      modal: true,
+      title: "Suggest A Course for CodeBytes",
+      buttons: [
+    		{
+    			text: "Submit Suggestion",
+    			click: function() {
+    				$( this ).dialog( "close" );
+            $( this ).dialog( "destroy" );
+            suggestForm.remove();
+    			}
+    		},
+    		{
+    			text: "Cancel",
+    			click: function() {
+    				$( this ).dialog( "close" );
+            $( this ).dialog( "destroy" );
+            suggestForm.remove();
+    			}
+    		}
+    	]
+    });
   },
 
   render: function () {
