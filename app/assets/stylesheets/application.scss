@@ -239,6 +239,17 @@ footer nav {
   margin-bottom: 10px;
 }
 
+.suggestions {
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.suggestions a:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 /*course list items displays*/
 
 .course-item, .upcoming-course-item {
@@ -256,6 +267,7 @@ footer nav {
   transition: background-color 1s, filter 1s, -webkit-filter 1s;
   -webkit-transition: background-color 1s, filter 1s, -webkit-filter 1s;
   background-color: #eee;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 500px) {
