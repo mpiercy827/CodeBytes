@@ -29,9 +29,20 @@ CodeBytes.Views.CoursesIndex = Backbone.CompositeView.extend({
     		{
     			text: "Submit Suggestion",
     			click: function() {
-    				$( this ).dialog( "close" );
-            $( this ).dialog( "destroy" );
-            suggestForm.remove();
+            var $alert = $("<div>")
+                            .addClass("alert")
+                            .addClass("alert-success")
+                            .text("Your suggestion has been received!");
+
+            $(".suggestion-form").html($alert);
+            $(".ui-dialog-buttonpane").remove();
+            var that = this;
+            
+            setTimeout(function () {
+        				$( that ).dialog( "close" );
+                $( that ).dialog( "destroy" );
+                suggestForm.remove();
+              }, 2000);
     			}
     		},
     		{
