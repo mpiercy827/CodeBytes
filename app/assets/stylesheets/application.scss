@@ -108,6 +108,18 @@ html, body {
   border: 1px solid $codebytes-blue !important;
 }
 
+button.ui-button:first-child {
+  color: #fff !important;
+}
+
+button.ui-button:first-child .ui-button-text{
+  background-color: $codebytes-blue !important;
+}
+
+.ui-icon-closethick {
+  color: $codebytes-blue;
+}
+
 /* navbar & header */
 
 header {
