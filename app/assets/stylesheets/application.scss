@@ -354,6 +354,7 @@ footer nav {
 .topic-item {
   background-color: #fff;
   text-align: left;
+  cursor: pointer;
   a, a:hover, a:active, a:visited {
     color: #000;
   }
@@ -432,6 +433,10 @@ footer nav {
 
 .btn-group {
   float: right;
+}
+
+.btn-group li {
+  cursor: pointer;
 }
 
 .interactive {
