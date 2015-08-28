@@ -56,10 +56,10 @@
   // Try for Firefox, which doesn't have a setter for these properties
   try {
     global.window = global.window || global;
-  } catch (e) { console.log(e) }
+  } catch (e) { }
   try {
     global.self = global.self || global;
-  } catch (e) { console.log(e)}
+  } catch (e) { }
 
 
   var Sandboss;
