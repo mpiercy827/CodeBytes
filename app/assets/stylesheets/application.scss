@@ -42,7 +42,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	vertical-align: middle;
+	vertical-align: top;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -210,7 +210,7 @@ footer nav {
   color: #204056;
 }
 
-.about {
+.about, .careers {
   margin-top: 20px;
 }
 
