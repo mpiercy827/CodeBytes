@@ -210,12 +210,19 @@ footer nav {
   color: #204056;
 }
 
-.about, .careers {
+.about, .careers, .contact {
   margin-top: 20px;
+  width: 80%;
+  margin: 0 auto;
+  p {
+    font-size: 16px;
+    text-align: justify;
+  }
 }
 
-.about p {
-  font-size: 16px;
+.contact-info {
+  font-size: 18px;
+  text-align: center;
 }
 
 /* course index */

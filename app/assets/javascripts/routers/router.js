@@ -6,6 +6,7 @@ CodeBytes.Routers.Router = Backbone.Router.extend({
     "profile": "showProfile",
     "about": "showAbout",
     "careers": "showCareers",
+    "contact": "showContact",
     "suggest": "suggestCourse"
   },
 
@@ -60,6 +61,10 @@ CodeBytes.Routers.Router = Backbone.Router.extend({
 
   showCareers: function () {
     this._swapView(new CodeBytes.Views.CareersView());
+  },
+
+  showContact: function () {
+    this._swapView(new CodeBytes.Views.ContactView());
   },
 
   suggestCourse: function () {
