@@ -40,7 +40,7 @@ InterpreterOptions = {
   },
 
   timeout: {
-    time: 10000,
+    time: 5000,
     callback: function () {
       return true;
     }
@@ -56,8 +56,9 @@ CodeBytes.Interpreter.setNewLang = function (course) {
       (!this.lang || this.lang.system_name !== course.get("language"))) {
     this.loadLanguage(course.get("language"), CodeBytes.submitCodeActivate);
 
+    that = this;
     this.timeout.callback = function () {
-      this.loadLanguage(course.get("language"), CodeBytes.submitCodeActivate);
+      that.loadLanguage(course.get("language"), CodeBytes.submitCodeActivate);
       CodeBytes.Terminal.html("> Code Timed Out.");
       return true;
     };
