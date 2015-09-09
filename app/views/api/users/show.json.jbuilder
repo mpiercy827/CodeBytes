@@ -9,3 +9,15 @@ json.course_completions do
     json.partial! "api/course_completions/coursecomp", course_completion: cc
   end
 end
+
+json.topic_completions do
+  json.array! @user.topic_completions.each do |tc|
+    json.partial! "api/topic_completions/topiccomp", topic_completion: tc
+  end
+end
+
+json.exercise_completions do
+  json.array! @user.exercise_completions.each do |ec|
+    json.partial! "api/exercise_completions/exercisecomp", exercise_completion: ec
+  end
+end
