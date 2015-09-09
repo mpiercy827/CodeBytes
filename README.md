@@ -28,7 +28,7 @@ Almost all of the functionality of the site is available to unregistered users, 
 ### Upcoming Features
 CodeBytes is still under construction. I plan on adding the following features to the app:
 - [x] Allow anonymous users to access everything but badges
-- [ ] Show registered users which courses, topics and exercises they've completed
+- [x] Show registered users which courses, topics and exercises they've completed
 - [ ] Experiment with a language by using a sandbox terminal
 - [ ] Multiple sessions/session management
 - [ ] Password reset with email confirmation
