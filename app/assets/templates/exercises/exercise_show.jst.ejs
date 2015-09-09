@@ -1,6 +1,13 @@
+<% if (user && user.exerciseCompletions().findWhere({ exercise_id: activeExercise.id })) { %>
+  <% var addGlyph = true; %>
+<% } %>
+
 <div class="exercise-header">
   <% var numExercises = exercises.length %>
   <h3><%= activeExercise.get("title") %></h3>
+  <% if (addGlyph) { %>
+    <span class="glyphicon glyphicon-ok"></span>
+  <% } %>
   <div class="btn-group">
     <button type="button" class="btn btn-default btn-xs">
       <%= activeIndex + 1 + "/" + numExercises %>

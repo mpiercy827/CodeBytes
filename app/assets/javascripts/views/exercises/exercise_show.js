@@ -8,6 +8,10 @@ CodeBytes.Views.ExerciseShow = Backbone.View.extend({
   },
 
   initialize: function (options) {
+    if (options.user) {
+      this.user = options.user;
+      this.listenTo(this.user, "sync", this.render);
+    }
     this.activeIndex = options.activeIndex;
     this.course = options.course;
     this.listenTo(this.collection, 'add', this.render);
@@ -41,7 +45,8 @@ CodeBytes.Views.ExerciseShow = Backbone.View.extend({
       exercises: this.collection,
       activeExercise: this.activeExercise(),
       course: this.course,
-      activeIndex: this.activeIndex
+      activeIndex: this.activeIndex,
+      user: this.user
     });
 
     this.$el.html(content);

@@ -418,6 +418,12 @@ footer nav {
   h3 {
     display: inline-block;
   }
+  .glyphicon {
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: $codebytes-blue;
+  }
 }
 
 .sample {
