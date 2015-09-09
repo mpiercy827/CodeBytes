@@ -548,8 +548,22 @@ footer nav {
 }
 
 .profile {
-  padding-top: 20px;
+  margin-top: 10px;
+  max-width: 70%;
+  border-radius: 5px;
+  padding: 20px;
   text-align: center;
+  background-color: #ffffff;
+}
+
+.profile-info {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.codebytes-blue {
+  color: $codebytes-blue;
 }
 
 /* login and register pages */
