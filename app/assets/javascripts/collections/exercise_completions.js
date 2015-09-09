@@ -1,4 +1,4 @@
-CodeBytes.Collections.ExerciseCompletions = Backbone.Collections.extend({
+CodeBytes.Collections.ExerciseCompletions = Backbone.Collection.extend({
   url: "api/exercise_completions",
 
   model: CodeBytes.Models.ExerciseCompletion,

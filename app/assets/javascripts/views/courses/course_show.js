@@ -7,7 +7,11 @@ CodeBytes.Views.CourseShow = Backbone.CompositeView.extend({
     "click .topic-item": "showTopic"
   },
 
-  initialize: function () {
+  initialize: function (options) {
+    if (options.user) {
+      this.user = options.user;
+      this.listenTo(this.user, "sync", this.render);
+    }
     this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.model, "sync", this.setLang);
     this.listenTo(this.model.topics(), "add", this.addTopic);
@@ -24,7 +28,7 @@ CodeBytes.Views.CourseShow = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    var content = this.template({ course: this.model });
+    var content = this.template({ course: this.model, user: this.user });
     this.$el.html(content);
     this.attachSubviews();
     return this;

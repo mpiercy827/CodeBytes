@@ -26,9 +26,14 @@ CodeBytes.Routers.Router = Backbone.Router.extend({
   },
 
   showCourse: function (id) {
+    if (window.logged_in) {
+      var user = new CodeBytes.Models.User();
+      user.fetch();
+    }
     var course = this.courses.getOrFetch(id);
     var courseShow = new CodeBytes.Views.CourseShow({
-      model: course
+      model: course,
+      user: user
     });
     this._swapView(courseShow);
   },

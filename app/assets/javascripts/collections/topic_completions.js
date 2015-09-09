@@ -1,4 +1,4 @@
-CodeBytes.Collections.TopicCompletions = Backbone.Collections.extend({
+CodeBytes.Collections.TopicCompletions = Backbone.Collection.extend({
   url: "api/topic_completions",
 
   model: CodeBytes.Models.TopicCompletion,
