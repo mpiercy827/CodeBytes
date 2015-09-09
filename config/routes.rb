@@ -11,7 +11,8 @@ Rails.application.routes.draw do
     resources :exercises, only: [:index, :show] do
       get 'check' => "exercises#check"
     end
-    resources :exercise_completions, only: :create
+    resources :exercise_completions, only: [:create, :show]
+    resources :topic_completions, only: :show
     resources :course_completions, only: :show
     get 'profile', to: 'users#show'
   end
