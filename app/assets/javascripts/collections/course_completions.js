@@ -11,8 +11,8 @@ CodeBytes.Collections.CourseCompletions = Backbone.Collection.extend({
       cc = new CodeBytes.Models.CourseCompletion({ id: id });
       comps.add(cc);
       cc.fetch({
-        error: function () { comps.remove(cc) }
-      })
+        error: function () { comps.remove(cc); }
+      });
     } else {
       cc.fetch();
     }
