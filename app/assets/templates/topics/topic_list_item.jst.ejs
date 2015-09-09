@@ -1,5 +1,11 @@
+<% if (user && user.topicCompletions().findWhere({ topic_id: topic.id })) { %>
+  <% var glyphiconClass = "glyphicon-ok" %>
+<% } else { %>
+  <% var glyphiconClass = "glyphicon-menu-right" %>
+<% } %>
+
 <a>
-  <span class="glyphicon glyphicon-menu-right pull-right"></span>
+  <span class="glyphicon <%= glyphiconClass %> pull-right"></span>
   <h2><%= topic.escape("title") %></h2>
   <%= topic.escape("description") %>
 </a>
