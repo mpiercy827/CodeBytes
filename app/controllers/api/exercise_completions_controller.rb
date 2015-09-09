@@ -9,4 +9,8 @@ class Api::ExerciseCompletionsController < ApplicationController
       render json: @comp
     end
   end
+
+  def show
+    @exercise_completions = ExerciseCompletion.where(user: current_user)
+  end
 end
