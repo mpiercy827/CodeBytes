@@ -17,6 +17,8 @@ Almost all of the functionality of the site is available to unregistered users, 
 * Hits a custom Rails route for comparison of results of users' code and database solutions.
 * Tracks course completions for registered users and awards badges.
 * Allows users to suggest a new course.
+* Allow anonymous users to access everything but badges
+* Show registered users which courses, topics and exercises they've completed 
 
 ## Design Docs
 * [View Wireframes][views]
@@ -27,8 +29,6 @@ Almost all of the functionality of the site is available to unregistered users, 
 
 ### Upcoming Features
 CodeBytes is still under construction. I plan on adding the following features to the app:
-- [x] Allow anonymous users to access everything but badges
-- [x] Show registered users which courses, topics and exercises they've completed
 - [ ] Experiment with a language by using a sandbox terminal
 - [ ] Multiple sessions/session management
 - [ ] Password reset with email confirmation
