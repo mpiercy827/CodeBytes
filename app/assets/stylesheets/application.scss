@@ -423,6 +423,11 @@ footer nav {
     padding: 5px;
     border-radius: 50%;
     background-color: $codebytes-blue;
+    transition: background-color 0.25s, color 0.25s;
+    &:hover {
+      color: $codebytes-blue;
+      background-color: white;
+    }
   }
 }
 
