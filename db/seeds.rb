@@ -639,15 +639,15 @@ alan = User.create!(
   email: "alan.turing@gmail.com",
   password: "enigma"
 )
-# 
-# ruby.exercises.each_with_index do |exercise, index|
-#   next if index == ruby.exercises.length - 1
-#   ExerciseCompletion.create!(exercise: exercise, user: alan)
-#   ExerciseCompletion.create!(exercise: exercise, user: ada)
-# end
-#
-# ruby.topics.each_with_index do |topic, index|
-#   next if index == ruby.topics.length - 1
-#   TopicCompletion.create!(topic: topic, user: alan)
-#   TopicCompletion.create!(topic: topic, user: ada)
-# end
+
+ruby.exercises.each_with_index do |exercise, index|
+  next if index == ruby.exercises.length - 1
+  ExerciseCompletion.create!(exercise: exercise, user: alan)
+  ExerciseCompletion.create!(exercise: exercise, user: ada)
+end
+
+ruby.topics.each_with_index do |topic, index|
+  next if index == ruby.topics.length - 1
+  TopicCompletion.create!(topic: topic, user: alan)
+  TopicCompletion.create!(topic: topic, user: ada)
+end
