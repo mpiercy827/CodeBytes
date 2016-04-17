@@ -15,6 +15,10 @@
         </li>
         <% if logged_in? %>
           <script type="text/javascript">window.logged_in = true</script>
+          <% if is_admin_user? %>
+            <li><%= link_to "Add Topic", "/#/topic/new"%></li>
+            <li><%= link_to "Add Exercise", "/#/exercise/new"%></li>
+          <% end %>
           <li><%= link_to "Profile", "/#/profile" %></li>
           <li><%= link_to "Log Out", session_url, method: :delete %></li>
         <% else %>

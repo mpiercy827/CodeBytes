@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user
   helper_method :logged_in?
+  helper_method :is_admin_user?
   helper_method :all_courses
 
   def current_user
@@ -12,6 +13,10 @@ class ApplicationController < ActionController::Base
 
   def logged_in?
     !!current_user
+  end
+
+  def is_admin_user?
+    logged_in? && current_user.admin
   end
 
   def login!(user)

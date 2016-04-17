@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new'
 
   namespace :api, defaults: {format: :json} do
-    resources :courses, only: [:index, :show]
-    resources :topics, only: [:index, :show]
-    resources :exercises, only: [:index, :show] do
+    resources :courses, only: [:index, :show,]
+    resources :topics, only: [:index, :show, :create]
+    resources :exercises, only: [:index, :show, :create] do
       get 'check' => "exercises#check"
     end
     resources :exercise_completions, only: [:create, :show]

@@ -3,6 +3,9 @@ class Api::ExercisesController < ApplicationController
     @exercises = Exercise.all
   end
 
+  def create
+  end
+
   def show
     @exercise = Exercise.find(params[:id])
   end
