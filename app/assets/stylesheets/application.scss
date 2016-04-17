@@ -246,7 +246,7 @@ footer nav {
   color: white;
 }
 
-.courses, .upcoming-courses {
+.courses, .upcoming-courses, .under-maintenance {
   width: 100%;
   margin: 0 auto;
   margin-bottom: 10px;
@@ -282,7 +282,7 @@ footer nav {
 
 /*course list items displays*/
 
-.course-item, .upcoming-course-item {
+.course-item, .upcoming-course-item, .under-maintenance-item {
   width: calc(25% - 40px);
   height: 260px;
   border-radius: 5px;
@@ -301,19 +301,19 @@ footer nav {
 }
 
 @media screen and (max-width: 500px) {
-  .course-item, .upcoming-course-item {
+  .course-item, .upcoming-course-item, .under-maintenance-item {
     width: calc(100% - 40px);
   }
 }
 
 @media screen and (max-width: 800px) and (min-width: 500px) {
-  .course-item, .upcoming-course-item {
+  .course-item, .upcoming-course-item, .under-maintenance-item {
     width: calc(50% - 40px);
   }
 }
 
 @media screen and (max-width: 1200px) and (min-width: 800px) {
-  .course-item, .upcoming-course-item {
+  .course-item, .upcoming-course-item, .under-maintenance-item {
     width: calc(33% - 40px);
   }
 }
@@ -325,7 +325,7 @@ footer nav {
   display: block;
 }
 
-.course-item:hover, .upcoming-course-item:hover {
+.course-item:hover, .upcoming-course-item:hover, .under-maintenance-item:hover {
   background-color: #fff;
   filter: grayscale(0%);
   -webkit-filter: grayscale(0%);

@@ -56,9 +56,9 @@ CodeBytes.Interpreter.setNewLang = function (course) {
       (!this.lang || this.lang.system_name !== course.get("language"))) {
     this.loadLanguage(course.get("language"), CodeBytes.submitCodeActivate);
 
-    that = this;
+    self = this;
     this.timeout.callback = function () {
-      that.loadLanguage(course.get("language"), CodeBytes.submitCodeActivate);
+      self.loadLanguage(course.get("language"), CodeBytes.submitCodeActivate);
       CodeBytes.Terminal.html("> Code Timed Out.");
       return true;
     };

@@ -37,7 +37,7 @@ CodeBytes.Views.CoursesIndex = Backbone.CompositeView.extend({
             $(".suggestion-form").html($alert);
             $(".ui-dialog-buttonpane").remove();
             var that = this;
-            
+
             setTimeout(function () {
         				$( that ).dialog( "close" );
                 $( that ).dialog( "destroy" );
